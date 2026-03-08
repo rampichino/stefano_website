@@ -4,6 +4,33 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sculture — Stefano Bianchi</title>
+  <script>
+    (function() {
+      if (sessionStorage.getItem('auth') === '1') return;
+      document.addEventListener('DOMContentLoaded', function() {
+        var overlay = document.createElement('div');
+        overlay.style.cssText = 'position:fixed;inset:0;z-index:9999;background:#022b3a;display:flex;align-items:center;justify-content:center;font-family:Georgia,serif;';
+        overlay.innerHTML = '<div style="background:#fff;border-radius:12px;padding:48px 40px;max-width:360px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.4)"><h2 style="color:#022b3a;font-size:1.5rem;margin:0 0 8px">Stefano Bianchi</h2><p style="color:#1f7a8c;font-size:0.85rem;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 32px">Accesso privato</p><input id="pw-input" type="password" placeholder="Password" style="width:100%;box-sizing:border-box;border:1.5px solid #bfdbf7;border-radius:6px;padding:12px 14px;font-size:1rem;outline:none;margin-bottom:12px"/><div id="pw-err" style="color:#c0392b;font-size:0.8rem;min-height:18px;margin-bottom:8px"></div><button id="pw-btn" style="width:100%;background:#1f7a8c;color:#fff;border:none;border-radius:6px;padding:12px;font-size:1rem;cursor:pointer">Entra</button></div>';
+        document.body.appendChild(overlay);
+        var input = document.getElementById('pw-input');
+        var btn = document.getElementById('pw-btn');
+        var err = document.getElementById('pw-err');
+        function check() {
+          if (input.value === 'nespola') {
+            sessionStorage.setItem('auth', '1');
+            overlay.remove();
+          } else {
+            err.textContent = 'Password errata.';
+            input.value = '';
+            input.focus();
+          }
+        }
+        btn.addEventListener('click', check);
+        input.addEventListener('keydown', function(e) { if (e.key === 'Enter') check(); });
+        input.focus();
+      });
+    })();
+  </script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script>
