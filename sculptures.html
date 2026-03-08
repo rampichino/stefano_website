@@ -260,11 +260,12 @@
        @click.self="selected = null"
        @keydown.escape.window="selected = null">
 
-    <div class="bg-white rounded-xl overflow-hidden max-w-4xl w-full shadow-2xl flex flex-col md:flex-row max-h-[90vh]">
-      <div class="md:w-1/2 overflow-hidden flex-shrink-0 bg-gray-100">
-        <img :src="selected?.src" :alt="selected?.title" class="w-full h-full object-contain max-h-[50vh] md:max-h-full" />
+    <div class="bg-white rounded-xl overflow-hidden max-w-6xl w-full shadow-2xl flex flex-col md:flex-row max-h-[95vh]">
+      <div class="md:w-2/3 overflow-hidden flex-shrink-0 bg-black flex items-center justify-center cursor-zoom-in"
+           @click.stop="$el.querySelector('img').requestFullscreen?.()">
+        <img :src="selected?.src" :alt="selected?.title" class="w-full h-full object-contain max-h-[60vh] md:max-h-[95vh]" />
       </div>
-      <div class="md:w-1/2 p-8 overflow-y-auto flex flex-col justify-between">
+      <div class="md:w-1/3 p-8 overflow-y-auto flex flex-col justify-between">
         <div>
           <span class="text-teal text-xs font-medium tracking-widest uppercase" x-text="selected?.medium"></span>
           <h2 class="font-serif text-3xl text-jet mt-2 mb-1" x-text="selected?.title"></h2>
