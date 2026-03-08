@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="it" x-data="{ menuOpen: false }">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stefano Bianchi — Artista</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'jet':      '#022b3a',
+            'teal':     '#1f7a8c',
+            'sky':      '#bfdbf7',
+            'lavender': '#e1e5f2',
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans:  ['"Inter"', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    .hero-overlay { background: linear-gradient(135deg, rgba(2,43,58,0.85) 0%, rgba(31,122,140,0.55) 60%, rgba(191,219,247,0.15) 100%); }
+    .card-hover { transition: transform 0.35s ease, box-shadow 0.35s ease; }
+    .card-hover:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(2,43,58,0.18); }
+    .nav-link { position: relative; }
+    .nav-link::after { content:''; position:absolute; bottom:-2px; left:0; width:0; height:2px; background:#1f7a8c; transition: width 0.3s ease; }
+    .nav-link:hover::after { width:100%; }
+  </style>
+</head>
+<body class="bg-lavender text-jet font-sans">
+
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-jet/95 backdrop-blur-sm shadow-lg">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="font-serif text-xl text-white tracking-wide">
+        Stefano Bianchi
+      </a>
+
+      <!-- Desktop nav -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html" class="nav-link text-sky text-sm font-medium hover:text-white transition-colors">Home</a>
+        <a href="#about" class="nav-link text-sky text-sm font-medium hover:text-white transition-colors">Chi Sono</a>
+        <a href="paintings.html" class="nav-link text-sky text-sm font-medium hover:text-white transition-colors">Dipinti</a>
+        <a href="sculptures.html" class="nav-link text-sky text-sm font-medium hover:text-white transition-colors">Sculture</a>
+        <a href="#contact" class="bg-teal text-white text-sm font-medium px-4 py-2 rounded hover:bg-teal/80 transition-colors">Contatto</a>
+      </div>
+
+      <!-- Mobile burger -->
+      <button @click="menuOpen = !menuOpen" class="md:hidden text-sky focus:outline-none">
+        <svg x-show="!menuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        <svg x-show="menuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div x-show="menuOpen" x-transition class="md:hidden bg-jet border-t border-teal/30 px-6 py-4 flex flex-col gap-4">
+      <a href="index.html" @click="menuOpen=false" class="text-sky text-sm hover:text-white">Home</a>
+      <a href="#about" @click="menuOpen=false" class="text-sky text-sm hover:text-white">Chi Sono</a>
+      <a href="paintings.html" @click="menuOpen=false" class="text-sky text-sm hover:text-white">Dipinti</a>
+      <a href="sculptures.html" @click="menuOpen=false" class="text-sky text-sm hover:text-white">Sculture</a>
+      <a href="#contact" @click="menuOpen=false" class="text-sky text-sm hover:text-white">Contatto</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <!-- Background image collage -->
+    <div class="absolute inset-0">
+      <img src="static/disegni/disegno_1.jpeg" alt="" class="w-full h-full object-cover object-center scale-105" />
+      <div class="hero-overlay absolute inset-0"></div>
+    </div>
+
+    <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+      <p class="text-sky text-sm font-medium tracking-[0.25em] uppercase mb-4">Venezia, 1948</p>
+      <h1 class="font-serif text-6xl md:text-8xl text-white leading-tight mb-6">
+        Stefano<br/><em class="text-sky">Bianchi</em>
+      </h1>
+      <p class="text-lavender/90 text-lg md:text-xl max-w-xl mx-auto mb-10 leading-relaxed">
+        Scultura &middot; Pittura &middot; Design
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#about" class="bg-teal hover:bg-teal/80 text-white font-medium px-8 py-3 rounded transition-colors">
+          Scopri l'Artista
+        </a>
+        <a href="paintings.html" class="border border-sky text-sky hover:bg-sky hover:text-jet font-medium px-8 py-3 rounded transition-colors">
+          Esplora le Opere
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-sky/60 animate-bounce">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+      <div>
+        <p class="text-teal text-sm font-medium tracking-[0.2em] uppercase mb-3">Chi Sono</p>
+        <h2 class="font-serif text-4xl md:text-5xl text-jet mb-8 leading-snug">
+          Una vita dedicata<br/><em>all'arte e alla forma</em>
+        </h2>
+        <div class="space-y-5 text-jet/70 leading-relaxed text-base">
+          <p>
+            Nato a Venezia nel 1948, Stefano Bianchi ha trascorso l'infanzia immerso nella bellezza senza tempo della Serenissima, tra il riflesso della laguna e l'architettura millenaria che lo ha plasmato come artista ancor prima che come uomo. Le calli silenziose, i campanili che si specchiano nell'acqua verde, i mercati del pesce di Rialto all'alba: tutto ha lasciato un'impronta indelebile nel suo sguardo sul mondo.
+          </p>
+          <p>
+            Si è formato all'<strong class="text-jet font-medium">Accademia di Belle Arti di Venezia</strong>, dove ha studiato scultura e pittura sotto la guida di maestri della tradizione figurativa italiana. Negli anni Settanta ha iniziato a sviluppare un linguaggio personale che fonde il rigore formale della scultura classica con l'urgenza espressiva della pittura contemporanea, muovendosi tra materiali come bronzo, terracotta, olio e tecniche miste su legno.
+          </p>
+          <p>
+            Riconosciuto come uno dei massimi artisti dell'Italia del Nord, il suo lavoro è stato esposto in gallerie a Milano, Torino, Venezia e nelle principali fiere d'arte europee. La sua ricerca si confronta con la memoria collettiva, la fragilità del corpo umano, e l'estetica del frammento come metafora della civiltà contemporanea.
+          </p>
+          <p>
+            Oggi vive e lavora nel suo studio a Venezia, dove continua a produrre opere che dialogano con la tradizione pur guardando con lucidità al presente.
+          </p>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="aspect-[3/4] overflow-hidden rounded-lg shadow-2xl">
+          <img src="static/sculture/scultura_1.jpeg" alt="Scultura di Stefano Bianchi" class="w-full h-full object-cover" />
+        </div>
+        <div class="absolute -bottom-6 -left-6 bg-teal text-white p-5 rounded shadow-xl">
+          <p class="font-serif text-3xl font-bold leading-none">50+</p>
+          <p class="text-sky text-xs mt-1 tracking-wide">anni di ricerca</p>
+        </div>
+        <div class="absolute -top-4 -right-4 bg-jet text-white p-4 rounded shadow-xl">
+          <p class="font-serif text-2xl font-bold leading-none">Venezia</p>
+          <p class="text-sky text-xs mt-1 tracking-wide">dal 1948</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <section class="py-20 bg-jet">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <svg class="w-10 h-10 text-teal mx-auto mb-6 opacity-60" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+      </svg>
+      <p class="font-serif text-2xl md:text-3xl text-white leading-relaxed italic mb-8">
+        "L'arte non imita la natura: ne rivela le strutture nascoste, quelle che l'occhio veloce non vede. Ogni opera è un atto di ascolto."
+      </p>
+      <p class="text-sky text-sm tracking-widest uppercase">— Stefano Bianchi</p>
+    </div>
+  </section>
+
+  <!-- GALLERY PREVIEW -->
+  <section class="py-24 bg-lavender">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <p class="text-teal text-sm font-medium tracking-[0.2em] uppercase mb-3">Le Opere</p>
+        <h2 class="font-serif text-4xl md:text-5xl text-jet leading-snug">Dipinti e Sculture</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- Card: Pittura 1 -->
+        <a href="paintings.html" class="card-hover block group rounded-lg overflow-hidden shadow-lg bg-white">
+          <div class="aspect-square overflow-hidden">
+            <img src="static/disegni/disegno_2.jpeg" alt="Composizione astratta - Stefano Bianchi"
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-5">
+            <span class="text-teal text-xs font-medium tracking-widest uppercase">Pittura</span>
+            <h3 class="font-serif text-lg text-jet mt-1 mb-2">Composizione in Rosso</h3>
+            <p class="text-jet/60 text-sm leading-relaxed">Tecnica mista su legno — le schegge di colore diventano spartito visivo.</p>
+            <p class="text-teal text-sm font-medium mt-3 group-hover:underline">Vedi la serie →</p>
+          </div>
+        </a>
+
+        <!-- Card: Scultura -->
+        <a href="sculptures.html" class="card-hover block group rounded-lg overflow-hidden shadow-lg bg-white">
+          <div class="aspect-square overflow-hidden">
+            <img src="static/sculture/scultura_1.jpeg" alt="Figura femminile - Stefano Bianchi"
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-5">
+            <span class="text-teal text-xs font-medium tracking-widest uppercase">Scultura</span>
+            <h3 class="font-serif text-lg text-jet mt-1 mb-2">Figura in Cammino</h3>
+            <p class="text-jet/60 text-sm leading-relaxed">Bronzo patinato — il corpo femminile come archetipo del movimento.</p>
+            <p class="text-teal text-sm font-medium mt-3 group-hover:underline">Vedi la serie →</p>
+          </div>
+        </a>
+
+        <!-- Card: Pittura 2 -->
+        <a href="paintings.html" class="card-hover block group rounded-lg overflow-hidden shadow-lg bg-white">
+          <div class="aspect-square overflow-hidden">
+            <img src="static/disegni/gaza.jpeg" alt="Gaza - Stefano Bianchi"
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-5">
+            <span class="text-teal text-xs font-medium tracking-widest uppercase">Pittura</span>
+            <h3 class="font-serif text-lg text-jet mt-1 mb-2">Gaza, 2024</h3>
+            <p class="text-jet/60 text-sm leading-relaxed">Acrilico su tela — macerie e luce, un grido silenzioso sul mondo.</p>
+            <p class="text-teal text-sm font-medium mt-3 group-hover:underline">Vedi la serie →</p>
+          </div>
+        </a>
+
+      </div>
+
+      <div class="text-center mt-12 flex gap-4 justify-center">
+        <a href="paintings.html" class="bg-jet hover:bg-teal text-white font-medium px-8 py-3 rounded transition-colors">
+          Tutti i Dipinti
+        </a>
+        <a href="sculptures.html" class="border border-jet text-jet hover:bg-jet hover:text-white font-medium px-8 py-3 rounded transition-colors">
+          Tutte le Sculture
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-24 bg-white">
+    <div class="max-w-2xl mx-auto px-6 text-center">
+      <p class="text-teal text-sm font-medium tracking-[0.2em] uppercase mb-3">Contatto</p>
+      <h2 class="font-serif text-4xl text-jet mb-6">Scrivimi</h2>
+      <p class="text-jet/60 mb-10 leading-relaxed">
+        Per informazioni su opere disponibili, collaborazioni, mostre o acquisti, non esitare a metterti in contatto.
+      </p>
+      <form class="space-y-4 text-left" @submit.prevent>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <input type="text" placeholder="Nome" class="w-full border border-lavender rounded px-4 py-3 text-jet focus:outline-none focus:border-teal transition-colors bg-lavender/30" />
+          <input type="email" placeholder="Email" class="w-full border border-lavender rounded px-4 py-3 text-jet focus:outline-none focus:border-teal transition-colors bg-lavender/30" />
+        </div>
+        <input type="text" placeholder="Oggetto" class="w-full border border-lavender rounded px-4 py-3 text-jet focus:outline-none focus:border-teal transition-colors bg-lavender/30" />
+        <textarea rows="5" placeholder="Messaggio..." class="w-full border border-lavender rounded px-4 py-3 text-jet focus:outline-none focus:border-teal transition-colors bg-lavender/30 resize-none"></textarea>
+        <button type="submit" class="w-full bg-teal hover:bg-jet text-white font-medium py-3 rounded transition-colors">
+          Invia Messaggio
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-jet text-sky/60 py-10">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="font-serif text-white text-lg">Stefano Bianchi</p>
+      <nav class="flex gap-6 text-sm">
+        <a href="index.html" class="hover:text-white transition-colors">Home</a>
+        <a href="paintings.html" class="hover:text-white transition-colors">Dipinti</a>
+        <a href="sculptures.html" class="hover:text-white transition-colors">Sculture</a>
+        <a href="#contact" class="hover:text-white transition-colors">Contatto</a>
+      </nav>
+      <p class="text-xs">© 2025 Stefano Bianchi. Tutti i diritti riservati.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
