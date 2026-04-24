@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="it" x-data="{ menuOpen: false, selected: null, imgIdx: 0 }">
+<html lang="it" x-data="{ menuOpen: false, selected: null }">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sculture — Stefano Bianchi Dall'Era</title>
+  <title>Design — Stefano Bianchi Dall'Era</title>
   <script>
     (function() {
       if (sessionStorage.getItem('auth') === '1') return;
@@ -70,8 +70,8 @@
         <a href="index.html" class="relative text-sky text-sm font-medium hover:text-white transition-colors">Home</a>
         <a href="index.html#about" class="relative text-sky text-sm font-medium hover:text-white transition-colors">Chi Sono</a>
         <a href="paintings.html" class="relative text-sky text-sm font-medium hover:text-white transition-colors">Opere Grafiche</a>
-        <a href="sculptures.html" class="text-white text-sm font-medium border-b border-teal pb-0.5">Sculture</a>
-        <a href="design.html" class="relative text-sky text-sm font-medium hover:text-white transition-colors">Design</a>
+        <a href="sculptures.html" class="relative text-sky text-sm font-medium hover:text-white transition-colors">Sculture</a>
+        <a href="design.html" class="text-white text-sm font-medium border-b border-teal pb-0.5">Design</a>
         <a href="index.html#contact" class="bg-teal text-white text-sm font-medium px-4 py-2 rounded hover:bg-teal/80 transition-colors">Contatto</a>
       </div>
       <button @click="menuOpen = !menuOpen" class="md:hidden text-sky focus:outline-none">
@@ -87,8 +87,8 @@
       <a href="index.html" @click="menuOpen=false" class="text-sky text-sm hover:text-white">Home</a>
       <a href="index.html#about" @click="menuOpen=false" class="text-sky text-sm hover:text-white">Chi Sono</a>
       <a href="paintings.html" @click="menuOpen=false" class="text-sky text-sm hover:text-white">Opere Grafiche</a>
-      <a href="sculptures.html" @click="menuOpen=false" class="text-white text-sm">Sculture</a>
-      <a href="design.html" @click="menuOpen=false" class="text-sky text-sm hover:text-white">Design</a>
+      <a href="sculptures.html" @click="menuOpen=false" class="text-sky text-sm hover:text-white">Sculture</a>
+      <a href="design.html" @click="menuOpen=false" class="text-white text-sm">Design</a>
       <a href="index.html#contact" @click="menuOpen=false" class="text-sky text-sm hover:text-white">Contatto</a>
     </div>
   </nav>
@@ -96,11 +96,10 @@
   <!-- PAGE HEADER -->
   <header class="pt-28 pb-16 bg-jet">
     <div class="max-w-6xl mx-auto px-6">
-      <p class="text-teal text-sm font-medium tracking-[0.25em] uppercase mb-3">Opere tridimensionali</p>
-      <h1 class="font-serif text-5xl md:text-6xl text-white leading-tight mb-4"><em class="text-sky">Sculture</em></h1>
+      <p class="text-teal text-sm font-medium tracking-[0.25em] uppercase mb-3">Industrial Design</p>
+      <h1 class="font-serif text-5xl md:text-6xl text-white leading-tight mb-4"><em class="text-sky">Design</em></h1>
       <p class="text-sky/70 max-w-2xl text-base leading-relaxed">
-        Il corpo nello spazio. Le sculture di Stefano Bianchi Dall'Era indagano la forma umana attraverso il bronzo e la terracotta,
-        ricercando nell'essenziale la verità della figura.
+        La ricerca di Stefano Bianchi Dall'Era nel settore del mobile: sedie e arredi esposti nelle principali fiere internazionali, dove forma e funzione dialogano in un equilibrio essenziale.
       </p>
     </div>
   </header>
@@ -110,61 +109,61 @@
     <div class="max-w-4xl mx-auto px-6">
       <div class="grid md:grid-cols-2 gap-10 items-center mb-12">
         <div>
-          <h2 class="font-serif text-3xl text-jet mb-4">Il corpo come linguaggio</h2>
+          <h2 class="font-serif text-3xl text-jet mb-4">Forma e funzione</h2>
           <p class="text-jet/70 leading-relaxed mb-4">
-            La scultura ha sempre occupato un posto centrale nella ricerca di Stefano Bianchi Dall'Era. Formatosi alla tradizione della scultura figurativa veneziana, ha sviluppato nel tempo un approccio che riduce la forma al suo nucleo essenziale, eliminando ogni decorazione superflua per far emergere la verità gestuale e strutturale del corpo umano.
+            Parallelamente alla pittura e alla scultura, Stefano Bianchi Dall'Era ha sviluppato una significativa attività nel campo dell'industrial design, con una concentrazione particolare sul settore del mobile. Il suo approccio muove dagli stessi principi della ricerca artistica: riduzione formale, tensione tra materiali, rispetto per la funzione d'uso.
           </p>
           <p class="text-jet/70 leading-relaxed">
-            Lavora principalmente in bronzo e terracotta — materiali che hanno memoria, che mantengono l'impronta del gesto dell'artista, la pressione di un pollice, la traccia di un utensile. Le sue figure sono sintetiche ma mai fredde: c'è sempre una tensione vitale, un movimento incompiuto che sollecita lo spettatore a completare mentalmente l'azione.
+            Le sue sedie non sono oggetti decorativi: sono soluzioni abitative con una precisa identità estetica. Strutture in legno naturale o acciaio tubolare si combinano con imbottiture cromaticamente decise — viola intenso, verde acqua — creando pezzi riconoscibili nel panorama del design italiano contemporaneo.
           </p>
         </div>
         <div>
-          <h2 class="font-serif text-3xl text-jet mb-4">La figura femminile</h2>
+          <h2 class="font-serif text-3xl text-jet mb-4">Le esposizioni internazionali</h2>
           <p class="text-jet/70 leading-relaxed mb-4">
-            Il soggetto ricorrente è la figura femminile: non come oggetto estetico, ma come archetipo del movimento, della grazia e della forza. Le donne di Bianchi camminano, si girano, si raccolgono in se stesse — sempre in uno stato di transizione, mai statiche.
+            I lavori di Bianchi Dall'Era sono stati presentati in più occasioni al <strong class="font-medium text-jet">Salone Internazionale del Mobile di Milano</strong>, al <strong class="font-medium text-jet">Salone Internazionale della Sedia di Udine</strong>, ad <strong class="font-medium text-jet">Abitare il Tempo</strong> di Verona e alla <strong class="font-medium text-jet">International Mobilmesse di Colonia</strong>.
           </p>
           <p class="text-jet/70 leading-relaxed">
-            Questo approccio richiama la grande tradizione della scultura italiana del Novecento — da Manzù a Fontana — pur mantenendo un carattere fortemente personale, riconoscibile nella sintesi formale e nella qualità della superficie patinata che assorbe e riflette la luce in modo quasi pittorico.
+            Una presenza internazionale che conferma come la sua ricerca sul design non sia marginale rispetto all'attività artistica, ma ne sia una naturale estensione: lo stesso sguardo, applicato all'oggetto che abitiamo ogni giorno.
           </p>
         </div>
       </div>
 
-      <!-- Process note -->
-      <div class="bg-lavender p-8 border-l-4">
-        <h3 class="font-serif text-xl text-jet mb-3">Il processo creativo</h3>
+      <!-- Note -->
+      <div class="bg-lavender p-8 border-l-4 border-teal">
+        <h3 class="font-serif text-xl text-jet mb-3">Design come linguaggio artistico</h3>
         <p class="text-jet/70 leading-relaxed text-sm">
-          Ogni scultura nasce da una serie di bozzetti in creta o argilla, modellati direttamente a mano nello studio veneziano. La fase di fusione in bronzo — affidata a fonderie artigianali del Veneto — viene seguita personalmente dall'artista, che supervisiona la patinatura finale per ottenere quella caratteristica superficie scura, quasi vellutata, che contraddistingue il suo lavoro scultoreo.
+          Per Bianchi Dall'Era il confine tra arte applicata e design è sempre stato poroso. Ogni pezzo nasce da un disegno a mano, dall'intuizione di una struttura, dalla scelta di un colore che non sia mai neutro. Il progetto di una sedia diventa così un atto compositivo, governato dagli stessi principi che guidano una scultura o una tela.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- SCULPTURE GALLERY -->
+  <!-- DESIGN GALLERY -->
   <section class="py-20 bg-lavender">
     <div class="max-w-6xl mx-auto px-6">
-      <h2 class="font-serif text-3xl text-jet mb-10 text-center">Galleria Sculture</h2>
+      <h2 class="font-serif text-3xl text-jet mb-10 text-center">Galleria Design</h2>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
-        <!-- Sculpture 1 -->
-        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer col-span-1 sm:col-span-2 lg:col-span-1"
+        <!-- Design 1 -->
+        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
              @click="selected = {
-               src: 'static/sculture/scultura_1.jpeg',
-               title: 'Ballerina in attesa della musica',
+               src: 'static/design/B.04.JPG',
+               title: 'Poltrona B.04',
                year: '',
-               medium: 'Legno laccato',
+               medium: 'Legno naturale, tessuto',
                dim: '',
-               desc: ''
+               desc: 'Struttura a telaio rettangolare in legno naturale chiaro: quattro montanti che disegnano nello spazio una geometria pura, quasi una scultura. La seduta e lo schienale in tessuto blu notte si inseriscono nella cornice con precisione chirurgica, creando un contrasto cromatico netto tra il caldo del legno e il profondo del colore. Un oggetto che pensa.'
              }">
           <div class="aspect-[3/4] overflow-hidden">
-            <img src="static/sculture/scultura_1.jpeg" alt="Ballerina in attesa della musica — Stefano Bianchi Dall'Era"
+            <img src="static/design/B.04.JPG" alt="Poltrona B.04 — Stefano Bianchi Dall'Era"
                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
           </div>
           <div class="p-6">
             <div class="flex justify-between items-start">
               <div>
-                <span class="text-teal text-xs font-medium tracking-widest uppercase">Legno laccato</span>
-                <h3 class="font-serif text-xl text-jet mt-1">Ballerina in attesa della musica</h3>
+                <span class="text-teal text-xs font-medium tracking-widest uppercase">Legno naturale, tessuto</span>
+                <h3 class="font-serif text-xl text-jet mt-1">Poltrona B.04</h3>
               </div>
             </div>
             <div class="mt-3 flex items-center gap-3">
@@ -173,25 +172,25 @@
           </div>
         </div>
 
-        <!-- Sculpture 2 -->
+        <!-- Design 2 -->
         <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
              @click="selected = {
-               src: 'static/sculture/ecco_la_musica.jpeg',
-               title: 'Ecco la musica è finita',
+               src: 'static/design/C,01.JPG',
+               title: 'Seduta C.01',
                year: '',
-               medium: 'Legno laccato',
+               medium: 'Acciaio, tessuto',
                dim: '',
-               desc: ''
+               desc: 'Una sedia su colonna: base circolare in acciaio spazzolato, fusto centrale, guscio continuo in tessuto viola intenso. La forma è quella di una foglia piegata, con un unico bordo anteriore appuntito che taglia l\'aria. Nessun bracciolo, nessuna ridondanza. La semplicità come rigore, non come rinuncia.'
              }">
           <div class="aspect-[3/4] overflow-hidden">
-            <img src="static/sculture/ecco_la_musica.jpeg" alt="Ecco la musica è finita — Stefano Bianchi Dall'Era"
+            <img src="static/design/C,01.JPG" alt="Seduta C.01 — Stefano Bianchi Dall'Era"
                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
           </div>
           <div class="p-6">
             <div class="flex justify-between items-start">
               <div>
-                <span class="text-teal text-xs font-medium tracking-widest uppercase">Legno laccato</span>
-                <h3 class="font-serif text-xl text-jet mt-1">Ecco la musica è finita</h3>
+                <span class="text-teal text-xs font-medium tracking-widest uppercase">Acciaio, tessuto</span>
+                <h3 class="font-serif text-xl text-jet mt-1">Seduta C.01</h3>
               </div>
             </div>
             <div class="mt-3 flex items-center gap-3">
@@ -200,52 +199,25 @@
           </div>
         </div>
 
-        <!-- Sculpture 3 -->
+        <!-- Design 3 -->
         <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
              @click="selected = {
-               src: 'static/sculture/nudo.jpeg',
-               title: 'Nudo',
+               src: 'static/design/D.02.JPG',
+               title: 'Poltrona D.02',
                year: '',
-               medium: 'Legno',
+               medium: 'Acciaio tubolare, tessuto',
                dim: '',
-               desc: 'Un torso femminile ridotto all\'essenziale: niente braccia, niente testa, solo la curva viva del corpo che parla da sola. La venatura naturale del legno diventa parte del linguaggio scultoreo — linee che scorrono lungo i fianchi e la schiena come se fossero già lì, in attesa di essere rivelate. La superficie levigata assorbe la luce con calore, trasformando la materia grezza in pelle, in respiro, in presenza.'
+               desc: 'Struttura in acciaio tubolare curvato a slitta: le gambe si aprono verso l\'esterno e si chiudono in una curva continua che tocca il pavimento con leggerezza. I braccioli seguono la stessa linea sinuosa. La seduta e lo schienale in tessuto verde acqua formano un\'unica superficie avvolgente. Tensione tra la rigidità del metallo e la morbidezza del colore.'
              }">
           <div class="aspect-[3/4] overflow-hidden">
-            <img src="static/sculture/nudo.jpeg" alt="Nudo — Stefano Bianchi Dall'Era"
+            <img src="static/design/D.02.JPG" alt="Poltrona D.02 — Stefano Bianchi Dall'Era"
                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
           </div>
           <div class="p-6">
             <div class="flex justify-between items-start">
               <div>
-                <span class="text-teal text-xs font-medium tracking-widest uppercase">Legno</span>
-                <h3 class="font-serif text-xl text-jet mt-1">Nudo</h3>
-              </div>
-            </div>
-            <div class="mt-3 flex items-center gap-3">
-              <button class="text-teal text-sm font-medium hover:underline">Leggi di più →</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Sculpture 4 -->
-        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
-             @click="imgIdx = 0; selected = {
-               srcs: ['static/sculture/contro_vento_1.jpeg', 'static/sculture/contro_vento_2.jpeg'],
-               title: 'Contro Vento',
-               year: '',
-               medium: 'Legno dipinto',
-               dim: '',
-               desc: 'Una figura femminile sorpresa da una folata: il corpo si raddrizza, le gambe resistono, il mantello nero si gonfia alle spalle come un\'ala. La tensione è tutta nella postura — rigida e al tempo stesso sul punto di cedere. Il legno naturale delle gambe e il nero steso sul torso creano un contrasto cromatico netto, quasi grafico, che amplifica la sensazione di movimento arrestato.'
-             }">
-          <div class="aspect-[3/4] overflow-hidden">
-            <img src="static/sculture/contro_vento_1.jpeg" alt="Contro Vento — Stefano Bianchi Dall'Era"
-                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
-          </div>
-          <div class="p-6">
-            <div class="flex justify-between items-start">
-              <div>
-                <span class="text-teal text-xs font-medium tracking-widest uppercase">Legno dipinto</span>
-                <h3 class="font-serif text-xl text-jet mt-1">Contro Vento</h3>
+                <span class="text-teal text-xs font-medium tracking-widest uppercase">Acciaio tubolare, tessuto</span>
+                <h3 class="font-serif text-xl text-jet mt-1">Poltrona D.02</h3>
               </div>
             </div>
             <div class="mt-3 flex items-center gap-3">
@@ -258,36 +230,46 @@
     </div>
   </section>
 
-  <!-- TECHNIQUE SECTION -->
+  <!-- FIERE SECTION -->
   <section class="py-20 bg-jet">
     <div class="max-w-6xl mx-auto px-6">
-      <div class="grid md:grid-cols-3 gap-10 text-center">
+      <h2 class="font-serif text-2xl text-white text-center mb-10">Esposizioni internazionali</h2>
+      <div class="grid md:grid-cols-4 gap-8 text-center">
         <div>
           <div class="w-12 h-12 bg-teal rounded-full flex items-center justify-center mx-auto mb-4">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
             </svg>
           </div>
-          <h3 class="font-serif text-xl text-white mb-3">Modellazione</h3>
-          <p class="text-sky/60 text-sm leading-relaxed">Ogni opera nasce come bozzetto in argilla, modellata a mano nello studio veneziano. Il contatto diretto con il materiale grezzo è per Bianchi il momento più autentico del processo creativo.</p>
+          <h3 class="font-serif text-lg text-white mb-2">Salone del Mobile</h3>
+          <p class="text-sky/60 text-sm leading-relaxed">Milano — la vetrina più importante del design italiano nel mondo.</p>
         </div>
         <div>
           <div class="w-12 h-12 bg-teal rounded-full flex items-center justify-center mx-auto mb-4">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 10h18M3 14h18M10 3v18M14 3v18"/>
             </svg>
           </div>
-          <h3 class="font-serif text-xl text-white mb-3">Intaglio del Legno</h3>
-          <p class="text-sky/60 text-sm leading-relaxed">Il legno è il materiale d'elezione: Bianchi sceglie personalmente ogni pezzo, leggendo la venatura come una mappa da rispettare. Lo scalpello segue il filo del legno, lasciando che la materia partecipi attivamente alla forma finale.</p>
+          <h3 class="font-serif text-lg text-white mb-2">Salone della Sedia</h3>
+          <p class="text-sky/60 text-sm leading-relaxed">Udine — riferimento europeo per il design della seduta.</p>
         </div>
         <div>
           <div class="w-12 h-12 bg-teal rounded-full flex items-center justify-center mx-auto mb-4">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
             </svg>
           </div>
-          <h3 class="font-serif text-xl text-white mb-3">Patinatura</h3>
-          <p class="text-sky/60 text-sm leading-relaxed">La fase di patinatura è forse la più delicata: ossidi e acidi applicati a caldo conferiscono alla superficie quella caratteristica tonalità scura che assorbe la luce come velluto e racconta il tempo.</p>
+          <h3 class="font-serif text-lg text-white mb-2">Abitare il Tempo</h3>
+          <p class="text-sky/60 text-sm leading-relaxed">Verona — fiera internazionale dell'arredo e del complemento.</p>
+        </div>
+        <div>
+          <div class="w-12 h-12 bg-teal rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9"/>
+            </svg>
+          </div>
+          <h3 class="font-serif text-lg text-white mb-2">Mobilmesse Colonia</h3>
+          <p class="text-sky/60 text-sm leading-relaxed">Colonia — palcoscenico internazionale del mobile europeo.</p>
         </div>
       </div>
     </div>
@@ -306,24 +288,9 @@
        @keydown.escape.window="selected = null">
 
     <div class="bg-white rounded-xl overflow-hidden max-w-6xl w-full shadow-2xl flex flex-col md:flex-row max-h-[95vh]">
-      <div class="md:w-2/3 overflow-hidden flex-shrink-0 bg-black flex items-center justify-center relative cursor-zoom-in"
+      <div class="md:w-2/3 overflow-hidden flex-shrink-0 bg-black flex items-center justify-center cursor-zoom-in"
            @click.stop="$el.querySelector('img').requestFullscreen?.()">
-        <img :src="selected?.srcs ? selected.srcs[imgIdx] : selected?.src"
-             :alt="selected?.title" class="w-full h-full object-contain max-h-[60vh] md:max-h-[95vh]" />
-        <!-- Navigazione multi-immagine -->
-        <template x-if="selected?.srcs && selected.srcs.length > 1">
-          <div class="absolute inset-x-0 bottom-4 flex items-center justify-center gap-4" @click.stop>
-            <button @click="imgIdx = (imgIdx - 1 + selected.srcs.length) % selected.srcs.length"
-                    class="bg-white/20 hover:bg-white/40 text-white rounded-full w-9 h-9 flex items-center justify-center transition-colors">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
-            </button>
-            <span class="text-white/70 text-xs" x-text="(imgIdx + 1) + ' / ' + selected.srcs.length"></span>
-            <button @click="imgIdx = (imgIdx + 1) % selected.srcs.length"
-                    class="bg-white/20 hover:bg-white/40 text-white rounded-full w-9 h-9 flex items-center justify-center transition-colors">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-            </button>
-          </div>
-        </template>
+        <img :src="selected?.src" :alt="selected?.title" class="w-full h-full object-contain max-h-[60vh] md:max-h-[95vh]" />
       </div>
       <div class="md:w-1/3 p-8 overflow-y-auto flex flex-col justify-between">
         <div>
@@ -331,7 +298,7 @@
           <h2 class="font-serif text-3xl text-jet mt-2 mb-1" x-text="selected?.title"></h2>
           <div class="flex gap-3 items-center mb-6">
             <p class="text-jet/40 font-serif text-lg" x-text="selected?.year"></p>
-            <span class="text-jet/30">·</span>
+            <span x-show="selected?.year && selected?.dim" class="text-jet/30">·</span>
             <p class="text-jet/40 text-sm" x-text="selected?.dim"></p>
           </div>
           <p class="text-jet/70 leading-relaxed text-sm" x-text="selected?.desc"></p>
@@ -357,8 +324,8 @@
       <nav class="flex gap-6 text-sm">
         <a href="index.html" class="hover:text-white transition-colors">Home</a>
         <a href="paintings.html" class="hover:text-white transition-colors">Opere Grafiche</a>
-        <a href="sculptures.html" class="text-white">Sculture</a>
-        <a href="design.html" class="hover:text-white transition-colors">Design</a>
+        <a href="sculptures.html" class="hover:text-white transition-colors">Sculture</a>
+        <a href="design.html" class="text-white">Design</a>
         <a href="index.html#contact" class="hover:text-white transition-colors">Contatto</a>
       </nav>
       <p class="text-xs">© 2025 Stefano Bianchi Dall'Era. Tutti i diritti riservati.</p>
