@@ -125,7 +125,7 @@
           La città natale ritorna nelle opere architettoniche: campanili che emergono dal piano pittorico come apparizioni, imbarcazioni che tagliano la composizione con la loro geometria austera. Il segno è preciso, quasi tecnico, ma l'atmosfera è quella della nebbia lagunare, dell'ambiguità tra reale e riflesso.
         </p>
         <p class="text-jet/70 leading-relaxed">
-          L'opera <em>Disegno 1</em> (2023) è un esempio emblematico: la torre di Piazza San Marco emerge da uno sfondo granulare che evoca nebbia e sabbia, mentre la barca in primo piano — silenziosa, immobile — introduce una nota di attesa sospesa nel tempo.
+          L'opera <em>Venezia, Punta della Dogana</em> (2023) è un esempio emblematico: la torre di Piazza San Marco emerge da uno sfondo granulare che evoca nebbia e sabbia, mentre la barca in primo piano — silenziosa, immobile — introduce una nota di attesa sospesa nel tempo.
         </p>
       </div>
     </div>
@@ -134,255 +134,209 @@
   <!-- GALLERY -->
   <section class="py-20 bg-lavender">
     <div class="max-w-6xl mx-auto px-6">
-      <h2 class="font-serif text-3xl text-jet mb-10 text-center">Galleria</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
 
-        <!-- Painting 1 -->
+        <div class="col-span-full pt-8 pb-4">
+          <div class="border-b border-teal/20"></div>
+        </div>
+
         <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
-             @click="selected = {
-               src: 'static/disegni/disegno_1.jpeg',
-               title: 'Venezia — La Torre',
-               year: '2023',
-               medium: 'Inchiostro e tecnica mista su carta',
-               desc: 'La torre di piazza San Marco emerge da un fondale granulare di segni e ombre. La barca in primo piano, geometrica e silenziosa, introduce la dimensione del viaggio e dell\'attesa. Un omaggio alla città natale, filtrato attraverso un linguaggio che coniuga precisione grafica e suggestione atmosferica.'
-             }">
+             @click="selected = { src: 'static/disegni/venezia_punta_della_dogana.jpeg', title: 'Venezia, Punta della Dogana', year: '2023', medium: 'Grafite e retini su carta', desc: 'A4 — Mostra ¿Y si dibujamos barcos?, Spagna' }">
           <div class="aspect-[3/4] overflow-hidden bg-white px-2 pb-2 pt-6">
-            <img src="static/disegni/disegno_1.jpeg" alt="Venezia — La Torre"
+            <img src="static/disegni/venezia_punta_della_dogana.jpeg" alt="Venezia, Punta della Dogana"
                  class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
           </div>
           <div class="p-5">
             <div class="flex justify-between items-start">
               <div>
-                <span class="text-teal text-xs font-medium tracking-widest uppercase">Tecnica mista</span>
-                <h3 class="font-serif text-xl text-jet mt-1">Venezia — La Torre</h3>
+                <span class="text-teal text-xs font-medium tracking-widest uppercase">Grafite e retini su carta</span>
+                <h3 class="font-serif text-xl text-jet mt-1">Venezia, Punta della Dogana</h3>
               </div>
               <span class="text-jet/40 font-serif text-sm mt-1">2023</span>
             </div>
-            <p class="text-jet/60 text-sm mt-2 leading-relaxed">Inchiostro e grafite su carta — la Serenissima come archeologia del presente.</p>
-            <button class="mt-3 text-teal text-sm font-medium hover:underline">Leggi di più →</button>
+            <p class="text-jet/50 text-xs mt-2">A4</p>
           </div>
         </div>
 
-        <!-- Painting 2 -->
         <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
-             @click="selected = {
-               src: 'static/disegni/disegno_2.jpeg',
-               title: 'Composizione Centripeta',
-               year: '1994',
-               medium: 'Tecnica mista su legno pressato',
-               desc: 'I frammenti di tavole colorate si accumulano in una composizione centrifuga che trasmette energia e movimento. Il legno grezzo del pannello di fondo fa parte integrante dell\'opera: non è semplice supporto ma materia viva che dialoga con i colori sovrapposti — rosso, ocra, turchese, blu intenso. Firmato 1994, questo lavoro segna la maturità del linguaggio frammentario di Bianchi.'
-             }">
-          <div class="aspect-square overflow-hidden">
-            <img src="static/disegni/disegno_2.jpeg" alt="Composizione Centripeta"
+             @click="selected = { src: 'static/disegni/stop_incidenti_sul_lavoro.jpeg', title: 'Stop agli incidenti sul lavoro', year: '2025', medium: 'Grafite, retini, tarsie e pennarelli su carta', desc: 'A4' }">
+          <div class="aspect-[3/4] overflow-hidden bg-white px-2 pb-2 pt-6">
+            <img src="static/disegni/stop_incidenti_sul_lavoro.jpeg" alt="Stop agli incidenti sul lavoro"
                  class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
           </div>
           <div class="p-5">
             <div class="flex justify-between items-start">
               <div>
-                <span class="text-teal text-xs font-medium tracking-widest uppercase">Pittura</span>
-                <h3 class="font-serif text-xl text-jet mt-1">Composizione Centripeta</h3>
+                <span class="text-teal text-xs font-medium tracking-widest uppercase">Grafite, retini, tarsie e pennarelli su carta</span>
+                <h3 class="font-serif text-xl text-jet mt-1">Stop agli incidenti sul lavoro</h3>
               </div>
-              <span class="text-jet/40 font-serif text-sm mt-1">1994</span>
+              <span class="text-jet/40 font-serif text-sm mt-1">2025</span>
             </div>
-            <p class="text-jet/60 text-sm mt-2 leading-relaxed">Tecnica mista su legno — schegge cromatiche come spartito visivo del caos ordinato.</p>
-            <button class="mt-3 text-teal text-sm font-medium hover:underline">Leggi di più →</button>
+            <p class="text-jet/50 text-xs mt-2">A4</p>
           </div>
         </div>
 
-        <!-- Painting 3 -->
+        <div class="col-span-full pt-8 pb-4">
+          <div class="border-b border-teal/20"></div>
+        </div>
+
         <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
-             @click="selected = {
-               src: 'static/disegni/disegno_3.jpeg',
-               title: 'Il Dubbio',
-               year: '2024',
-               medium: 'Acrilico su legno pressato',
-               desc: 'La palette si riduce all\'essenziale: bianco, nero, e le tonalità intermedie del legno naturale. I frammenti sono meno dinamici che nella serie rossa: sembrano essere stati deposti piuttosto che lanciati, come relitti di qualcosa che è già accaduto. Un\'opera meditativa, dove il silenzio è materia espressiva tanto quanto il colore. Firmata novembre 2024.'
-             }">
-          <div class="aspect-square overflow-hidden">
-            <img src="static/disegni/disegno_3.jpeg" alt="Il Dubbio"
+             @click="selected = { src: 'static/disegni/senza_titolo_1976.jpeg', title: 'Senza titolo', year: '1976', medium: 'Pastelli e pennarelli su carta', desc: '47 × 67 cm' }">
+          <div class="aspect-[3/4] overflow-hidden bg-white px-2 pb-2 pt-6">
+            <img src="static/disegni/senza_titolo_1976.jpeg" alt="Senza titolo, 1976"
                  class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
           </div>
           <div class="p-5">
             <div class="flex justify-between items-start">
               <div>
-                <span class="text-teal text-xs font-medium tracking-widest uppercase">Pittura</span>
+                <span class="text-teal text-xs font-medium tracking-widest uppercase">Pastelli e pennarelli su carta</span>
+                <h3 class="font-serif text-xl text-jet mt-1">Senza titolo</h3>
+              </div>
+              <span class="text-jet/40 font-serif text-sm mt-1">1976</span>
+            </div>
+            <p class="text-jet/50 text-xs mt-2">47 × 67 cm</p>
+          </div>
+        </div>
+
+        <div class="col-span-full pt-8 pb-4">
+          <div class="border-b border-teal/20"></div>
+        </div>
+
+        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
+             @click="selected = { src: 'static/disegni/il_dubbio.jpeg', title: 'Il Dubbio', year: '2024', medium: 'Pennarelli su truciolare edilizio', desc: '24,5 × 24,5 cm' }">
+          <div class="aspect-square overflow-hidden bg-white px-2 pb-2 pt-6">
+            <img src="static/disegni/il_dubbio.jpeg" alt="Il Dubbio"
+                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-5">
+            <div class="flex justify-between items-start">
+              <div>
+                <span class="text-teal text-xs font-medium tracking-widest uppercase">Pennarelli su truciolare edilizio</span>
                 <h3 class="font-serif text-xl text-jet mt-1">Il Dubbio</h3>
               </div>
               <span class="text-jet/40 font-serif text-sm mt-1">2024</span>
             </div>
-            <p class="text-jet/60 text-sm mt-2 leading-relaxed">Acrilico su legno — il silenzio come materia, il relitto come forma del tempo.</p>
-            <button class="mt-3 text-teal text-sm font-medium hover:underline">Leggi di più →</button>
+            <p class="text-jet/50 text-xs mt-2">24,5 × 24,5 cm</p>
           </div>
         </div>
 
-        <!-- Painting 4: Gaza -->
         <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
-             @click="selected = {
-               src: 'static/disegni/gaza.jpeg',
-               title: 'Gaza, 2024',
-               year: '2024',
-               medium: 'Acrilico su tela',
-               desc: 'Un\'opera che si impone per la sua carica morale e politica. Le macerie dipinte — travi spezzate, calcinacci, frammenti di strutture — rimandano esplicitamente alle immagini di distruzione che il mondo ha osservato con orrore. La superficie della tela, lasciata parzialmente grezza come legno e gesso, amplifica il senso di brutalità e di fine. Bianchi non è mai stato un artista programmaticamente politico, ma alcune realtà chiedono di essere nominate.'
-             }">
-          <div class="aspect-square overflow-hidden">
-            <img src="static/disegni/gaza.jpeg" alt="Gaza, 2024"
-                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
-          </div>
-          <div class="p-5">
-            <div class="flex justify-between items-start">
-              <div>
-                <span class="text-teal text-xs font-medium tracking-widest uppercase">Pittura</span>
-                <h3 class="font-serif text-xl text-jet mt-1">Gaza, 2024</h3>
-              </div>
-              <span class="text-jet/40 font-serif text-sm mt-1">2024</span>
-            </div>
-            <p class="text-jet/60 text-sm mt-2 leading-relaxed">Acrilico su tela — macerie e luce, un grido silenzioso rivolto al mondo.</p>
-            <button class="mt-3 text-teal text-sm font-medium hover:underline">Leggi di più →</button>
-          </div>
-        </div>
-
-        <!-- Painting 5: Ascensione Diagonale -->
-        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
-             @click="selected = {
-               src: 'static/disegni/disegno_4.jpeg',
-               title: 'Ascensione Diagonale',
-               year: '',
-               medium: 'Opera grafica',
-               desc: ''
-             }">
-          <div class="aspect-square overflow-hidden">
-            <img src="static/disegni/disegno_4.jpeg" alt="Ascensione Diagonale"
-                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
-          </div>
-          <div class="p-5">
-            <div class="flex justify-between items-start">
-              <div>
-                <span class="text-teal text-xs font-medium tracking-widest uppercase">Opera grafica</span>
-                <h3 class="font-serif text-xl text-jet mt-1">Ascensione Diagonale</h3>
-              </div>
-            </div>
-            <button class="mt-3 text-teal text-sm font-medium hover:underline">Leggi di più →</button>
-          </div>
-        </div>
-
-        <!-- Painting 6: Sospensione -->
-        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
-             @click="selected = {
-               src: 'static/disegni/composizione_orizzontale.jpeg',
-               title: 'Sospensione',
-               year: '',
-               medium: 'Opera grafica',
-               desc: ''
-             }">
-          <div class="aspect-square overflow-hidden">
-            <img src="static/disegni/composizione_orizzontale.jpeg" alt="Sospensione"
-                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
-          </div>
-          <div class="p-5">
-            <div class="flex justify-between items-start">
-              <div>
-                <span class="text-teal text-xs font-medium tracking-widest uppercase">Opera grafica</span>
-                <h3 class="font-serif text-xl text-jet mt-1">Sospensione</h3>
-              </div>
-            </div>
-            <button class="mt-3 text-teal text-sm font-medium hover:underline">Leggi di più →</button>
-          </div>
-        </div>
-
-        <!-- Painting 7: Basta incidenti sul lavoro -->
-        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
-             @click="selected = {
-               src: 'static/disegni/incidenti_lavoro.jpeg',
-               title: 'Basta incidenti sul lavoro',
-               year: '',
-               medium: '',
-               desc: 'Il linguaggio pittorico tiene in considerazione che a vedere questa mostra non saranno i critici d\'arte bensì il \u201cPopolo\u201d. Volevo che il messaggio, che a me sta particolarmente a cuore, fosse di facile lettura.'
-             }">
-          <div class="aspect-square overflow-hidden">
-            <img src="static/disegni/incidenti_lavoro.jpeg" alt="Basta incidenti sul lavoro"
-                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
-          </div>
-          <div class="p-5">
-            <div class="flex justify-between items-start">
-              <div>
-                <span class="text-teal text-xs font-medium tracking-widest uppercase">Pittura</span>
-                <h3 class="font-serif text-xl text-jet mt-1">Basta incidenti sul lavoro</h3>
-              </div>
-            </div>
-            <button class="mt-3 text-teal text-sm font-medium hover:underline">Leggi di più →</button>
-          </div>
-        </div>
-
-        <!-- Painting: Espansione -->
-        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
-             @click="selected = {
-               src: 'static/disegni/espansione.jpeg',
-               title: 'Espansione',
-               year: '',
-               medium: 'Opera grafica',
-               desc: ''
-             }">
-          <div class="aspect-square overflow-hidden">
+             @click="selected = { src: 'static/disegni/espansione.jpeg', title: 'Espansione', year: '2024', medium: 'Pennarelli su truciolare edilizio', desc: '24,5 × 24,5 cm' }">
+          <div class="aspect-square overflow-hidden bg-white px-2 pb-2 pt-6">
             <img src="static/disegni/espansione.jpeg" alt="Espansione"
                  class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
           </div>
           <div class="p-5">
             <div class="flex justify-between items-start">
               <div>
-                <span class="text-teal text-xs font-medium tracking-widest uppercase">Opera grafica</span>
+                <span class="text-teal text-xs font-medium tracking-widest uppercase">Pennarelli su truciolare edilizio</span>
                 <h3 class="font-serif text-xl text-jet mt-1">Espansione</h3>
               </div>
+              <span class="text-jet/40 font-serif text-sm mt-1">2024</span>
             </div>
-            <button class="mt-3 text-teal text-sm font-medium hover:underline">Leggi di più →</button>
+            <p class="text-jet/50 text-xs mt-2">24,5 × 24,5 cm</p>
           </div>
         </div>
 
-        <!-- Painting: Geometrie Veneziane -->
+        <div class="col-span-full pt-8 pb-4">
+          <div class="border-b border-teal/20"></div>
+        </div>
+
         <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
-             @click="selected = {
-               src: 'static/disegni/geometrie_veneziane.jpeg',
-               title: 'Geometrie Veneziane',
-               year: '',
-               medium: 'Opera grafica',
-               desc: ''
-             }">
-          <div class="aspect-square overflow-hidden">
+             @click="selected = { src: 'static/disegni/composizione_centripeta.jpeg', title: 'Composizione Centripeta', year: '2024', medium: 'Pennarelli e pastelli su truciolare edilizio', desc: '24,5 × 24,5 cm' }">
+          <div class="aspect-square overflow-hidden bg-white px-2 pb-2 pt-6">
+            <img src="static/disegni/composizione_centripeta.jpeg" alt="Composizione Centripeta"
+                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-5">
+            <div class="flex justify-between items-start">
+              <div>
+                <span class="text-teal text-xs font-medium tracking-widest uppercase">Pennarelli e pastelli su truciolare edilizio</span>
+                <h3 class="font-serif text-xl text-jet mt-1">Composizione Centripeta</h3>
+              </div>
+              <span class="text-jet/40 font-serif text-sm mt-1">2024</span>
+            </div>
+            <p class="text-jet/50 text-xs mt-2">24,5 × 24,5 cm</p>
+          </div>
+        </div>
+
+        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
+             @click="selected = { src: 'static/disegni/ascensione_diagonale.jpeg', title: 'Ascensione Diagonale', year: '2024', medium: 'Pennarelli e pastelli su truciolare edilizio', desc: '24,5 × 24,5 cm' }">
+          <div class="aspect-square overflow-hidden bg-white px-2 pb-2 pt-6">
+            <img src="static/disegni/ascensione_diagonale.jpeg" alt="Ascensione Diagonale"
+                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-5">
+            <div class="flex justify-between items-start">
+              <div>
+                <span class="text-teal text-xs font-medium tracking-widest uppercase">Pennarelli e pastelli su truciolare edilizio</span>
+                <h3 class="font-serif text-xl text-jet mt-1">Ascensione Diagonale</h3>
+              </div>
+              <span class="text-jet/40 font-serif text-sm mt-1">2024</span>
+            </div>
+            <p class="text-jet/50 text-xs mt-2">24,5 × 24,5 cm</p>
+          </div>
+        </div>
+
+        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
+             @click="selected = { src: 'static/disegni/sospensione.jpeg', title: 'Sospensione', year: '2024', medium: 'Pennarelli e pastelli su truciolare edilizio', desc: '24,5 × 24,5 cm' }">
+          <div class="aspect-square overflow-hidden bg-white px-2 pb-2 pt-6">
+            <img src="static/disegni/sospensione.jpeg" alt="Sospensione"
+                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-5">
+            <div class="flex justify-between items-start">
+              <div>
+                <span class="text-teal text-xs font-medium tracking-widest uppercase">Pennarelli e pastelli su truciolare edilizio</span>
+                <h3 class="font-serif text-xl text-jet mt-1">Sospensione</h3>
+              </div>
+              <span class="text-jet/40 font-serif text-sm mt-1">2024</span>
+            </div>
+            <p class="text-jet/50 text-xs mt-2">24,5 × 24,5 cm</p>
+          </div>
+        </div>
+
+        <div class="col-span-full pt-8 pb-4">
+          <div class="border-b border-teal/20"></div>
+        </div>
+
+        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
+             @click="selected = { src: 'static/disegni/geometrie_veneziane.jpeg', title: 'Geometrie Veneziane', year: '2015', medium: 'Mascherine e vernice a spruzzo, tarsie e pastelli', desc: '40 × 40 cm' }">
+          <div class="aspect-square overflow-hidden bg-white px-2 pb-2 pt-6">
             <img src="static/disegni/geometrie_veneziane.jpeg" alt="Geometrie Veneziane"
                  class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
           </div>
           <div class="p-5">
             <div class="flex justify-between items-start">
               <div>
-                <span class="text-teal text-xs font-medium tracking-widest uppercase">Opera grafica</span>
+                <span class="text-teal text-xs font-medium tracking-widest uppercase">Mascherine e vernice a spruzzo</span>
                 <h3 class="font-serif text-xl text-jet mt-1">Geometrie Veneziane</h3>
               </div>
+              <span class="text-jet/40 font-serif text-sm mt-1">2015</span>
             </div>
-            <button class="mt-3 text-teal text-sm font-medium hover:underline">Leggi di più →</button>
+            <p class="text-jet/50 text-xs mt-2">40 × 40 cm</p>
           </div>
         </div>
 
-        <!-- Painting: Due -->
+        <div class="col-span-full pt-8 pb-4">
+          <div class="border-b border-teal/20"></div>
+        </div>
+
         <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
-             @click="selected = {
-               src: 'static/disegni/due.jpeg',
-               title: 'Due',
-               year: '1976',
-               medium: 'Pennarelli e pastelli su carta',
-               desc: 'Un amplesso tra un uomo e una donna, tracciato con segno rapido e continuo. Le linee nere, rosse e gialle si intrecciano e si sovrappongono senza mai chiudersi del tutto, lasciando che i corpi emergano per sottrazione dal bianco della carta. Un disegno dal vivo degli anni Settanta: puro gesto, pura osservazione.'
-             }">
-          <div class="aspect-[3/4] overflow-hidden bg-white px-2 pb-2 pt-6">
-            <img src="static/disegni/due.jpeg" alt="Due — Stefano Bianchi Dall'Era"
+             @click="selected = { src: 'static/disegni/gaza.jpeg', title: 'Gaza 2025 - Stop a tutte le guerre', year: '2025', medium: 'Olio e stucco su truciolare edilizio', desc: '55 × 55 cm' }">
+          <div class="aspect-square overflow-hidden bg-white px-2 pb-2 pt-6">
+            <img src="static/disegni/gaza.jpeg" alt="Gaza 2025 - Stop a tutte le guerre"
                  class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
           </div>
           <div class="p-5">
             <div class="flex justify-between items-start">
               <div>
-                <span class="text-teal text-xs font-medium tracking-widest uppercase">Pennarelli e pastelli su carta</span>
-                <h3 class="font-serif text-xl text-jet mt-1">Due</h3>
+                <span class="text-teal text-xs font-medium tracking-widest uppercase">Olio e stucco su truciolare edilizio</span>
+                <h3 class="font-serif text-xl text-jet mt-1">Gaza 2025 - Stop a tutte le guerre</h3>
               </div>
-              <span class="text-jet/40 font-serif text-sm mt-1">1976</span>
+              <span class="text-jet/40 font-serif text-sm mt-1">2025</span>
             </div>
-            <button class="mt-3 text-teal text-sm font-medium hover:underline">Leggi di più →</button>
+            <p class="text-jet/50 text-xs mt-2">55 × 55 cm</p>
           </div>
         </div>
 

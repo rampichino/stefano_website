@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mv \"disegno_1.jpeg\" \"venezia_punta_della_dogana.jpeg\")",
+      "Bash(mv \"disegno_2.jpeg\" \"composizione_centripeta.jpeg\")",
+      "Bash(mv \"disegno_3.jpeg\" \"il_dubbio.jpeg\")",
+      "Bash(mv \"disegno_4.jpeg\" \"ascensione_diagonale.jpeg\")",
+      "Bash(mv \"composizione_orizzontale.jpeg\" \"sospensione.jpeg\")"
+    ]
+  }
+}
