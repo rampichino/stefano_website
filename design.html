@@ -392,6 +392,22 @@
           </div>
         </div>
 
+        <!-- ZETATRE: MANHATTAN 1983 -->
+        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
+             @click="selected = { src: 'static/design/Mod. MANHATTAN   1983 produzione ZETATRE.jpeg', title: 'MANHATTAN', year: '1983', medium: 'Produzione ZETATRE', dim: '', desc: '' }">
+          <div class="aspect-[3/4] overflow-hidden bg-white p-2">
+            <img src="static/design/Mod. MANHATTAN   1983 produzione ZETATRE.jpeg" alt="MANHATTAN"
+                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-5">
+            <span class="text-teal text-xs font-medium tracking-widest uppercase">Produzione ZETATRE</span>
+            <div class="flex justify-between items-baseline mt-1">
+              <h3 class="font-serif text-xl text-jet">MANHATTAN</h3>
+              <span class="text-jet/40 font-serif text-sm">1983</span>
+            </div>
+          </div>
+        </div>
+
         <!-- SEDIE -->
         <div class="col-span-full pt-8 pb-2">
           <p class="text-jet font-serif text-2xl mb-1">Sedie</p>
@@ -496,8 +512,14 @@
 
     <div class="bg-white rounded-xl overflow-hidden max-w-6xl w-full shadow-2xl flex flex-col md:flex-row max-h-[95vh]">
       <div class="md:w-2/3 overflow-hidden flex-shrink-0 bg-black flex items-center justify-center relative">
-        <img :src="selected?.srcs ? selected.srcs[imgIdx] : selected?.src" :alt="selected?.title"
-             class="w-full h-full object-contain max-h-[60vh] md:max-h-[95vh]" />
+        <template x-if="!((selected?.srcs ? selected.srcs[imgIdx] : selected?.src) || '').match(/\.mp4$/i)">
+          <img :src="selected?.srcs ? selected.srcs[imgIdx] : selected?.src" :alt="selected?.title"
+               class="w-full h-full object-contain max-h-[60vh] md:max-h-[95vh]" />
+        </template>
+        <template x-if="((selected?.srcs ? selected.srcs[imgIdx] : selected?.src) || '').match(/\.mp4$/i)">
+          <video :src="selected?.srcs ? selected.srcs[imgIdx] : selected?.src"
+                 controls class="w-full h-full object-contain max-h-[60vh] md:max-h-[95vh]"></video>
+        </template>
         <button x-show="selected?.srcs && selected.srcs.length > 1"
                 @click.stop="imgIdx = (imgIdx - 1 + selected.srcs.length) % selected.srcs.length"
                 class="absolute left-3 top-1/2 -translate-y-1/2 bg-jet/60 hover:bg-jet text-white rounded-full w-10 h-10 flex items-center justify-center text-xl">‹</button>
@@ -532,64 +554,123 @@
       <h2 class="font-serif text-3xl text-jet mb-10">Prototipi e maquette</h2>
       <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
 
-        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square"
-             @click="selected = { src: 'static/design/prototipi/prototipo.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
-          <img src="static/design/prototipi/prototipo.JPG" alt="Prototipo"
-               class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
+
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/bozzetto 1.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+          <img src="static/design/prototipi/bozzetto 1.JPG" alt="Bozzetto" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
+        </div>
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/bozzetto 2.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+          <img src="static/design/prototipi/bozzetto 2.JPG" alt="Bozzetto" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
+        </div>
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/bozzetto 3.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+          <img src="static/design/prototipi/bozzetto 3.JPG" alt="Bozzetto" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
+        </div>
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/bozzetto 4.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+          <img src="static/design/prototipi/bozzetto 4.JPG" alt="Bozzetto" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
+        </div>
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/bozzetto 5.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+          <img src="static/design/prototipi/bozzetto 5.JPG" alt="Bozzetto" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
+        </div>
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/bozzetto 6.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+          <img src="static/design/prototipi/bozzetto 6.JPG" alt="Bozzetto" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
+        </div>
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/bozzetto 7.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+          <img src="static/design/prototipi/bozzetto 7.JPG" alt="Bozzetto" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
+        </div>
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/bozzetto 8.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+          <img src="static/design/prototipi/bozzetto 8.JPG" alt="Bozzetto" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
+        </div>
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/bozzetto 9.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+          <img src="static/design/prototipi/bozzetto 9.JPG" alt="Bozzetto" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
+        </div>
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/bozzetto 10.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+          <img src="static/design/prototipi/bozzetto 10.JPG" alt="Bozzetto" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
+        </div>
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/bozzetto 11.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+          <img src="static/design/prototipi/bozzetto 11.JPG" alt="Bozzetto" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
+        </div>
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/bozzetto 12.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+          <img src="static/design/prototipi/bozzetto 12.JPG" alt="Bozzetto" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
+        </div>
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/bozzetto 13.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+          <img src="static/design/prototipi/bozzetto 13.JPG" alt="Bozzetto" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
+        </div>
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/bozzetto 14.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+          <img src="static/design/prototipi/bozzetto 14.JPG" alt="Bozzetto" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
+        </div>
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/bozzetto 15.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+          <img src="static/design/prototipi/bozzetto 15.JPG" alt="Bozzetto" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
+        </div>
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/bozzetto 16.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+          <img src="static/design/prototipi/bozzetto 16.JPG" alt="Bozzetto" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
         </div>
 
-        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square"
-             @click="selected = { src: 'static/design/prototipi/prototipo (2).JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
-          <img src="static/design/prototipi/prototipo (2).JPG" alt="Prototipo"
-               class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/maquette 1.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+          <img src="static/design/prototipi/maquette 1.JPG" alt="Maquette" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
+        </div>
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/maquette 2.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+          <img src="static/design/prototipi/maquette 2.JPG" alt="Maquette" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
+        </div>
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/maquette 3.jpg', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+          <img src="static/design/prototipi/maquette 3.jpg" alt="Maquette" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
+        </div>
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/maquette 4.jpg', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+          <img src="static/design/prototipi/maquette 4.jpg" alt="Maquette" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
+        </div>
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/maquette 5.jpg', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+          <img src="static/design/prototipi/maquette 5.jpg" alt="Maquette" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
+        </div>
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/maquette 6.jpg', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+          <img src="static/design/prototipi/maquette 6.jpg" alt="Maquette" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
+        </div>
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/maquette 7.jpg', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+          <img src="static/design/prototipi/maquette 7.jpg" alt="Maquette" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
+        </div>
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/maquette 8.jpg', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+          <img src="static/design/prototipi/maquette 8.jpg" alt="Maquette" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
+        </div>
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/maquette 9.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+          <img src="static/design/prototipi/maquette 9.JPG" alt="Maquette" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
+        </div>
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/maquette 10.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+          <img src="static/design/prototipi/maquette 10.JPG" alt="Maquette" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
+        </div>
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/maquette 11.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+          <img src="static/design/prototipi/maquette 11.JPG" alt="Maquette" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
+        </div>
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/maquette 12.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+          <img src="static/design/prototipi/maquette 12.JPG" alt="Maquette" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
+        </div>
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/maquette 13.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+          <img src="static/design/prototipi/maquette 13.JPG" alt="Maquette" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
+        </div>
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/maquette 14.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+          <img src="static/design/prototipi/maquette 14.JPG" alt="Maquette" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
         </div>
 
-        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square"
-             @click="selected = { src: 'static/design/prototipi/prototipo (3).JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
-          <img src="static/design/prototipi/prototipo (3).JPG" alt="Prototipo"
-               class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/prototipo 1.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+          <img src="static/design/prototipi/prototipo 1.JPG" alt="Prototipo" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
         </div>
-
-        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square"
-             @click="selected = { src: 'static/design/prototipi/prototipo (4).JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
-          <img src="static/design/prototipi/prototipo (4).JPG" alt="Prototipo"
-               class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/prototipo 2.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+          <img src="static/design/prototipi/prototipo 2.JPG" alt="Prototipo" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
         </div>
-
-        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square"
-             @click="selected = { src: 'static/design/prototipi/mod. TRIA prototipo.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
-          <img src="static/design/prototipi/mod. TRIA prototipo.JPG" alt="Mod. TRIA prototipo"
-               class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/prototipo 3.jpg', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+          <img src="static/design/prototipi/prototipo 3.jpg" alt="Prototipo" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
         </div>
-
-        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square"
-             @click="selected = { src: 'static/design/prototipi/maquette.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
-          <img src="static/design/prototipi/maquette.JPG" alt="Maquette"
-               class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/prototipo 4.jpg', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+          <img src="static/design/prototipi/prototipo 4.jpg" alt="Prototipo" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
         </div>
-
-        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square"
-             @click="selected = { src: 'static/design/prototipi/sedia impilabile machette.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
-          <img src="static/design/prototipi/sedia impilabile machette.JPG" alt="Sedia impilabile"
-               class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/prototipo 5.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+          <img src="static/design/prototipi/prototipo 5.JPG" alt="Prototipo" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
         </div>
-
-        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square"
-             @click="selected = { srcs: ['static/design/prototipi/sedia pieghevole bozzetto.JPG', 'static/design/prototipi/sedia pieghevole prototipo.JPG'], title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
-          <img src="static/design/prototipi/sedia pieghevole bozzetto.JPG" alt="Sedia pieghevole"
-               class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/prototipo 6.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+          <img src="static/design/prototipi/prototipo 6.JPG" alt="Prototipo" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
         </div>
-
-        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square"
-             @click="selected = { src: 'static/design/prototipi/servitore prototipo.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
-          <img src="static/design/prototipi/servitore prototipo.JPG" alt="Servitore prototipo"
-               class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/prototipo 7.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+          <img src="static/design/prototipi/prototipo 7.JPG" alt="Prototipo" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
         </div>
-
         <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square"
-             @click="selected = { src: 'static/design/prototipi/servitori impilabili maquette.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
-          <img src="static/design/prototipi/servitori impilabili maquette.JPG" alt="Servitori impilabili"
-               class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
+             @click="imgIdx = 0; selected = { srcs: ['static/design/prototipi/prototipo 8/mod. GAMBIT prototipo e maquette  2008.jpg', 'static/design/prototipi/prototipo 8/mod, GAMBIT interno.jpg', 'static/design/prototipi/prototipo 8/mod. GAMBIT dettaglio.JPG', 'static/design/prototipi/prototipo 8/mod, GAMBIT madia maquette.jpg', 'static/design/prototipi/prototipo 8/mod. GAMBIT sedia.jpg', 'static/design/prototipi/prototipo 8/mod. GAMBIT apertura.mp4'], title: 'GAMBIT', year: '2008', medium: '', dim: '', desc: '', noContact: true }">
+          <img src="static/design/prototipi/prototipo 8/mod. GAMBIT prototipo e maquette  2008.jpg" alt="GAMBIT" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
         </div>
 
       </div>
