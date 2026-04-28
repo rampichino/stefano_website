@@ -1,7 +1,11 @@
 {
   "permissions": {
     "allow": [
-      "PowerShell(winget install ffmpeg --accept-source-agreements --accept-package-agreements)"
+      "PowerShell(winget install ffmpeg --accept-source-agreements --accept-package-agreements)",
+      "Bash(grep -v \"^prototipo 8$\")"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\aless\\Desktop"
     ]
   }
 }
