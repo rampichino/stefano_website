@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="it" x-data="{ menuOpen: false, selected: null, imgIdx: 0 }">
 <head>
   <meta charset="UTF-8" />
@@ -160,9 +160,9 @@
 
         <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
              @click="imgIdx = 0; selected = { src: 'static/sculture/ballerina in attesa della musica 2023.jpeg', title: 'Ballerina in attesa della musica', year: '2023', medium: 'Legno laccato', dim: '', desc: '' }">
-          <div class="aspect-[3/4] overflow-hidden">
+          <div class="aspect-[3/4] overflow-hidden bg-white">
             <img src="static/sculture/ballerina in attesa della musica 2023.jpeg" alt="Ballerina in attesa della musica"
-                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
           </div>
           <div class="p-6">
             <span class="text-teal text-xs font-medium tracking-widest uppercase">Legno laccato</span>
@@ -173,9 +173,9 @@
 
         <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
              @click="imgIdx = 0; selected = { src: 'static/sculture/ecco_la_musica 2024.jpeg', title: 'La musica è finita', year: '2024', medium: 'Legno laccato', dim: '', desc: '' }">
-          <div class="aspect-[3/4] overflow-hidden">
+          <div class="aspect-[3/4] overflow-hidden bg-white">
             <img src="static/sculture/ecco_la_musica 2024.jpeg" alt="La musica è finita"
-                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
           </div>
           <div class="p-6">
             <span class="text-teal text-xs font-medium tracking-widest uppercase">Legno laccato</span>
@@ -186,9 +186,9 @@
 
         <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
              @click="imgIdx = 0; selected = { srcs: ['static/sculture/torsione_1 2026.jpeg', 'static/sculture/torsione_2 2026.jpeg'], title: 'Torsione', year: '2026', medium: 'Legno di platano incerato', dim: '', desc: '' }">
-          <div class="aspect-[3/4] overflow-hidden relative">
+          <div class="aspect-[3/4] overflow-hidden relative bg-white">
             <img src="static/sculture/torsione_1 2026.jpeg" alt="Torsione"
-                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
             <div class="absolute bottom-1.5 left-0 right-0 flex justify-center gap-1 pointer-events-none z-10">
               <span class="w-1.5 h-1.5 rounded-full bg-teal/60 block"></span>
               <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
@@ -204,9 +204,9 @@
 
         <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
              @click="imgIdx = 0; selected = { srcs: ['static/sculture/contro_vento 1 2026.jpeg', 'static/sculture/contro_vento_2 2026.jpeg'], title: 'Contro Vento', year: '2026', medium: 'Legno di platano tinto e incerato', dim: '', desc: '' }">
-          <div class="aspect-[3/4] overflow-hidden relative">
+          <div class="aspect-[3/4] overflow-hidden relative bg-white">
             <img src="static/sculture/contro_vento 1 2026.jpeg" alt="Contro Vento"
-                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
             <div class="absolute bottom-1.5 left-0 right-0 flex justify-center gap-1 pointer-events-none z-10">
               <span class="w-1.5 h-1.5 rounded-full bg-teal/60 block"></span>
               <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
@@ -222,9 +222,9 @@
 
         <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
              @click="imgIdx = 0; selected = { srcs: ['static/sculture/pudore 1 2015.jpeg', 'static/sculture/pudore 2 2015.jpeg'], title: 'Pudore', year: '2015', medium: 'Legno incerato', dim: '', desc: '' }">
-          <div class="aspect-[3/4] overflow-hidden relative">
+          <div class="aspect-[3/4] overflow-hidden relative bg-white">
             <img src="static/sculture/pudore 1 2015.jpeg" alt="Pudore"
-                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
             <div class="absolute bottom-1.5 left-0 right-0 flex justify-center gap-1 pointer-events-none z-10">
               <span class="w-1.5 h-1.5 rounded-full bg-teal/60 block"></span>
               <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
@@ -237,7 +237,117 @@
             <p class="text-jet/40 font-serif text-sm mt-1">2015</p>
           </div>
         </div>
-
+        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
+             @click="imgIdx = 0; selected = { srcs: ['static/sculture/sconforto  2012 legno tinto.JPG', 'static/sculture/sconforto 2012 legno tinto 2.JPG'], title: 'Sconforto', year: '2012', medium: 'Legno tinto', dim: '', desc: '' }">
+          <div class="aspect-[3/4] overflow-hidden relative bg-white">
+            <img src="static/sculture/sconforto  2012 legno tinto.JPG" alt="Sconforto"
+                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
+            <div class="absolute bottom-1.5 left-0 right-0 flex justify-center gap-1 pointer-events-none z-10">
+              <span class="w-1.5 h-1.5 rounded-full bg-teal/60 block"></span>
+              <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
+              <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
+            </div>
+          </div>
+          <div class="p-6">
+            <span class="text-teal text-xs font-medium tracking-widest uppercase">Legno tinto</span>
+            <h3 class="font-serif text-xl text-jet mt-1">Sconforto</h3>
+            <p class="text-jet/40 font-serif text-sm mt-1">2012</p>
+          </div>
+        </div>        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
+             @click="imgIdx = 0; selected = { srcs: ['static/sculture/nudo (e adesso spogliati...) 2013 legno incerato.JPG', 'static/sculture/nudo (e adesso spogliati...) 2013 legno incerato (2).JPG'], title: 'Nudo', subtitle: 'e adesso spogliati...', year: '2013', medium: 'Legno incerato', dim: '', desc: '' }">
+          <div class="aspect-[3/4] overflow-hidden relative bg-white">
+            <img src="static/sculture/nudo (e adesso spogliati...) 2013 legno incerato.JPG" alt="Nudo (e adesso spogliati...)"
+                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
+            <div class="absolute bottom-1.5 left-0 right-0 flex justify-center gap-1 pointer-events-none z-10">
+              <span class="w-1.5 h-1.5 rounded-full bg-teal/60 block"></span>
+              <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
+              <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
+            </div>
+          </div>
+          <div class="p-6">
+            <span class="text-teal text-xs font-medium tracking-widest uppercase">Legno incerato</span>
+            <h3 class="font-serif text-xl text-jet mt-1">Nudo</h3>
+            <p class="font-serif text-sm italic text-jet/50 mt-0.5">e adesso spogliati...</p>
+            <p class="text-jet/40 font-serif text-sm mt-1">2013</p>
+          </div>
+        </div>        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
+             @click="imgIdx = 0; selected = { srcs: ['static/sculture/nudo (l\'uomo si mostra completamente nudo, la donna no...)     2015 legno incerato.JPG', 'static/sculture/nudo (l\'uomo si mostra completamente nudo, la donna no...)     2015 legno incerato 2.JPG'], title: 'Nudo', subtitle: 'l\'uomo si mostra completamente nudo, la donna no...', year: '2015', medium: 'Legno incerato', dim: '', desc: '' }">
+          <div class="aspect-[3/4] overflow-hidden relative bg-white">
+            <img src="static/sculture/nudo (l'uomo si mostra completamente nudo, la donna no...)     2015 legno incerato.JPG" alt="Nudo (l\'uomo si mostra completamente nudo, la donna no...)"
+                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
+            <div class="absolute bottom-1.5 left-0 right-0 flex justify-center gap-1 pointer-events-none z-10">
+              <span class="w-1.5 h-1.5 rounded-full bg-teal/60 block"></span>
+              <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
+              <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
+            </div>
+          </div>
+          <div class="p-6">
+            <span class="text-teal text-xs font-medium tracking-widest uppercase">Legno incerato</span>
+            <h3 class="font-serif text-xl text-jet mt-1">Nudo</h3>
+            <p class="font-serif text-sm italic text-jet/50 mt-0.5">l'uomo si mostra completamente nudo, la donna no...</p>
+            <p class="text-jet/40 font-serif text-sm mt-1">2015</p>
+          </div>
+        </div>        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
+             @click="selected = { src: 'static/sculture/modella 2016 legno incerato.JPG', title: 'Modella', year: '2016', medium: 'Legno incerato', dim: '', desc: '' }; imgIdx = 0">
+          <div class="aspect-[3/4] overflow-hidden bg-white">
+            <img src="static/sculture/modella 2016 legno incerato.JPG" alt="Modella"
+                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
+          </div>
+          <div class="p-6">
+            <span class="text-teal text-xs font-medium tracking-widest uppercase">Legno incerato</span>
+            <h3 class="font-serif text-xl text-jet mt-1">Modella</h3>
+            <p class="text-jet/40 font-serif text-sm mt-1">2016</p>
+          </div>
+        </div>        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
+             @click="imgIdx = 0; selected = { srcs: ['static/sculture/nudo (qulla tua maglietta fina...) 2016 legno di tiglio naturale.JPG', 'static/sculture/nudo (qulla tua maglietta fina...) 2016 legno di tiglio naturale (2).JPG'], title: 'Nudo', subtitle: 'quella tua maglietta fina...', year: '2016', medium: 'Legno di tiglio naturale', dim: '', desc: '' }">
+          <div class="aspect-[3/4] overflow-hidden relative bg-white">
+            <img src="static/sculture/nudo (qulla tua maglietta fina...) 2016 legno di tiglio naturale.JPG" alt="Nudo (quella tua maglietta fina...)"
+                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
+            <div class="absolute bottom-1.5 left-0 right-0 flex justify-center gap-1 pointer-events-none z-10">
+              <span class="w-1.5 h-1.5 rounded-full bg-teal/60 block"></span>
+              <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
+              <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
+            </div>
+          </div>
+          <div class="p-6">
+            <span class="text-teal text-xs font-medium tracking-widest uppercase">Legno di tiglio naturale</span>
+            <h3 class="font-serif text-xl text-jet mt-1">Nudo</h3>
+            <p class="font-serif text-sm italic text-jet/50 mt-0.5">quella tua maglietta fina...</p>
+            <p class="text-jet/40 font-serif text-sm mt-1">2016</p>
+          </div>
+        </div>        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
+             @click="imgIdx = 0; selected = { srcs: ['static/sculture/oriente  2016 legno di pero incerato.JPG', 'static/sculture/oriente  2016 legno di pero incerato 2.JPG'], title: 'Oriente', year: '2016', medium: 'Legno di pero incerato', dim: '', desc: '' }">
+          <div class="aspect-[3/4] overflow-hidden relative bg-white">
+            <img src="static/sculture/oriente  2016 legno di pero incerato.JPG" alt="Oriente"
+                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
+            <div class="absolute bottom-1.5 left-0 right-0 flex justify-center gap-1 pointer-events-none z-10">
+              <span class="w-1.5 h-1.5 rounded-full bg-teal/60 block"></span>
+              <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
+              <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
+            </div>
+          </div>
+          <div class="p-6">
+            <span class="text-teal text-xs font-medium tracking-widest uppercase">Legno di pero incerato</span>
+            <h3 class="font-serif text-xl text-jet mt-1">Oriente</h3>
+            <p class="text-jet/40 font-serif text-sm mt-1">2016</p>
+          </div>
+        </div>        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
+             @click="imgIdx = 0; selected = { srcs: ['static/sculture/quote rosa 2018 legno incerato.JPG', 'static/sculture/quote rosa 2018 legno incerato 2.JPG'], title: 'Quote Rosa', year: '2018', medium: 'Legno incerato', dim: '', desc: '' }">
+          <div class="aspect-[3/4] overflow-hidden relative bg-white">
+            <img src="static/sculture/quote rosa 2018 legno incerato.JPG" alt="Quote Rosa"
+                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
+            <div class="absolute bottom-1.5 left-0 right-0 flex justify-center gap-1 pointer-events-none z-10">
+              <span class="w-1.5 h-1.5 rounded-full bg-teal/60 block"></span>
+              <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
+              <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
+            </div>
+          </div>
+          <div class="p-6">
+            <span class="text-teal text-xs font-medium tracking-widest uppercase">Legno incerato</span>
+            <h3 class="font-serif text-xl text-jet mt-1">Quote Rosa</h3>
+            <p class="text-jet/40 font-serif text-sm mt-1">2018</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -290,7 +400,7 @@
        @keydown.escape.window="selected = null">
 
     <div class="bg-white rounded-xl overflow-hidden max-w-6xl w-full shadow-2xl flex flex-col md:flex-row max-h-[95vh]">
-      <div class="md:w-2/3 overflow-hidden flex-shrink-0 bg-black flex items-center justify-center relative cursor-zoom-in"
+      <div class="md:w-2/3 overflow-hidden flex-shrink-0 bg-white flex items-center justify-center relative cursor-zoom-in"
            @click.stop="$el.querySelector('img').requestFullscreen?.()">
         <img :src="selected?.srcs ? selected.srcs[imgIdx] : selected?.src"
              :alt="selected?.title" class="w-full h-full object-contain max-h-[60vh] md:max-h-[95vh]" />
@@ -312,6 +422,7 @@
         <div>
           <span class="text-teal text-xs font-medium tracking-widest uppercase" x-text="selected?.medium"></span>
           <h2 class="font-serif text-3xl text-jet mt-2 mb-1" x-text="selected?.title"></h2>
+          <p x-show="selected?.subtitle" class="font-serif text-base italic text-jet/50 mb-1" x-text="selected?.subtitle"></p>
           <p class="text-jet/40 font-serif text-lg mb-6" x-text="selected?.year"></p>
         </div>
         <button @click="selected = null"
