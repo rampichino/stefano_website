@@ -204,6 +204,96 @@
         </div>
 
         <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
+             @click="selected = { src: 'static/disegni/Chateau_du_bosq.jpeg', title: 'Chateau du bosq – Francia', year: '2002', medium: 'Grafite su carta', desc: '28 × 19 cm' }">
+          <div class="aspect-[3/4] overflow-hidden bg-white px-2 pb-2 pt-6">
+            <img src="static/disegni/Chateau_du_bosq.jpeg" alt="Chateau du bosq – Francia"
+                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-5">
+            <div class="flex justify-between items-start">
+              <div>
+                <span class="text-teal text-xs font-medium tracking-widest uppercase">Grafite su carta</span>
+                <h3 class="font-serif text-xl text-jet mt-1">Chateau du bosq – Francia</h3>
+              </div>
+              <span class="text-jet/40 font-serif text-sm mt-1">2002</span>
+            </div>
+            <p class="text-jet/50 text-xs mt-2">28 × 19 cm</p>
+          </div>
+        </div>
+
+        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
+             @click="selected = { src: 'static/disegni/Parigi.jpeg', title: 'Parigi', year: '2004', medium: 'Grafite su carta', desc: '18 × 27 cm' }">
+          <div class="aspect-[3/4] overflow-hidden bg-white px-2 pb-2 pt-6">
+            <img src="static/disegni/Parigi.jpeg" alt="Parigi"
+                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-5">
+            <div class="flex justify-between items-start">
+              <div>
+                <span class="text-teal text-xs font-medium tracking-widest uppercase">Grafite su carta</span>
+                <h3 class="font-serif text-xl text-jet mt-1">Parigi</h3>
+              </div>
+              <span class="text-jet/40 font-serif text-sm mt-1">2004</span>
+            </div>
+            <p class="text-jet/50 text-xs mt-2">18 × 27 cm</p>
+          </div>
+        </div>
+
+        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
+             @click="selected = { src: 'static/disegni/Lisbona.jpeg', title: 'Lisbona', year: '2007', medium: 'Grafite e pennarelli su carta', desc: '19 × 22 cm' }">
+          <div class="aspect-[3/4] overflow-hidden bg-white px-2 pb-2 pt-6">
+            <img src="static/disegni/Lisbona.jpeg" alt="Lisbona"
+                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-5">
+            <div class="flex justify-between items-start">
+              <div>
+                <span class="text-teal text-xs font-medium tracking-widest uppercase">Grafite e pennarelli su carta</span>
+                <h3 class="font-serif text-xl text-jet mt-1">Lisbona</h3>
+              </div>
+              <span class="text-jet/40 font-serif text-sm mt-1">2007</span>
+            </div>
+            <p class="text-jet/50 text-xs mt-2">19 × 22 cm</p>
+          </div>
+        </div>
+
+        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
+             @click="selected = { src: 'static/disegni/Trau.jpeg', title: 'Trau', year: '2008', medium: 'Grafite su carta', desc: '19 × 28 cm' }">
+          <div class="aspect-[3/4] overflow-hidden bg-white px-2 pb-2 pt-6">
+            <img src="static/disegni/Trau.jpeg" alt="Trau"
+                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-5">
+            <div class="flex justify-between items-start">
+              <div>
+                <span class="text-teal text-xs font-medium tracking-widest uppercase">Grafite su carta</span>
+                <h3 class="font-serif text-xl text-jet mt-1">Trau</h3>
+              </div>
+              <span class="text-jet/40 font-serif text-sm mt-1">2008</span>
+            </div>
+            <p class="text-jet/50 text-xs mt-2">19 × 28 cm</p>
+          </div>
+        </div>
+
+        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
+             @click="selected = { src: 'static/disegni/Praga.jpeg', title: 'Praga', year: '2009', medium: 'Grafite su carta', desc: '20 × 31 cm' }">
+          <div class="aspect-[3/4] overflow-hidden bg-white px-2 pb-2 pt-6">
+            <img src="static/disegni/Praga.jpeg" alt="Praga"
+                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-5">
+            <div class="flex justify-between items-start">
+              <div>
+                <span class="text-teal text-xs font-medium tracking-widest uppercase">Grafite su carta</span>
+                <h3 class="font-serif text-xl text-jet mt-1">Praga</h3>
+              </div>
+              <span class="text-jet/40 font-serif text-sm mt-1">2009</span>
+            </div>
+            <p class="text-jet/50 text-xs mt-2">20 × 31 cm</p>
+          </div>
+        </div>
+
+        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
              @click="selected = { src: 'static/disegni/venezia_punta_della_dogana.jpeg', title: 'Venezia, Punta della Dogana', year: '2023', medium: 'Grafite e retini su carta', desc: 'A4 — Mostra ¿Y si dibujamos barcos?, Spagna' }">
           <div class="aspect-[3/4] overflow-hidden bg-white px-2 pb-2 pt-6">
             <img src="static/disegni/venezia_punta_della_dogana.jpeg" alt="Venezia, Punta della Dogana"
@@ -294,6 +384,24 @@
               <span class="text-jet/40 font-serif text-sm mt-1">2009</span>
             </div>
             <p class="text-jet/50 text-xs mt-2">52 × 68 cm</p>
+          </div>
+        </div>
+
+        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
+             @click="selected = { src: 'static/disegni/Tra Le Corbu e Le Corbu.jpeg', title: 'Tra Le Corbu e Le Corbu', year: '2010', medium: 'Pennarelli, pastelli, grafite su carta', desc: '64 × 66 cm' }">
+          <div class="aspect-[3/4] overflow-hidden bg-white px-2 pb-2 pt-6">
+            <img src="static/disegni/Tra Le Corbu e Le Corbu.jpeg" alt="Tra Le Corbu e Le Corbu"
+                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-5">
+            <div class="flex justify-between items-start">
+              <div>
+                <span class="text-teal text-xs font-medium tracking-widest uppercase">Pennarelli, pastelli, grafite su carta</span>
+                <h3 class="font-serif text-xl text-jet mt-1">Tra Le Corbu e Le Corbu</h3>
+              </div>
+              <span class="text-jet/40 font-serif text-sm mt-1">2010</span>
+            </div>
+            <p class="text-jet/50 text-xs mt-2">64 × 66 cm</p>
           </div>
         </div>
 

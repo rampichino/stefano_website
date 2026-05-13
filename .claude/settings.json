@@ -2,10 +2,12 @@
   "permissions": {
     "allow": [
       "PowerShell(winget install ffmpeg --accept-source-agreements --accept-package-agreements)",
-      "Bash(grep -v \"^prototipo 8$\")"
+      "Bash(grep -v \"^prototipo 8$\")",
+      "PowerShell($src = \"C:\\\\Users\\\\aless\\\\Desktop\\\\papa\\\\da caricare\\\\disegni\"; $dst = \"C:\\\\Users\\\\aless\\\\Documents\\\\GitHub\\\\stefano_website\\\\static\\\\disegni\"; @\\(\"Chateau_du_bosq.jpeg\",\"Lisbona.jpeg\",\"Parigi.jpeg\",\"Praga.jpeg\",\"Tra Le Corbu e Le Corbu.jpeg\",\"Trau.jpeg\"\\) | ForEach-Object { Copy-Item \"$src\\\\$_\" \"$dst\\\\$_\" }; Write-Output \"OK\")"
     ],
     "additionalDirectories": [
-      "C:\\Users\\aless\\Desktop"
+      "C:\\Users\\aless\\Desktop",
+      "C:\\Users\\aless\\Desktop\\papa\\da caricare\\sculture"
     ]
   }
 }
