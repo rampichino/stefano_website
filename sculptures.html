@@ -391,9 +391,9 @@
         </div>
 
         <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
-             @click="imgIdx = 0; selected = { srcs: ['static/sculture/Pensieri 1 2015 legno tinto.jpeg', 'static/sculture/Pensieri 2 2015 legno tinto.jpeg'], title: 'Pensieri', year: '2015', medium: 'Legno tinto', dim: '', desc: '' }">
+             @click="imgIdx = 0; selected = { srcs: ['static/sculture/pensieri1.jpeg', 'static/sculture/pensieri2.jpeg'], title: 'Pensieri', year: '2015', medium: 'Legno tinto', dim: '', desc: '' }">
           <div class="aspect-[3/4] overflow-hidden relative bg-white px-2 pb-2 pt-6">
-            <img src="static/sculture/Pensieri 1 2015 legno tinto.jpeg" alt="Pensieri"
+            <img src="static/sculture/pensieri1.jpeg" alt="Pensieri"
                  class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
           </div>
           <div class="flex justify-center gap-1 py-2">
@@ -477,6 +477,29 @@
             </div>
           </div>
         </div>
+
+        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
+             @click="imgIdx = 0; selected = { srcs: ['static/sculture/nuova_scultura_1.jpeg', 'static/sculture/nuova_scultura_2.jpeg', 'static/sculture/nuova_scultura_3.jpeg'], title: '', year: '', medium: '', dim: '', desc: '' }">
+          <div class="aspect-[3/4] overflow-hidden relative bg-white px-2 pb-2 pt-6">
+            <img src="static/sculture/nuova_scultura_1.jpeg" alt=""
+                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="flex justify-center gap-1 py-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-teal/60 block"></span>
+            <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
+            <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
+          </div>
+          <div class="p-5">
+            <div class="flex justify-between items-start">
+              <div>
+                <span class="text-teal text-xs font-medium tracking-widest uppercase"></span>
+                <h3 class="font-serif text-xl text-jet mt-1"></h3>
+              </div>
+              <span class="text-jet/40 font-serif text-sm mt-1"></span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>

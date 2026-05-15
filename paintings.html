@@ -108,12 +108,15 @@
 
   <!-- INTRO TEXT -->
   <section class="bg-white py-16">
-    <div class="max-w-4xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-start">
-      <div class="md:col-span-2">
+    <div class="max-w-4xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+      <div>
         <h2 class="font-serif text-3xl text-jet mb-4">Tecniche e Stili</h2>
         <p class="text-jet/70 leading-relaxed">
           Bianchi non ha mai aderito a movimenti e correnti artistiche. Ha realizzato le sue opere con le tecniche e lo stile che, in quel momento, gli sono sembrate più adatte ed efficaci. Stile di facile lettura per le opere realistiche a sfondo sociale e linguaggi più complessi nelle ricerche estetiche.
         </p>
+      </div>
+      <div class="text-center">
+        <img src="static/disegni/disegno dal vero Aquitania 2009.jpg" alt="Disegno dal vero, Aquitania 2009" class="w-full rounded shadow-md" />
       </div>
     </div>
   </section>
@@ -141,9 +144,6 @@
           </div>
         </div>
 
-        <div class="col-span-full pt-8 pb-4">
-          <div class="border-b border-teal/20"></div>
-        </div>
 
         <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
              @click="selected = { src: 'static/disegni/modella 1965 carboncino e sanguigno su carta.jpeg', title: 'Modella', year: '1965', medium: 'Carboncino e sanguigno su carta', desc: '40 × 65 cm' }">
@@ -199,9 +199,6 @@
           </div>
         </div>
 
-        <div class="col-span-full pt-8 pb-4">
-          <div class="border-b border-teal/20"></div>
-        </div>
 
         <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
              @click="selected = { src: 'static/disegni/Chateau_du_bosq.jpeg', title: 'Chateau du bosq – Francia', year: '2002', medium: 'Grafite su carta', desc: '28 × 19 cm' }">
@@ -329,9 +326,6 @@
           </div>
         </div>
 
-        <div class="col-span-full pt-8 pb-4">
-          <div class="border-b border-teal/20"></div>
-        </div>
 
         <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
              @click="selected = { src: 'static/disegni/senza_titolo_1976.jpeg', title: 'Senza titolo', year: '1976', medium: 'Pastelli e pennarelli su carta', desc: '67 × 47 cm' }">
@@ -366,6 +360,24 @@
               <span class="text-jet/40 font-serif text-sm mt-1">2010</span>
             </div>
             <p class="text-jet/50 text-xs mt-2">41 × 51 cm</p>
+          </div>
+        </div>
+
+        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
+             @click="selected = { src: 'static/disegni/Senza titolo.jpeg', title: 'Senza titolo', year: '', medium: 'Pennarelli e pastelli su carta', desc: '19 × 25 cm' }">
+          <div class="aspect-[3/4] overflow-hidden bg-white px-2 pb-2 pt-6">
+            <img src="static/disegni/Senza titolo.jpeg" alt="Senza titolo"
+                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-5">
+            <div class="flex justify-between items-start">
+              <div>
+                <span class="text-teal text-xs font-medium tracking-widest uppercase">Pennarelli e pastelli su carta</span>
+                <h3 class="font-serif text-xl text-jet mt-1">Senza titolo</h3>
+              </div>
+              <span class="text-jet/40 font-serif text-sm mt-1"></span>
+            </div>
+            <p class="text-jet/50 text-xs mt-2">19 × 25 cm</p>
           </div>
         </div>
 
@@ -405,9 +417,6 @@
           </div>
         </div>
 
-        <div class="col-span-full pt-8 pb-4">
-          <div class="border-b border-teal/20"></div>
-        </div>
 
         <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
              @click="selected = { src: 'static/disegni/il_dubbio.jpeg', title: 'Il Dubbio', year: '2024', medium: 'Pennarelli su truciolare edilizio', desc: '24,5 × 24,5 cm' }">
@@ -517,9 +526,6 @@
           </div>
         </div>
 
-        <div class="col-span-full pt-8 pb-4">
-          <div class="border-b border-teal/20"></div>
-        </div>
 
         <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
              @click="selected = { src: 'static/disegni/geometrie_veneziane.jpeg', title: 'Geometrie Veneziane', year: '2015', medium: 'Mascherine e vernice a spruzzo, tarsie e pastelli', desc: '40 × 40 cm' }">
