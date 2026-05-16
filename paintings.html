@@ -126,6 +126,7 @@
     <div class="max-w-6xl mx-auto px-6">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
+        <!-- Acquerello su carta -->
         <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
              @click="selected = { src: 'static/disegni/Venezia la salute acquerello 1964 33X40.jpg', title: 'Venezia, la Salute', year: '1964', medium: 'Acquerello su carta', desc: '33 × 40 cm' }">
           <div class="aspect-[3/4] overflow-hidden bg-white px-2 pb-2 pt-6">
@@ -144,11 +145,11 @@
           </div>
         </div>
 
-
+        <!-- Carboncino e sanguigno su carta -->
         <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
-             @click="selected = { src: 'static/disegni/modella 1965 carboncino e sanguigno su carta.jpeg', title: 'Modella', year: '1965', medium: 'Carboncino e sanguigno su carta', desc: '40 × 65 cm' }">
-          <div class="aspect-[2/3] overflow-hidden bg-white px-2 pb-2 pt-6">
-            <img src="static/disegni/modella 1965 carboncino e sanguigno su carta.jpeg" alt="Modella"
+             @click="selected = { src: 'static/disegni/modella 1965 carboncino e sanguigno su carta 70x100.jpg', title: 'Modella', year: '1965', medium: 'Carboncino e sanguigno su carta', desc: '70 × 100 cm' }">
+          <div class="aspect-[7/10] overflow-hidden bg-white px-2 pb-2 pt-6">
+            <img src="static/disegni/modella 1965 carboncino e sanguigno su carta 70x100.jpg" alt="Modella"
                  class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
           </div>
           <div class="p-5 mt-auto">
@@ -159,7 +160,7 @@
               </div>
               <span class="text-jet/40 font-serif text-sm mt-1">1965</span>
             </div>
-            <p class="text-jet/50 text-xs mt-2">40 × 65 cm</p>
+            <p class="text-jet/50 text-xs mt-2">70 × 100 cm</p>
           </div>
         </div>
 
@@ -182,9 +183,9 @@
         </div>
 
         <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
-             @click="selected = { src: 'static/disegni/modella 1965 carboncino e sanguigno su carta 70x100.jpg', title: 'Modella', year: '1965', medium: 'Carboncino e sanguigno su carta', desc: '70 × 100 cm' }">
-          <div class="aspect-[7/10] overflow-hidden bg-white px-2 pb-2 pt-6">
-            <img src="static/disegni/modella 1965 carboncino e sanguigno su carta 70x100.jpg" alt="Modella"
+             @click="selected = { src: 'static/disegni/modella 1965 carboncino e sanguigno su carta.jpeg', title: 'Modella', year: '1965', medium: 'Carboncino e sanguigno su carta', desc: '40 × 65 cm' }">
+          <div class="aspect-[2/3] overflow-hidden bg-white px-2 pb-2 pt-6">
+            <img src="static/disegni/modella 1965 carboncino e sanguigno su carta.jpeg" alt="Modella"
                  class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
           </div>
           <div class="p-5 mt-auto">
@@ -195,62 +196,26 @@
               </div>
               <span class="text-jet/40 font-serif text-sm mt-1">1965</span>
             </div>
-            <p class="text-jet/50 text-xs mt-2">70 × 100 cm</p>
+            <p class="text-jet/50 text-xs mt-2">40 × 65 cm</p>
           </div>
         </div>
 
-
+        <!-- Grafite su carta -->
         <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
-             @click="selected = { src: 'static/disegni/Chateau_du_bosq.jpeg', title: 'Chateau du bosq – Francia', year: '2002', medium: 'Grafite su carta', desc: '28 × 19 cm' }">
+             @click="selected = { src: 'static/disegni/Praga.jpeg', title: 'Praga', year: '2009', medium: 'Grafite su carta', desc: '20 × 31 cm' }">
           <div class="aspect-[3/4] overflow-hidden bg-white px-2 pb-2 pt-6">
-            <img src="static/disegni/Chateau_du_bosq.jpeg" alt="Chateau du bosq – Francia"
+            <img src="static/disegni/Praga.jpeg" alt="Praga"
                  class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
           </div>
           <div class="p-5 mt-auto">
             <div class="flex justify-between items-start">
               <div>
                 <span class="text-teal text-xs font-medium tracking-widest uppercase">Grafite su carta</span>
-                <h3 class="font-serif text-xl text-jet mt-1">Chateau du bosq – Francia</h3>
+                <h3 class="font-serif text-xl text-jet mt-1">Praga</h3>
               </div>
-              <span class="text-jet/40 font-serif text-sm mt-1">2002</span>
+              <span class="text-jet/40 font-serif text-sm mt-1">2009</span>
             </div>
-            <p class="text-jet/50 text-xs mt-2">28 × 19 cm</p>
-          </div>
-        </div>
-
-        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
-             @click="selected = { src: 'static/disegni/Parigi.jpeg', title: 'Parigi', year: '2004', medium: 'Grafite su carta', desc: '18 × 27 cm' }">
-          <div class="aspect-[3/4] overflow-hidden bg-white px-2 pb-2 pt-6">
-            <img src="static/disegni/Parigi.jpeg" alt="Parigi"
-                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
-          </div>
-          <div class="p-5 mt-auto">
-            <div class="flex justify-between items-start">
-              <div>
-                <span class="text-teal text-xs font-medium tracking-widest uppercase">Grafite su carta</span>
-                <h3 class="font-serif text-xl text-jet mt-1">Parigi</h3>
-              </div>
-              <span class="text-jet/40 font-serif text-sm mt-1">2004</span>
-            </div>
-            <p class="text-jet/50 text-xs mt-2">18 × 27 cm</p>
-          </div>
-        </div>
-
-        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
-             @click="selected = { src: 'static/disegni/Lisbona.jpeg', title: 'Lisbona', year: '2007', medium: 'Grafite e pennarelli su carta', desc: '19 × 22 cm' }">
-          <div class="aspect-[3/4] overflow-hidden bg-white px-2 pb-2 pt-6">
-            <img src="static/disegni/Lisbona.jpeg" alt="Lisbona"
-                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
-          </div>
-          <div class="p-5 mt-auto">
-            <div class="flex justify-between items-start">
-              <div>
-                <span class="text-teal text-xs font-medium tracking-widest uppercase">Grafite e pennarelli su carta</span>
-                <h3 class="font-serif text-xl text-jet mt-1">Lisbona</h3>
-              </div>
-              <span class="text-jet/40 font-serif text-sm mt-1">2007</span>
-            </div>
-            <p class="text-jet/50 text-xs mt-2">19 × 22 cm</p>
+            <p class="text-jet/50 text-xs mt-2">20 × 31 cm</p>
           </div>
         </div>
 
@@ -273,23 +238,61 @@
         </div>
 
         <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
-             @click="selected = { src: 'static/disegni/Praga.jpeg', title: 'Praga', year: '2009', medium: 'Grafite su carta', desc: '20 × 31 cm' }">
+             @click="selected = { src: 'static/disegni/Parigi.jpeg', title: 'Parigi', year: '2004', medium: 'Grafite su carta', desc: '18 × 27 cm' }">
           <div class="aspect-[3/4] overflow-hidden bg-white px-2 pb-2 pt-6">
-            <img src="static/disegni/Praga.jpeg" alt="Praga"
+            <img src="static/disegni/Parigi.jpeg" alt="Parigi"
                  class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
           </div>
           <div class="p-5 mt-auto">
             <div class="flex justify-between items-start">
               <div>
                 <span class="text-teal text-xs font-medium tracking-widest uppercase">Grafite su carta</span>
-                <h3 class="font-serif text-xl text-jet mt-1">Praga</h3>
+                <h3 class="font-serif text-xl text-jet mt-1">Parigi</h3>
               </div>
-              <span class="text-jet/40 font-serif text-sm mt-1">2009</span>
+              <span class="text-jet/40 font-serif text-sm mt-1">2004</span>
             </div>
-            <p class="text-jet/50 text-xs mt-2">20 × 31 cm</p>
+            <p class="text-jet/50 text-xs mt-2">18 × 27 cm</p>
           </div>
         </div>
 
+        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
+             @click="selected = { src: 'static/disegni/Chateau_du_bosq.jpeg', title: 'Chateau du bosq – Francia', year: '2002', medium: 'Grafite su carta', desc: '28 × 19 cm' }">
+          <div class="aspect-[3/4] overflow-hidden bg-white px-2 pb-2 pt-6">
+            <img src="static/disegni/Chateau_du_bosq.jpeg" alt="Chateau du bosq – Francia"
+                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-5 mt-auto">
+            <div class="flex justify-between items-start">
+              <div>
+                <span class="text-teal text-xs font-medium tracking-widest uppercase">Grafite su carta</span>
+                <h3 class="font-serif text-xl text-jet mt-1">Chateau du bosq – Francia</h3>
+              </div>
+              <span class="text-jet/40 font-serif text-sm mt-1">2002</span>
+            </div>
+            <p class="text-jet/50 text-xs mt-2">28 × 19 cm</p>
+          </div>
+        </div>
+
+        <!-- Grafite e pennarelli su carta -->
+        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
+             @click="selected = { src: 'static/disegni/Lisbona.jpeg', title: 'Lisbona', year: '2007', medium: 'Grafite e pennarelli su carta', desc: '19 × 22 cm' }">
+          <div class="aspect-[3/4] overflow-hidden bg-white px-2 pb-2 pt-6">
+            <img src="static/disegni/Lisbona.jpeg" alt="Lisbona"
+                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-5 mt-auto">
+            <div class="flex justify-between items-start">
+              <div>
+                <span class="text-teal text-xs font-medium tracking-widest uppercase">Grafite e pennarelli su carta</span>
+                <h3 class="font-serif text-xl text-jet mt-1">Lisbona</h3>
+              </div>
+              <span class="text-jet/40 font-serif text-sm mt-1">2007</span>
+            </div>
+            <p class="text-jet/50 text-xs mt-2">19 × 22 cm</p>
+          </div>
+        </div>
+
+        <!-- Grafite e retini su carta -->
         <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
              @click="selected = { src: 'static/disegni/venezia_punta_della_dogana.jpeg', title: 'Venezia, Punta della Dogana', year: '2023', medium: 'Grafite e retini su carta', desc: 'A4 — Mostra ¿Y si dibujamos barcos?, Spagna' }">
           <div class="aspect-[3/4] overflow-hidden bg-white px-2 pb-2 pt-6">
@@ -308,6 +311,7 @@
           </div>
         </div>
 
+        <!-- Grafite, retini, tarsie e pennarelli su carta -->
         <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
              @click="selected = { src: 'static/disegni/stop_incidenti_sul_lavoro.jpeg', title: 'Stop agli incidenti sul lavoro', year: '2025', medium: 'Grafite, retini, tarsie e pennarelli su carta', desc: 'A4' }">
           <div class="aspect-[3/4] overflow-hidden bg-white px-2 pb-2 pt-6">
@@ -326,25 +330,7 @@
           </div>
         </div>
 
-
-        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
-             @click="selected = { src: 'static/disegni/senza_titolo_1976.jpeg', title: 'Senza titolo', year: '1976', medium: 'Pastelli e pennarelli su carta', desc: '67 × 47 cm' }">
-          <div class="aspect-[3/4] overflow-hidden bg-white px-2 pb-2 pt-6">
-            <img src="static/disegni/senza_titolo_1976.jpeg" alt="Senza titolo, 1976"
-                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
-          </div>
-          <div class="p-5 mt-auto">
-            <div class="flex justify-between items-start">
-              <div>
-                <span class="text-teal text-xs font-medium tracking-widest uppercase">Pastelli e pennarelli su carta</span>
-                <h3 class="font-serif text-xl text-jet mt-1">Senza titolo</h3>
-              </div>
-              <span class="text-jet/40 font-serif text-sm mt-1">1976</span>
-            </div>
-            <p class="text-jet/50 text-xs mt-2">67 × 47 cm</p>
-          </div>
-        </div>
-
+        <!-- Pastelli e grafite su carta -->
         <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
              @click="selected = { src: 'static/disegni/dalla_finestra_casadolo.jpg', title: 'Neve da casa mia', year: '2010', medium: 'Pastelli e grafite su carta', desc: '41 × 51 cm' }">
           <div class="aspect-[3/4] overflow-hidden bg-white px-2 pb-2 pt-6">
@@ -363,6 +349,26 @@
           </div>
         </div>
 
+        <!-- Pennarelli, pastelli, grafite su carta -->
+        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
+             @click="selected = { src: 'static/disegni/Tra Le Corbu e Le Corbu.jpeg', title: 'Tra Le Corbu e Le Corbu', year: '2010', medium: 'Pennarelli, pastelli, grafite su carta', desc: '56 × 66 cm' }">
+          <div class="aspect-[3/4] overflow-hidden bg-white px-2 pb-2 pt-6">
+            <img src="static/disegni/Tra Le Corbu e Le Corbu.jpeg" alt="Tra Le Corbu e Le Corbu"
+                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-5 mt-auto">
+            <div class="flex justify-between items-start">
+              <div>
+                <span class="text-teal text-xs font-medium tracking-widest uppercase">Pennarelli, pastelli, grafite su carta</span>
+                <h3 class="font-serif text-xl text-jet mt-1">Tra Le Corbu e Le Corbu</h3>
+              </div>
+              <span class="text-jet/40 font-serif text-sm mt-1">2010</span>
+            </div>
+            <p class="text-jet/50 text-xs mt-2">56 × 66 cm</p>
+          </div>
+        </div>
+
+        <!-- Pennarelli e pastelli su carta -->
         <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
              @click="selected = { src: 'static/disegni/Senza titolo.jpeg', title: 'Senza titolo', year: '2010', medium: 'Pennarelli e pastelli su carta', desc: '19 × 25 cm' }">
           <div class="aspect-[3/4] overflow-hidden bg-white px-2 pb-2 pt-6">
@@ -400,24 +406,24 @@
         </div>
 
         <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
-             @click="selected = { src: 'static/disegni/Tra Le Corbu e Le Corbu.jpeg', title: 'Tra Le Corbu e Le Corbu', year: '2010', medium: 'Pennarelli, pastelli, grafite su carta', desc: '56 × 66 cm' }">
+             @click="selected = { src: 'static/disegni/senza_titolo_1976.jpeg', title: 'Senza titolo', year: '1976', medium: 'Pennarelli e pastelli su carta', desc: '67 × 47 cm' }">
           <div class="aspect-[3/4] overflow-hidden bg-white px-2 pb-2 pt-6">
-            <img src="static/disegni/Tra Le Corbu e Le Corbu.jpeg" alt="Tra Le Corbu e Le Corbu"
+            <img src="static/disegni/senza_titolo_1976.jpeg" alt="Senza titolo, 1976"
                  class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
           </div>
           <div class="p-5 mt-auto">
             <div class="flex justify-between items-start">
               <div>
-                <span class="text-teal text-xs font-medium tracking-widest uppercase">Pennarelli, pastelli, grafite su carta</span>
-                <h3 class="font-serif text-xl text-jet mt-1">Tra Le Corbu e Le Corbu</h3>
+                <span class="text-teal text-xs font-medium tracking-widest uppercase">Pennarelli e pastelli su carta</span>
+                <h3 class="font-serif text-xl text-jet mt-1">Senza titolo</h3>
               </div>
-              <span class="text-jet/40 font-serif text-sm mt-1">2010</span>
+              <span class="text-jet/40 font-serif text-sm mt-1">1976</span>
             </div>
-            <p class="text-jet/50 text-xs mt-2">56 × 66 cm</p>
+            <p class="text-jet/50 text-xs mt-2">67 × 47 cm</p>
           </div>
         </div>
 
-
+        <!-- Pennarelli su truciolare edilizio -->
         <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
              @click="selected = { src: 'static/disegni/il_dubbio.jpeg', title: 'Il Dubbio', year: '2024', medium: 'Pennarelli su truciolare edilizio', desc: '24,5 × 24,5 cm' }">
           <div class="aspect-square overflow-hidden bg-white px-2 pb-2 pt-6">
@@ -454,6 +460,7 @@
           </div>
         </div>
 
+        <!-- Pennarelli e pastelli su truciolare edilizio -->
         <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
              @click="selected = { src: 'static/disegni/composizione_centripeta.jpeg', title: 'Composizione Centripeta', year: '2024', medium: 'Pennarelli e pastelli su truciolare edilizio', desc: '24,5 × 24,5 cm' }">
           <div class="aspect-square overflow-hidden bg-white px-2 pb-2 pt-6">
@@ -508,6 +515,7 @@
           </div>
         </div>
 
+        <!-- Olio e stucco su truciolare edilizio -->
         <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
              @click="selected = { src: 'static/disegni/gaza.jpeg', title: 'Gaza 2025 - Stop a tutte le guerre', year: '2025', medium: 'Olio e stucco su truciolare edilizio', desc: '55 × 55 cm' }">
           <div class="aspect-square overflow-hidden bg-white px-2 pb-2 pt-6">
@@ -526,7 +534,7 @@
           </div>
         </div>
 
-
+        <!-- Mascherine e vernice a spruzzo -->
         <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
              @click="selected = { src: 'static/disegni/geometrie_veneziane.jpeg', title: 'Geometrie Veneziane', year: '2015', medium: 'Mascherine e vernice a spruzzo, tarsie e pastelli', desc: '40 × 40 cm' }">
           <div class="aspect-square overflow-hidden bg-white px-2 pb-2 pt-6">
