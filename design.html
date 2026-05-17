@@ -607,6 +607,7 @@
             <p class="text-jet/40 text-sm" x-text="selected?.dim"></p>
           </div>
           <p class="text-jet/70 leading-relaxed text-sm" x-text="selected?.desc"></p>
+          <p x-show="selected?.codice" class="text-jet/30 text-xs mt-6 font-mono tracking-widest" x-text="selected?.codice"></p>
         </div>
         <div class="mt-8 flex gap-3">
           <button @click="selected = null"
@@ -624,20 +625,20 @@
       <h2 class="font-serif text-3xl text-jet mb-10">Prototipi, maquette e disegni</h2>
       <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
 
-        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/bozzetto 2.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/bozzetto 2.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true, codice: 'Progetto 01' }; imgIdx = 0">
           <img src="static/design/prototipi/bozzetto 2.JPG" alt="Bozzetto" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
         </div>
-        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/maquette 1.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/maquette 1.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true, codice: 'Progetto 02' }; imgIdx = 0">
           <img src="static/design/prototipi/maquette 1.JPG" alt="Maquette" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
         </div>
-        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/prototipo 1.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/prototipo 1.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true, codice: 'Progetto 03' }; imgIdx = 0">
           <img src="static/design/prototipi/prototipo 1.JPG" alt="Prototipo" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
         </div>
-        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/bozzetto 3.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/bozzetto 3.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true, codice: 'Progetto 04' }; imgIdx = 0">
           <img src="static/design/prototipi/bozzetto 3.JPG" alt="Bozzetto" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
         </div>
         <div class="card-hover overflow-hidden relative rounded-lg bg-white shadow-md cursor-pointer aspect-square"
-             @click="imgIdx = 0; selected = { srcs: ['static/design/prototipi/bozzetto 1.JPG', 'static/design/prototipi/bozzetto 13.JPG'], title: '', year: '', medium: '', dim: '', desc: '', noContact: true }">
+             @click="imgIdx = 0; selected = { srcs: ['static/design/prototipi/bozzetto 1.JPG', 'static/design/prototipi/bozzetto 13.JPG'], title: '', year: '', medium: '', dim: '', desc: '', noContact: true, codice: 'Progetto 05' }">
           <div class="absolute bottom-1.5 left-0 right-0 flex justify-center gap-1 pointer-events-none z-10">
             <span class="w-1.5 h-1.5 rounded-full bg-teal/60 block"></span>
             <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
@@ -653,20 +654,20 @@
             </div>
           </div>
         </div>
-        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/maquette 3.jpg', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/maquette 3.jpg', title: '', year: '', medium: '', dim: '', desc: '', noContact: true, codice: 'Progetto 06' }; imgIdx = 0">
           <img src="static/design/prototipi/maquette 3.jpg" alt="Maquette" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
         </div>
-        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/prototipo 2.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/prototipo 2.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true, codice: 'Progetto 07' }; imgIdx = 0">
           <img src="static/design/prototipi/prototipo 2.JPG" alt="Prototipo" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
         </div>
-        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/bozzetto 4.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/bozzetto 4.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true, codice: 'Progetto 08' }; imgIdx = 0">
           <img src="static/design/prototipi/bozzetto 4.JPG" alt="Bozzetto" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
         </div>
-        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/maquette 4.jpg', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/maquette 4.jpg', title: '', year: '', medium: '', dim: '', desc: '', noContact: true, codice: 'Progetto 09' }; imgIdx = 0">
           <img src="static/design/prototipi/maquette 4.jpg" alt="Maquette" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
         </div>
         <div class="card-hover overflow-hidden relative rounded-lg bg-white shadow-md cursor-pointer aspect-square"
-             @click="imgIdx = 0; selected = { srcs: ['static/design/prototipi/maquette 2.JPG', 'static/design/prototipi/bozzetto 16.JPG'], title: '', year: '', medium: '', dim: '', desc: '', noContact: true }">
+             @click="imgIdx = 0; selected = { srcs: ['static/design/prototipi/maquette 2.JPG', 'static/design/prototipi/bozzetto 16.JPG'], title: '', year: '', medium: '', dim: '', desc: '', noContact: true, codice: 'Progetto 10' }">
           <div class="absolute bottom-1.5 left-0 right-0 flex justify-center gap-1 pointer-events-none z-10">
             <span class="w-1.5 h-1.5 rounded-full bg-teal/60 block"></span>
             <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
@@ -683,7 +684,7 @@
           </div>
         </div>
         <div class="card-hover overflow-hidden relative rounded-lg bg-white shadow-md cursor-pointer aspect-square"
-             @click="imgIdx = 0; selected = { srcs: ['static/design/prototipi/prototipo 3.jpg', 'static/design/prototipi/prototipo 7.JPG'], title: '', year: '', medium: '', dim: '', desc: '', noContact: true }">
+             @click="imgIdx = 0; selected = { srcs: ['static/design/prototipi/prototipo 3.jpg', 'static/design/prototipi/prototipo 7.JPG'], title: '', year: '', medium: '', dim: '', desc: '', noContact: true, codice: 'Progetto 11' }">
           <div class="absolute bottom-1.5 left-0 right-0 flex justify-center gap-1 pointer-events-none z-10">
             <span class="w-1.5 h-1.5 rounded-full bg-teal/60 block"></span>
             <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
@@ -699,20 +700,20 @@
             </div>
           </div>
         </div>
-        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/bozzetto 5.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/bozzetto 5.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true, codice: 'Progetto 12' }; imgIdx = 0">
           <img src="static/design/prototipi/bozzetto 5.JPG" alt="Bozzetto" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
         </div>
-        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/maquette 5.jpg', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/maquette 5.jpg', title: '', year: '', medium: '', dim: '', desc: '', noContact: true, codice: 'Progetto 13' }; imgIdx = 0">
           <img src="static/design/prototipi/maquette 5.jpg" alt="Maquette" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
         </div>
-        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/bozzetto 6.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/bozzetto 6.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true, codice: 'Progetto 14' }; imgIdx = 0">
           <img src="static/design/prototipi/bozzetto 6.JPG" alt="Bozzetto" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
         </div>
-        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/prototipo 4.jpg', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/prototipo 4.jpg', title: '', year: '', medium: '', dim: '', desc: '', noContact: true, codice: 'Progetto 15' }; imgIdx = 0">
           <img src="static/design/prototipi/prototipo 4.jpg" alt="Prototipo" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
         </div>
         <div class="card-hover overflow-hidden relative rounded-lg bg-white shadow-md cursor-pointer aspect-square"
-             @click="imgIdx = 0; selected = { srcs: ['static/design/prototipi/bozzetto 12.JPG', 'static/design/prototipi/bozzetto 14.JPG'], title: '', year: '', medium: '', dim: '', desc: '', noContact: true }">
+             @click="imgIdx = 0; selected = { srcs: ['static/design/prototipi/bozzetto 12.JPG', 'static/design/prototipi/bozzetto 14.JPG'], title: '', year: '', medium: '', dim: '', desc: '', noContact: true, codice: 'Progetto 16' }">
           <div class="absolute bottom-1.5 left-0 right-0 flex justify-center gap-1 pointer-events-none z-10">
             <span class="w-1.5 h-1.5 rounded-full bg-teal/60 block"></span>
             <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
@@ -728,14 +729,14 @@
             </div>
           </div>
         </div>
-        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/maquette 6.jpg', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/maquette 6.jpg', title: '', year: '', medium: '', dim: '', desc: '', noContact: true, codice: 'Progetto 17' }; imgIdx = 0">
           <img src="static/design/prototipi/maquette 6.jpg" alt="Maquette" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
         </div>
-        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/bozzetto 7.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/bozzetto 7.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true, codice: 'Progetto 18' }; imgIdx = 0">
           <img src="static/design/prototipi/bozzetto 7.JPG" alt="Bozzetto" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
         </div>
         <div class="card-hover overflow-hidden relative rounded-lg bg-white shadow-md cursor-pointer aspect-square"
-             @click="imgIdx = 0; selected = { srcs: ['static/design/prototipi/bozzetto 15.JPG', 'static/design/prototipi/prototipo 6.JPG'], title: '', year: '', medium: '', dim: '', desc: '', noContact: true }">
+             @click="imgIdx = 0; selected = { srcs: ['static/design/prototipi/bozzetto 15.JPG', 'static/design/prototipi/prototipo 6.JPG'], title: '', year: '', medium: '', dim: '', desc: '', noContact: true, codice: 'Progetto 19' }">
           <div class="absolute bottom-1.5 left-0 right-0 flex justify-center gap-1 pointer-events-none z-10">
             <span class="w-1.5 h-1.5 rounded-full bg-teal/60 block"></span>
             <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
@@ -751,41 +752,41 @@
             </div>
           </div>
         </div>
-        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/maquette 7.jpg', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/maquette 7.jpg', title: '', year: '', medium: '', dim: '', desc: '', noContact: true, codice: 'Progetto 20' }; imgIdx = 0">
           <img src="static/design/prototipi/maquette 7.jpg" alt="Maquette" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
         </div>
-        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/bozzetto 8.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/bozzetto 8.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true, codice: 'Progetto 21' }; imgIdx = 0">
           <img src="static/design/prototipi/bozzetto 8.JPG" alt="Bozzetto" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
         </div>
-        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/maquette 8.jpg', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/maquette 8.jpg', title: '', year: '', medium: '', dim: '', desc: '', noContact: true, codice: 'Progetto 22' }; imgIdx = 0">
           <img src="static/design/prototipi/maquette 8.jpg" alt="Maquette" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
         </div>
-        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/prototipo 5.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/prototipo 5.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true, codice: 'Progetto 23' }; imgIdx = 0">
           <img src="static/design/prototipi/prototipo 5.JPG" alt="Prototipo" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
         </div>
-        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/bozzetto 9.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/bozzetto 9.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true, codice: 'Progetto 24' }; imgIdx = 0">
           <img src="static/design/prototipi/bozzetto 9.JPG" alt="Bozzetto" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
         </div>
-        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/maquette 9.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/maquette 9.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true, codice: 'Progetto 25' }; imgIdx = 0">
           <img src="static/design/prototipi/maquette 9.JPG" alt="Maquette" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
         </div>
-        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/bozzetto 10.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/bozzetto 10.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true, codice: 'Progetto 26' }; imgIdx = 0">
           <img src="static/design/prototipi/bozzetto 10.JPG" alt="Bozzetto" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
         </div>
-        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/maquette 10.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/maquette 10.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true, codice: 'Progetto 27' }; imgIdx = 0">
           <img src="static/design/prototipi/maquette 10.JPG" alt="Maquette" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
         </div>
-        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/bozzetto 11.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/bozzetto 11.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true, codice: 'Progetto 28' }; imgIdx = 0">
           <img src="static/design/prototipi/bozzetto 11.JPG" alt="Bozzetto" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
         </div>
-        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/maquette 11.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/maquette 11.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true, codice: 'Progetto 29' }; imgIdx = 0">
           <img src="static/design/prototipi/maquette 11.JPG" alt="Maquette" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
         </div>
-        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/maquette 12.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/maquette 12.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true, codice: 'Progetto 30' }; imgIdx = 0">
           <img src="static/design/prototipi/maquette 12.JPG" alt="Maquette" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
         </div>
         <div class="card-hover overflow-hidden relative rounded-lg bg-white shadow-md cursor-pointer aspect-square"
-             @click="imgIdx = 0; selected = { srcs: ['static/design/prototipi/prototipo 8 GAMBIT/mod. GAMBIT prototipo e maquette  2008.jpg', 'static/design/prototipi/prototipo 8 GAMBIT/mod, GAMBIT interno.jpg', 'static/design/prototipi/prototipo 8 GAMBIT/mod. GAMBIT dettaglio.JPG', 'static/design/prototipi/prototipo 8 GAMBIT/mod. GAMBIT apertura.mp4'], title: 'GAMBIT', year: '2008', medium: '', dim: '', desc: '', noContact: true }">
+             @click="imgIdx = 0; selected = { srcs: ['static/design/prototipi/prototipo 8 GAMBIT/mod. GAMBIT prototipo e maquette  2008.jpg', 'static/design/prototipi/prototipo 8 GAMBIT/mod, GAMBIT interno.jpg', 'static/design/prototipi/prototipo 8 GAMBIT/mod. GAMBIT dettaglio.JPG', 'static/design/prototipi/prototipo 8 GAMBIT/mod. GAMBIT apertura.mp4'], title: 'GAMBIT', year: '2008', medium: '', dim: '', desc: '', noContact: true, codice: 'Progetto 31' }">
           <div class="absolute bottom-1.5 left-0 right-0 flex justify-center gap-1 pointer-events-none z-10">
             <span class="w-1.5 h-1.5 rounded-full bg-teal/60 block"></span>
             <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
@@ -793,14 +794,14 @@
           </div>
           <img src="static/design/prototipi/prototipo 8 GAMBIT/mod. GAMBIT prototipo e maquette  2008.jpg" alt="GAMBIT" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
         </div>
-        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/prototipo 9 GAMBIT.jpg', title: 'GAMBIT', year: '2008', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/prototipo 9 GAMBIT.jpg', title: 'GAMBIT', year: '2008', medium: '', dim: '', desc: '', noContact: true, codice: 'Progetto 32' }; imgIdx = 0">
           <img src="static/design/prototipi/prototipo 9 GAMBIT.jpg" alt="GAMBIT" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
         </div>
-        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/prototipo 10 GAMBIT.jpg', title: 'GAMBIT', year: '2008', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/prototipo 10 GAMBIT.jpg', title: 'GAMBIT', year: '2008', medium: '', dim: '', desc: '', noContact: true, codice: 'Progetto 33' }; imgIdx = 0">
           <img src="static/design/prototipi/prototipo 10 GAMBIT.jpg" alt="GAMBIT" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
         </div>
         <div class="card-hover overflow-hidden relative rounded-lg bg-white shadow-md cursor-pointer aspect-square"
-             @click="imgIdx = 0; selected = { srcs: ['static/design/prototipi/maquette 15 BRA.JPG', 'static/design/prototipi/maquette 16 BRA.JPG'], title: '', year: '', medium: '', dim: '', desc: '', noContact: true }">
+             @click="imgIdx = 0; selected = { srcs: ['static/design/prototipi/maquette 15 BRA.JPG', 'static/design/prototipi/maquette 16 BRA.JPG'], title: '', year: '', medium: '', dim: '', desc: '', noContact: true, codice: 'Progetto 34' }">
           <img src="static/design/prototipi/maquette 15 BRA.JPG" alt="Maquette BRA" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
           <div class="absolute bottom-1.5 left-0 right-0 flex justify-center gap-1 pointer-events-none z-10">
             <span class="w-1.5 h-1.5 rounded-full bg-teal/60 block"></span>
@@ -809,7 +810,7 @@
           </div>
         </div>
         <div class="card-hover overflow-hidden relative rounded-lg bg-white shadow-md cursor-pointer aspect-square"
-             @click="imgIdx = 0; selected = { srcs: ['static/design/prototipi/maquette 17 ROUND.JPG', 'static/design/prototipi/maquette 18 ROUND.JPG'], title: '', year: '', medium: '', dim: '', desc: '', noContact: true }">
+             @click="imgIdx = 0; selected = { srcs: ['static/design/prototipi/maquette 17 ROUND.JPG', 'static/design/prototipi/maquette 18 ROUND.JPG'], title: '', year: '', medium: '', dim: '', desc: '', noContact: true, codice: 'Progetto 35' }">
           <img src="static/design/prototipi/maquette 17 ROUND.JPG" alt="Maquette ROUND" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
           <div class="absolute bottom-1.5 left-0 right-0 flex justify-center gap-1 pointer-events-none z-10">
             <span class="w-1.5 h-1.5 rounded-full bg-teal/60 block"></span>
@@ -818,7 +819,7 @@
           </div>
         </div>
         <div class="card-hover overflow-hidden relative rounded-lg bg-white shadow-md cursor-pointer aspect-square"
-             @click="imgIdx = 0; selected = { srcs: ['static/design/prototipi/maquette 19 SPIDER.JPG', 'static/design/prototipi/maquette 20 SPIDER.JPG'], title: '', year: '', medium: '', dim: '', desc: '', noContact: true }">
+             @click="imgIdx = 0; selected = { srcs: ['static/design/prototipi/maquette 19 SPIDER.JPG', 'static/design/prototipi/maquette 20 SPIDER.JPG'], title: '', year: '', medium: '', dim: '', desc: '', noContact: true, codice: 'Progetto 36' }">
           <img src="static/design/prototipi/maquette 19 SPIDER.JPG" alt="Maquette SPIDER" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
           <div class="absolute bottom-1.5 left-0 right-0 flex justify-center gap-1 pointer-events-none z-10">
             <span class="w-1.5 h-1.5 rounded-full bg-teal/60 block"></span>
@@ -827,7 +828,7 @@
           </div>
         </div>
         <div class="card-hover overflow-hidden relative rounded-lg bg-white shadow-md cursor-pointer aspect-square"
-             @click="imgIdx = 0; selected = { srcs: ['static/design/prototipi/maquette 21 ZTAV.JPG', 'static/design/prototipi/maquette 22 ZTAV.JPG'], title: '', year: '', medium: '', dim: '', desc: '', noContact: true }">
+             @click="imgIdx = 0; selected = { srcs: ['static/design/prototipi/maquette 21 ZTAV.JPG', 'static/design/prototipi/maquette 22 ZTAV.JPG'], title: '', year: '', medium: '', dim: '', desc: '', noContact: true, codice: 'Progetto 37' }">
           <img src="static/design/prototipi/maquette 21 ZTAV.JPG" alt="Maquette ZTAV" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
           <div class="absolute bottom-1.5 left-0 right-0 flex justify-center gap-1 pointer-events-none z-10">
             <span class="w-1.5 h-1.5 rounded-full bg-teal/60 block"></span>
@@ -837,7 +838,7 @@
         </div>
         <!-- PROTOTIPO TAV 11 + 12 -->
         <div class="card-hover overflow-hidden relative rounded-lg bg-white shadow-md cursor-pointer aspect-square"
-             @click="imgIdx = 0; selected = { srcs: ['static/design/prototipi/prototipo 11 TAV.jpg', 'static/design/prototipi/prototipo 12 TAV.jpg'], title: '', year: '', medium: '', dim: '', desc: '', noContact: true }">
+             @click="imgIdx = 0; selected = { srcs: ['static/design/prototipi/prototipo 11 TAV.jpg', 'static/design/prototipi/prototipo 12 TAV.jpg'], title: '', year: '', medium: '', dim: '', desc: '', noContact: true, codice: 'Progetto 38' }">
           <img src="static/design/prototipi/prototipo 12 TAV.jpg" alt="Prototipo TAV" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
           <div class="absolute bottom-1.5 left-0 right-0 flex justify-center gap-1 pointer-events-none z-10">
             <span class="w-1.5 h-1.5 rounded-full bg-teal/60 block"></span>
@@ -848,7 +849,7 @@
 
         <!-- MAQUETTE 13 + 14 -->
         <div class="card-hover overflow-hidden relative rounded-lg bg-white shadow-md cursor-pointer aspect-square"
-             @click="imgIdx = 0; selected = { srcs: ['static/design/prototipi/maquette 13.JPG', 'static/design/prototipi/maquette 14.JPG'], title: '', year: '', medium: '', dim: '', desc: '', noContact: true }">
+             @click="imgIdx = 0; selected = { srcs: ['static/design/prototipi/maquette 13.JPG', 'static/design/prototipi/maquette 14.JPG'], title: '', year: '', medium: '', dim: '', desc: '', noContact: true, codice: 'Progetto 39' }">
           <div class="flex h-full">
             <div class="w-1/2 overflow-hidden p-1">
               <img src="static/design/prototipi/maquette 13.JPG" alt="Maquette" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
@@ -866,7 +867,7 @@
 
         <!-- MAQUETTE SEDIE: A.02 + A.04 -->
         <div class="card-hover overflow-hidden relative rounded-lg bg-white shadow-md cursor-pointer aspect-square"
-             @click="imgIdx = 0; selected = { srcs: ['static/design/prototipi/maquette sedie A.02.JPG', 'static/design/prototipi/maquette sedie A.04.JPG'], title: '', year: '', medium: '', dim: '', desc: '', noContact: true }">
+             @click="imgIdx = 0; selected = { srcs: ['static/design/prototipi/maquette sedie A.02.JPG', 'static/design/prototipi/maquette sedie A.04.JPG'], title: '', year: '', medium: '', dim: '', desc: '', noContact: true, codice: 'Progetto 40' }">
           <img src="static/design/prototipi/maquette sedie A.02.JPG" alt="Maquette sedia" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
           <div class="absolute bottom-1.5 left-0 right-0 flex justify-center gap-1 pointer-events-none z-10">
             <span class="w-1.5 h-1.5 rounded-full bg-teal/60 block"></span>
@@ -876,22 +877,22 @@
         </div>
 
         <!-- MAQUETTE SEDIE: B.01 -->
-        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/maquette sedie B.01.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/maquette sedie B.01.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true, codice: 'Progetto 41' }; imgIdx = 0">
           <img src="static/design/prototipi/maquette sedie B.01.JPG" alt="Maquette sedia" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
         </div>
 
         <!-- MAQUETTE SEDIE: D.04 -->
-        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/maquette sedie D.04.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/maquette sedie D.04.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true, codice: 'Progetto 42' }; imgIdx = 0">
           <img src="static/design/prototipi/maquette sedie D.04.JPG" alt="Maquette sedia" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
         </div>
 
         <!-- MAQUETTE SEDIE: E.02 -->
-        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/maquette sedie E.02.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/maquette sedie E.02.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true, codice: 'Progetto 43' }; imgIdx = 0">
           <img src="static/design/prototipi/maquette sedie E.02.JPG" alt="Maquette sedia" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
         </div>
 
         <!-- MAQUETTE SEDIE: SPIDER07 -->
-        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/maquette sedie SPIDER07.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true }; imgIdx = 0">
+        <div class="card-hover overflow-hidden rounded-lg bg-white shadow-md cursor-pointer aspect-square" @click="selected = { src: 'static/design/prototipi/maquette sedie SPIDER07.JPG', title: '', year: '', medium: '', dim: '', desc: '', noContact: true, codice: 'Progetto 44' }; imgIdx = 0">
           <img src="static/design/prototipi/maquette sedie SPIDER07.JPG" alt="Maquette sedia SPIDER" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 p-2" />
         </div>
       </div>
