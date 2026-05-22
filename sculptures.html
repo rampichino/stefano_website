@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="it" x-data="{ menuOpen: false, selected: null, imgIdx: 0 }">
+<html lang="it" x-data="{ menuOpen: false, selected: null }">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sculture — Stefano Bianchi Dall'Era</title>
+  <title>Sculture — Stefano Bianchi</title>
   <script>
     (function() {
       if (sessionStorage.getItem('auth') === '1') return;
       document.addEventListener('DOMContentLoaded', function() {
         var overlay = document.createElement('div');
         overlay.style.cssText = 'position:fixed;inset:0;z-index:9999;background:#022b3a;display:flex;align-items:center;justify-content:center;font-family:Georgia,serif;';
-        overlay.innerHTML = '<div style="background:#fff;border-radius:12px;padding:48px 40px;max-width:360px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.4)"><h2 style="color:#022b3a;font-size:1.5rem;margin:0 0 8px">Stefano Bianchi Dall&#39;Era</h2><p style="color:#1f7a8c;font-size:0.85rem;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 32px">Accesso privato</p><input id="pw-input" type="password" placeholder="Password" style="width:100%;box-sizing:border-box;border:1.5px solid #bfdbf7;border-radius:6px;padding:12px 14px;font-size:1rem;outline:none;margin-bottom:12px"/><div id="pw-err" style="color:#c0392b;font-size:0.8rem;min-height:18px;margin-bottom:8px"></div><button id="pw-btn" style="width:100%;background:#1f7a8c;color:#fff;border:none;border-radius:6px;padding:12px;font-size:1rem;cursor:pointer">Entra</button></div>';
+        overlay.innerHTML = '<div style="background:#fff;border-radius:12px;padding:48px 40px;max-width:360px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.4)"><h2 style="color:#022b3a;font-size:1.5rem;margin:0 0 8px">Stefano Bianchi</h2><p style="color:#1f7a8c;font-size:0.85rem;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 32px">Accesso privato</p><input id="pw-input" type="password" placeholder="Password" style="width:100%;box-sizing:border-box;border:1.5px solid #bfdbf7;border-radius:6px;padding:12px 14px;font-size:1rem;outline:none;margin-bottom:12px"/><div id="pw-err" style="color:#c0392b;font-size:0.8rem;min-height:18px;margin-bottom:8px"></div><button id="pw-btn" style="width:100%;background:#1f7a8c;color:#fff;border:none;border-radius:6px;padding:12px;font-size:1rem;cursor:pointer">Entra</button></div>';
         document.body.appendChild(overlay);
         var input = document.getElementById('pw-input');
         var btn = document.getElementById('pw-btn');
@@ -65,13 +65,12 @@
   <!-- NAVBAR -->
   <nav class="fixed top-0 left-0 right-0 z-50 bg-jet/95 backdrop-blur-sm shadow-lg">
     <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="index.html" class="font-serif text-xl text-white tracking-wide">Stefano Bianchi Dall'Era</a>
+      <a href="index.html" class="font-serif text-xl text-white tracking-wide">Stefano Bianchi</a>
       <div class="hidden md:flex items-center gap-8">
         <a href="index.html" class="relative text-sky text-sm font-medium hover:text-white transition-colors">Home</a>
         <a href="index.html#about" class="relative text-sky text-sm font-medium hover:text-white transition-colors">Chi Sono</a>
-        <a href="paintings.html" class="relative text-sky text-sm font-medium hover:text-white transition-colors">Pitture &amp; Disegni</a>
+        <a href="paintings.html" class="relative text-sky text-sm font-medium hover:text-white transition-colors">Opere Grafiche</a>
         <a href="sculptures.html" class="text-white text-sm font-medium border-b border-teal pb-0.5">Sculture</a>
-        <a href="design.html" class="relative text-sky text-sm font-medium hover:text-white transition-colors">Design</a>
         <a href="index.html#contact" class="bg-teal text-white text-sm font-medium px-4 py-2 rounded hover:bg-teal/80 transition-colors">Contatto</a>
       </div>
       <button @click="menuOpen = !menuOpen" class="md:hidden text-sky focus:outline-none">
@@ -86,9 +85,8 @@
     <div x-show="menuOpen" x-transition class="md:hidden bg-jet border-t border-teal/30 px-6 py-4 flex flex-col gap-4">
       <a href="index.html" @click="menuOpen=false" class="text-sky text-sm hover:text-white">Home</a>
       <a href="index.html#about" @click="menuOpen=false" class="text-sky text-sm hover:text-white">Chi Sono</a>
-      <a href="paintings.html" @click="menuOpen=false" class="text-sky text-sm hover:text-white">Pitture &amp; Disegni</a>
+      <a href="paintings.html" @click="menuOpen=false" class="text-sky text-sm hover:text-white">Opere Grafiche</a>
       <a href="sculptures.html" @click="menuOpen=false" class="text-white text-sm">Sculture</a>
-      <a href="design.html" @click="menuOpen=false" class="text-sky text-sm hover:text-white">Design</a>
       <a href="index.html#contact" @click="menuOpen=false" class="text-sky text-sm hover:text-white">Contatto</a>
     </div>
   </nav>
@@ -99,7 +97,8 @@
       <p class="text-teal text-sm font-medium tracking-[0.25em] uppercase mb-3">Opere tridimensionali</p>
       <h1 class="font-serif text-5xl md:text-6xl text-white leading-tight mb-4"><em class="text-sky">Sculture</em></h1>
       <p class="text-sky/70 max-w-2xl text-base leading-relaxed">
-        Il corpo nello spazio. Le sculture di Stefano Bianchi Dall'Era indagano la forma umana.
+        Il corpo nello spazio. Le sculture di Stefano Bianchi indagano la forma umana attraverso il bronzo e la terracotta,
+        ricercando nell'essenziale la verità della figura.
       </p>
     </div>
   </header>
@@ -109,38 +108,32 @@
     <div class="max-w-4xl mx-auto px-6">
       <div class="grid md:grid-cols-2 gap-10 items-center mb-12">
         <div>
-          <h2 class="font-serif text-3xl text-jet mb-4">Passione ritrovata</h2>
+          <h2 class="font-serif text-3xl text-jet mb-4">Il corpo come linguaggio</h2>
+          <p class="text-jet/70 leading-relaxed mb-4">
+            La scultura ha sempre occupato un posto centrale nella ricerca di Stefano Bianchi. Formatosi alla tradizione della scultura figurativa veneziana, ha sviluppato nel tempo un approccio che riduce la forma al suo nucleo essenziale, eliminando ogni decorazione superflua per far emergere la verità gestuale e strutturale del corpo umano.
+          </p>
           <p class="text-jet/70 leading-relaxed">
-            La scultura per Stefano Bianchi Dall'Era rappresenta il ritorno alle antiche passioni liceali e all'esempio del nonno Romeo. Solo in età avanzata ha iniziato a scolpire, limitandosi a lavorare il legno: tiglio, pero, noce, platano, alloro.
+            Lavora principalmente in bronzo e terracotta — materiali che hanno memoria, che mantengono l'impronta del gesto dell'artista, la pressione di un pollice, la traccia di un utensile. Le sue figure sono sintetiche ma mai fredde: c'è sempre una tensione vitale, un movimento incompiuto che sollecita lo spettatore a completare mentalmente l'azione.
           </p>
         </div>
         <div>
           <h2 class="font-serif text-3xl text-jet mb-4">La figura femminile</h2>
           <p class="text-jet/70 leading-relaxed mb-4">
-            Il soggetto ricorrente è il corpo femminile con le sue movenze. Si vogliono indagare particolari stati d'animo ed emozioni. Altre volte il corpo è solo un pretesto per "giocare" con linee, forme e volumi.
+            Il soggetto ricorrente è la figura femminile: non come oggetto estetico, ma come archetipo del movimento, della grazia e della forza. Le donne di Bianchi camminano, si girano, si raccolgono in se stesse — sempre in uno stato di transizione, mai statiche.
+          </p>
+          <p class="text-jet/70 leading-relaxed">
+            Questo approccio richiama la grande tradizione della scultura italiana del Novecento — da Manzù a Fontana — pur mantenendo un carattere fortemente personale, riconoscibile nella sintesi formale e nella qualità della superficie patinata che assorbe e riflette la luce in modo quasi pittorico.
           </p>
         </div>
       </div>
 
-      <div class="bg-lavender p-8 border-l-4 border-teal">
+      <!-- Process note -->
+      <div class="bg-lavender p-8 border-l-4">
         <h3 class="font-serif text-xl text-jet mb-3">Il processo creativo</h3>
         <p class="text-jet/70 leading-relaxed text-sm">
-          Le sue sculture nascono direttamente sul legno, senza alcuno studio preliminare, per approssimazioni successive, adeguamenti e rettifiche. La finitura – cera o tinta – viene scelta in relazione alla qualità della materia prima, ma anche per esaltare o meno la plasticità delle forme.
+          Ogni scultura nasce da una serie di bozzetti in creta o argilla, modellati direttamente a mano nello studio veneziano. La fase di fusione in bronzo — affidata a fonderie artigianali del Veneto — viene seguita personalmente dall'artista, che supervisiona la patinatura finale per ottenere quella caratteristica superficie scura, quasi vellutata, che contraddistingue il suo lavoro scultoreo.
         </p>
       </div>
-    </div>
-  </section>
-
-  <!-- QUOTE -->
-  <section class="py-16 bg-jet">
-    <div class="max-w-3xl mx-auto px-6 text-center">
-      <svg class="w-10 h-10 text-teal mx-auto mb-6 opacity-60" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
-      </svg>
-      <p class="font-serif text-2xl md:text-3xl text-white leading-relaxed italic mb-8">
-        "Penso che se vuoi fare arte ad un certo punto devi sospendere il giudizio e farti coinvolgere nel gioco e non preoccuparti del risultato"
-      </p>
-      <p class="text-sky text-sm tracking-widest uppercase">— Keith Haring</p>
     </div>
   </section>
 
@@ -150,369 +143,71 @@
       <h2 class="font-serif text-3xl text-jet mb-10 text-center">Galleria Sculture</h2>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
-             @click="imgIdx = 0; selected = { srcs: ['static/sculture/torsione_1 2026.jpeg', 'static/sculture/torsione_2 2026.jpeg'], title: 'Torsione', year: '2026', medium: 'Legno di platano incerato', dim: '', desc: '' }">
-          <div class="aspect-[3/4] overflow-hidden relative bg-white px-2 pb-2 pt-6">
-            <img src="static/sculture/torsione_1 2026.jpeg" alt="Torsione"
-                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
-          </div>
-          <div class="flex justify-center gap-1 py-2">
-            <span class="w-1.5 h-1.5 rounded-full bg-teal/60 block"></span>
-            <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
-            <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
-          </div>
-          <div class="p-5 mt-auto">
-            <div class="flex justify-between items-start">
-              <div>
-                <span class="text-teal text-xs font-medium tracking-widest uppercase">Legno di platano incerato</span>
-                <h3 class="font-serif text-xl text-jet mt-1">Torsione</h3>
-              </div>
-              <span class="text-jet/40 font-serif text-sm mt-1">2026</span>
-            </div>
-          </div>
-        </div>
 
-        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
-             @click="imgIdx = 0; selected = { srcs: ['static/sculture/contro_vento 1 2026.jpeg', 'static/sculture/contro_vento_2 2026.jpeg'], title: 'Contro Vento', year: '2026', medium: 'Legno di platano tinto e incerato', dim: '', desc: '' }">
-          <div class="aspect-[3/4] overflow-hidden relative bg-white px-2 pb-2 pt-6">
-            <img src="static/sculture/contro_vento 1 2026.jpeg" alt="Contro Vento"
-                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
+        <!-- Sculpture 1 -->
+        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer col-span-1 sm:col-span-2 lg:col-span-1"
+             @click="selected = {
+               src: 'static/sculture/scultura_1.jpeg',
+               title: 'Ballerina in attesa della musica',
+               year: '',
+               medium: 'Legno laccato',
+               dim: '',
+               desc: ''
+             }">
+          <div class="aspect-[3/4] overflow-hidden">
+            <img src="static/sculture/scultura_1.jpeg" alt="Ballerina in attesa della musica — Stefano Bianchi"
+                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
           </div>
-          <div class="flex justify-center gap-1 py-2">
-            <span class="w-1.5 h-1.5 rounded-full bg-teal/60 block"></span>
-            <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
-            <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
-          </div>
-          <div class="p-5 mt-auto">
-            <div class="flex justify-between items-start">
-              <div>
-                <span class="text-teal text-xs font-medium tracking-widest uppercase">Legno di platano tinto e incerato</span>
-                <h3 class="font-serif text-xl text-jet mt-1">Contro Vento</h3>
-              </div>
-              <span class="text-jet/40 font-serif text-sm mt-1">2026</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
-             @click="imgIdx = 0; selected = { src: 'static/sculture/ecco_la_musica 2024.jpeg', title: 'La musica è finita', year: '2024', medium: 'Legno laccato', dim: '', desc: '' }">
-          <div class="aspect-[3/4] overflow-hidden bg-white px-2 pb-2 pt-6">
-            <img src="static/sculture/ecco_la_musica 2024.jpeg" alt="La musica è finita"
-                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
-          </div>
-          <div class="p-5 mt-auto">
-            <div class="flex justify-between items-start">
-              <div>
-                <span class="text-teal text-xs font-medium tracking-widest uppercase">Legno laccato</span>
-                <h3 class="font-serif text-xl text-jet mt-1">La musica è finita</h3>
-              </div>
-              <span class="text-jet/40 font-serif text-sm mt-1">2024</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
-             @click="imgIdx = 0; selected = { src: 'static/sculture/ballerina in attesa della musica 2023.jpeg', title: 'Ballerina in attesa della musica', year: '2023', medium: 'Legno laccato', dim: '', desc: '' }">
-          <div class="aspect-[3/4] overflow-hidden bg-white px-2 pb-2 pt-6">
-            <img src="static/sculture/ballerina in attesa della musica 2023.jpeg" alt="Ballerina in attesa della musica"
-                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
-          </div>
-          <div class="p-5 mt-auto">
+          <div class="p-6">
             <div class="flex justify-between items-start">
               <div>
                 <span class="text-teal text-xs font-medium tracking-widest uppercase">Legno laccato</span>
                 <h3 class="font-serif text-xl text-jet mt-1">Ballerina in attesa della musica</h3>
               </div>
-              <span class="text-jet/40 font-serif text-sm mt-1">2023</span>
+            </div>
+            <div class="mt-3 flex items-center gap-3">
+              <button class="text-teal text-sm font-medium hover:underline">Leggi di più →</button>
             </div>
           </div>
         </div>
 
-        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
-             @click="imgIdx = 0; selected = { srcs: ['static/sculture/quote rosa 2018 legno incerato.JPG', 'static/sculture/quote rosa 2018 legno incerato 2.JPG'], title: 'Quote Rosa', year: '2018', medium: 'Legno incerato', dim: '', desc: '' }">
-          <div class="aspect-[3/4] overflow-hidden relative bg-white px-2 pb-2 pt-6">
-            <img src="static/sculture/quote rosa 2018 legno incerato.JPG" alt="Quote Rosa"
-                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
+        <!-- Sculpture 2 -->
+        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
+             @click="selected = {
+               src: 'static/sculture/ecco_la_musica.jpeg',
+               title: 'Ecco la musica è finita',
+               year: '',
+               medium: 'Legno laccato',
+               dim: '',
+               desc: ''
+             }">
+          <div class="aspect-[3/4] overflow-hidden">
+            <img src="static/sculture/ecco_la_musica.jpeg" alt="Ecco la musica è finita — Stefano Bianchi"
+                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
           </div>
-          <div class="flex justify-center gap-1 py-2">
-            <span class="w-1.5 h-1.5 rounded-full bg-teal/60 block"></span>
-            <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
-            <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
-          </div>
-          <div class="p-5 mt-auto">
+          <div class="p-6">
             <div class="flex justify-between items-start">
               <div>
-                <span class="text-teal text-xs font-medium tracking-widest uppercase">Legno incerato</span>
-                <h3 class="font-serif text-xl text-jet mt-1">Quote Rosa</h3>
+                <span class="text-teal text-xs font-medium tracking-widest uppercase">Legno laccato</span>
+                <h3 class="font-serif text-xl text-jet mt-1">Ecco la musica è finita</h3>
               </div>
-              <span class="text-jet/40 font-serif text-sm mt-1">2018</span>
+            </div>
+            <div class="mt-3 flex items-center gap-3">
+              <button class="text-teal text-sm font-medium hover:underline">Leggi di più →</button>
             </div>
           </div>
         </div>
 
-        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
-             @click="selected = { src: 'static/sculture/modella 2016 legno incerato.JPG', title: 'Modella', year: '2016', medium: 'Legno incerato', dim: '', desc: '' }; imgIdx = 0">
-          <div class="aspect-[3/4] overflow-hidden bg-white px-2 pb-2 pt-6">
-            <img src="static/sculture/modella 2016 legno incerato.JPG" alt="Modella"
-                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
+        <!-- Placeholder card 3: upcoming work -->
+        <div class="bg-white rounded-lg overflow-hidden shadow-md border-2 border-dashed border-sky/60 flex flex-col items-center justify-center p-10 min-h-[380px]">
+          <div class="w-12 h-12 rounded-full bg-lavender flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4v16m8-8H4"/>
+            </svg>
           </div>
-          <div class="p-5 mt-auto">
-            <div class="flex justify-between items-start">
-              <div>
-                <span class="text-teal text-xs font-medium tracking-widest uppercase">Legno incerato</span>
-                <h3 class="font-serif text-xl text-jet mt-1">Modella</h3>
-              </div>
-              <span class="text-jet/40 font-serif text-sm mt-1">2016</span>
-            </div>
-          </div>
+          <p class="font-serif text-lg text-jet/50 text-center mb-2">In Lavorazione</p>
+          <p class="text-xs text-jet/40 text-center leading-relaxed max-w-[160px]">Studio in corso — terracotta e bronzo, 2025</p>
         </div>
-
-        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
-             @click="imgIdx = 0; selected = { srcs: ['static/sculture/nudo (qulla tua maglietta fina...) 2016 legno di tiglio naturale.JPG', 'static/sculture/nudo (qulla tua maglietta fina...) 2016 legno di tiglio naturale (2).JPG'], title: 'Nudo', subtitle: 'quella sua maglietta fina...', year: '2016', medium: 'Legno di tiglio naturale', dim: '', desc: '' }">
-          <div class="aspect-[3/4] overflow-hidden relative bg-white px-2 pb-2 pt-6">
-            <img src="static/sculture/nudo (qulla tua maglietta fina...) 2016 legno di tiglio naturale.JPG" alt="Nudo (quella sua maglietta fina...)"
-                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
-          </div>
-          <div class="flex justify-center gap-1 py-2">
-            <span class="w-1.5 h-1.5 rounded-full bg-teal/60 block"></span>
-            <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
-            <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
-          </div>
-          <div class="p-5 mt-auto">
-            <div class="flex justify-between items-start">
-              <div>
-                <span class="text-teal text-xs font-medium tracking-widest uppercase">Legno di tiglio naturale</span>
-                <h3 class="font-serif text-xl text-jet mt-1">Nudo</h3>
-                <p class="font-serif text-sm italic text-jet/50 mt-0.5">quella sua maglietta fina...</p>
-              </div>
-              <span class="text-jet/40 font-serif text-sm mt-1">2016</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
-             @click="imgIdx = 0; selected = { srcs: ['static/sculture/oriente  2016 legno di pero incerato.JPG', 'static/sculture/oriente  2016 legno di pero incerato 2.JPG'], title: 'Oriente', year: '2016', medium: 'Legno di pero incerato', dim: '', desc: '' }">
-          <div class="aspect-[3/4] overflow-hidden relative bg-white px-2 pb-2 pt-6">
-            <img src="static/sculture/oriente  2016 legno di pero incerato.JPG" alt="Oriente"
-                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
-          </div>
-          <div class="flex justify-center gap-1 py-2">
-            <span class="w-1.5 h-1.5 rounded-full bg-teal/60 block"></span>
-            <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
-            <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
-          </div>
-          <div class="p-5 mt-auto">
-            <div class="flex justify-between items-start">
-              <div>
-                <span class="text-teal text-xs font-medium tracking-widest uppercase">Legno di pero incerato</span>
-                <h3 class="font-serif text-xl text-jet mt-1">Oriente</h3>
-              </div>
-              <span class="text-jet/40 font-serif text-sm mt-1">2016</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
-             @click="imgIdx = 0; selected = { srcs: ['static/sculture/pudore 1 2015.jpeg', 'static/sculture/pudore 2 2015.jpeg'], title: 'Pudore', year: '2015', medium: 'Legno incerato', dim: '', desc: '' }">
-          <div class="aspect-[3/4] overflow-hidden relative bg-white px-2 pb-2 pt-6">
-            <img src="static/sculture/pudore 1 2015.jpeg" alt="Pudore"
-                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
-          </div>
-          <div class="flex justify-center gap-1 py-2">
-            <span class="w-1.5 h-1.5 rounded-full bg-teal/60 block"></span>
-            <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
-            <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
-          </div>
-          <div class="p-5 mt-auto">
-            <div class="flex justify-between items-start">
-              <div>
-                <span class="text-teal text-xs font-medium tracking-widest uppercase">Legno incerato</span>
-                <h3 class="font-serif text-xl text-jet mt-1">Pudore</h3>
-              </div>
-              <span class="text-jet/40 font-serif text-sm mt-1">2015</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
-             @click="imgIdx = 0; selected = { srcs: ['static/sculture/nudo (l\'uomo si mostra completamente nudo, la donna no...)     2015 legno incerato.JPG', 'static/sculture/nudo (l\'uomo si mostra completamente nudo, la donna no...)     2015 legno incerato 2.JPG'], title: 'Nudo', subtitle: 'l\'uomo si mostra completamente nudo, la donna no...', year: '2015', medium: 'Legno incerato', dim: '', desc: '' }">
-          <div class="aspect-[3/4] overflow-hidden relative bg-white px-2 pb-2 pt-6">
-            <img src="static/sculture/nudo (l'uomo si mostra completamente nudo, la donna no...)     2015 legno incerato.JPG" alt="Nudo (l'uomo si mostra completamente nudo, la donna no...)"
-                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
-          </div>
-          <div class="flex justify-center gap-1 py-2">
-            <span class="w-1.5 h-1.5 rounded-full bg-teal/60 block"></span>
-            <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
-            <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
-          </div>
-          <div class="p-5 mt-auto">
-            <div class="flex justify-between items-start">
-              <div>
-                <span class="text-teal text-xs font-medium tracking-widest uppercase">Legno incerato</span>
-                <h3 class="font-serif text-xl text-jet mt-1">Nudo</h3>
-                <p class="font-serif text-sm italic text-jet/50 mt-0.5">l'uomo si mostra completamente nudo, la donna no...</p>
-              </div>
-              <span class="text-jet/40 font-serif text-sm mt-1">2015</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
-             @click="imgIdx = 0; selected = { srcs: ['static/sculture/pensieri1.jpeg', 'static/sculture/pensieri2.jpeg'], title: 'Pensieri', year: '2015', medium: 'Legno tinto', dim: '', desc: '' }">
-          <div class="aspect-[3/4] overflow-hidden relative bg-white px-2 pb-2 pt-6">
-            <img src="static/sculture/pensieri1.jpeg" alt="Pensieri"
-                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
-          </div>
-          <div class="flex justify-center gap-1 py-2">
-            <span class="w-1.5 h-1.5 rounded-full bg-teal/60 block"></span>
-            <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
-            <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
-          </div>
-          <div class="p-5 mt-auto">
-            <div class="flex justify-between items-start">
-              <div>
-                <span class="text-teal text-xs font-medium tracking-widest uppercase">Legno tinto</span>
-                <h3 class="font-serif text-xl text-jet mt-1">Pensieri</h3>
-              </div>
-              <span class="text-jet/40 font-serif text-sm mt-1">2015</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
-             @click="imgIdx = 0; selected = { srcs: ['static/sculture/bagnante 2014 legno di alloro incerato 1.jpeg', 'static/sculture/bagnante 2014 legno di alloro incerato 2.jpeg'], title: 'Bagnante', year: '2014', medium: 'Legno di alloro incerato', dim: '', desc: '' }">
-          <div class="aspect-[3/4] overflow-hidden relative bg-white px-2 pb-2 pt-6">
-            <img src="static/sculture/bagnante 2014 legno di alloro incerato 1.jpeg" alt="Bagnante"
-                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
-          </div>
-          <div class="flex justify-center gap-1 py-2">
-            <span class="w-1.5 h-1.5 rounded-full bg-teal/60 block"></span>
-            <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
-            <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
-          </div>
-          <div class="p-5 mt-auto">
-            <div class="flex justify-between items-start">
-              <div>
-                <span class="text-teal text-xs font-medium tracking-widest uppercase">Legno di alloro incerato</span>
-                <h3 class="font-serif text-xl text-jet mt-1">Bagnante</h3>
-              </div>
-              <span class="text-jet/40 font-serif text-sm mt-1">2014</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
-             @click="imgIdx = 0; selected = { srcs: ['static/sculture/nudo (e adesso spogliati...) 2013 legno incerato.JPG', 'static/sculture/nudo (e adesso spogliati...) 2013 legno incerato (2).JPG'], title: 'Nudo', subtitle: 'e adesso spogliati...', year: '2013', medium: 'Legno incerato', dim: '', desc: '' }">
-          <div class="aspect-[3/4] overflow-hidden relative bg-white px-2 pb-2 pt-6">
-            <img src="static/sculture/nudo (e adesso spogliati...) 2013 legno incerato.JPG" alt="Nudo (e adesso spogliati...)"
-                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
-          </div>
-          <div class="flex justify-center gap-1 py-2">
-            <span class="w-1.5 h-1.5 rounded-full bg-teal/60 block"></span>
-            <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
-            <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
-          </div>
-          <div class="p-5 mt-auto">
-            <div class="flex justify-between items-start">
-              <div>
-                <span class="text-teal text-xs font-medium tracking-widest uppercase">Legno incerato</span>
-                <h3 class="font-serif text-xl text-jet mt-1">Nudo</h3>
-                <p class="font-serif text-sm italic text-jet/50 mt-0.5">e adesso spogliati...</p>
-              </div>
-              <span class="text-jet/40 font-serif text-sm mt-1">2013</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
-             @click="imgIdx = 0; selected = { srcs: ['static/sculture/stop alle violenze di genere 2013 legno tinto 1.jpeg', 'static/sculture/stop alle violenze di genere 2013 legno tinto 2.jpeg'], title: 'Stop alle violenze di genere', year: '2013', medium: 'Legno tinto', dim: '', desc: '' }">
-          <div class="aspect-[3/4] overflow-hidden relative bg-white px-2 pb-2 pt-6">
-            <img src="static/sculture/stop alle violenze di genere 2013 legno tinto 1.jpeg" alt="Stop alle violenze di genere"
-                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
-          </div>
-          <div class="flex justify-center gap-1 py-2">
-            <span class="w-1.5 h-1.5 rounded-full bg-teal/60 block"></span>
-            <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
-            <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
-          </div>
-          <div class="p-5 mt-auto">
-            <div class="flex justify-between items-start">
-              <div>
-                <span class="text-teal text-xs font-medium tracking-widest uppercase">Legno tinto</span>
-                <h3 class="font-serif text-xl text-jet mt-1">Stop alle violenze di genere</h3>
-              </div>
-              <span class="text-jet/40 font-serif text-sm mt-1">2013</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
-             @click="imgIdx = 0; selected = { srcs: ['static/sculture/l\'abbraccio 2013 legno tinto 1.jpeg', 'static/sculture/l\'abbraccio 2013 legno tinto 2.jpeg'], title: 'L\'abbraccio', year: '2013', medium: 'Legno tinto', dim: '', desc: '' }">
-          <div class="aspect-[3/4] overflow-hidden relative bg-white px-2 pb-2 pt-6">
-            <img src="static/sculture/l'abbraccio 2013 legno tinto 1.jpeg" alt="L'abbraccio"
-                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
-          </div>
-          <div class="flex justify-center gap-1 py-2">
-            <span class="w-1.5 h-1.5 rounded-full bg-teal/60 block"></span>
-            <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
-            <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
-          </div>
-          <div class="p-5 mt-auto">
-            <div class="flex justify-between items-start">
-              <div>
-                <span class="text-teal text-xs font-medium tracking-widest uppercase">Legno tinto</span>
-                <h3 class="font-serif text-xl text-jet mt-1">L'abbraccio</h3>
-              </div>
-              <span class="text-jet/40 font-serif text-sm mt-1">2013</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
-             @click="imgIdx = 0; selected = { srcs: ['static/sculture/nuova_scultura_1.jpeg', 'static/sculture/nuova_scultura_2.jpeg'], title: 'Senza titolo', year: '2013', medium: 'Legno incerato', dim: '', desc: '' }">
-          <div class="aspect-[3/4] overflow-hidden relative bg-white px-2 pb-2 pt-6">
-            <img src="static/sculture/nuova_scultura_1.jpeg" alt="Senza titolo"
-                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
-          </div>
-          <div class="flex justify-center gap-1 py-2">
-            <span class="w-1.5 h-1.5 rounded-full bg-teal/60 block"></span>
-            <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
-            <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
-          </div>
-          <div class="p-5 mt-auto">
-            <div class="flex justify-between items-start">
-              <div>
-                <span class="text-teal text-xs font-medium tracking-widest uppercase">Legno incerato</span>
-                <h3 class="font-serif text-xl text-jet mt-1">Senza titolo</h3>
-              </div>
-              <span class="text-jet/40 font-serif text-sm mt-1">2013</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
-             @click="imgIdx = 0; selected = { srcs: ['static/sculture/sconforto  2012 legno tinto.JPG', 'static/sculture/sconforto 2012 legno tinto 2.JPG'], title: 'Sconforto', year: '2012', medium: 'Legno tinto', dim: '', desc: '' }">
-          <div class="aspect-[3/4] overflow-hidden relative bg-white px-2 pb-2 pt-6">
-            <img src="static/sculture/sconforto  2012 legno tinto.JPG" alt="Sconforto"
-                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
-          </div>
-          <div class="flex justify-center gap-1 py-2">
-            <span class="w-1.5 h-1.5 rounded-full bg-teal/60 block"></span>
-            <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
-            <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
-          </div>
-          <div class="p-5 mt-auto">
-            <div class="flex justify-between items-start">
-              <div>
-                <span class="text-teal text-xs font-medium tracking-widest uppercase">Legno tinto</span>
-                <h3 class="font-serif text-xl text-jet mt-1">Sconforto</h3>
-              </div>
-              <span class="text-jet/40 font-serif text-sm mt-1">2012</span>
-            </div>
-          </div>
-        </div>
-
-
 
       </div>
     </div>
@@ -528,8 +223,8 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
             </svg>
           </div>
-          <h3 class="font-serif text-xl text-white mb-3">Scelta del materiale</h3>
-          <p class="text-sky/60 text-sm leading-relaxed">La qualità della materia prima è fondamentale per una buona riuscita del lavoro. Bianchi si adatta a qualsiasi tipo di legno purché sia poco nodoso, poco venato e adeguatamente stagionato.</p>
+          <h3 class="font-serif text-xl text-white mb-3">Modellazione</h3>
+          <p class="text-sky/60 text-sm leading-relaxed">Ogni opera nasce come bozzetto in argilla, modellata a mano nello studio veneziano. Il contatto diretto con il materiale grezzo è per Bianchi il momento più autentico del processo creativo.</p>
         </div>
         <div>
           <div class="w-12 h-12 bg-teal rounded-full flex items-center justify-center mx-auto mb-4">
@@ -537,8 +232,8 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/>
             </svg>
           </div>
-          <h3 class="font-serif text-xl text-white mb-3">Lavorazione</h3>
-          <p class="text-sky/60 text-sm leading-relaxed">Saracco, scalpelli e sgorbie sono gli attrezzi utilizzati. La carta vetrata, di varia grammatura, rifinisce l'opera fino al livello desiderato.</p>
+          <h3 class="font-serif text-xl text-white mb-3">Fusione in Bronzo</h3>
+          <p class="text-sky/60 text-sm leading-relaxed">La fusione è affidata a fonderie artigianali del Veneto, con cui l'artista mantiene un rapporto di collaborazione stretto. Bianchi supervisiona ogni fase della colata e della rifinitura.</p>
         </div>
         <div>
           <div class="w-12 h-12 bg-teal rounded-full flex items-center justify-center mx-auto mb-4">
@@ -546,8 +241,8 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
             </svg>
           </div>
-          <h3 class="font-serif text-xl text-white mb-3">Finitura</h3>
-          <p class="text-sky/60 text-sm leading-relaxed">La ceratura, la laccatura o la tinteggiatura sono l'ultimo gesto sulla superficie. Definiscono il carattere finale della scultura: la cera esalta la venatura naturale, la lacca uniforma e protegge, il colore trasforma.</p>
+          <h3 class="font-serif text-xl text-white mb-3">Patinatura</h3>
+          <p class="text-sky/60 text-sm leading-relaxed">La fase di patinatura è forse la più delicata: ossidi e acidi applicati a caldo conferiscono alla superficie quella caratteristica tonalità scura che assorbe la luce come velluto e racconta il tempo.</p>
         </div>
       </div>
     </div>
@@ -566,44 +261,74 @@
        @keydown.escape.window="selected = null">
 
     <div class="bg-white rounded-xl overflow-hidden max-w-6xl w-full shadow-2xl flex flex-col md:flex-row max-h-[95vh]">
-      <div class="md:w-2/3 overflow-hidden flex-shrink-0 bg-white flex items-center justify-center relative cursor-zoom-in"
+      <div class="md:w-2/3 overflow-hidden flex-shrink-0 bg-black flex items-center justify-center cursor-zoom-in"
            @click.stop="$el.querySelector('img').requestFullscreen?.()">
-        <img :src="selected?.srcs ? selected.srcs[imgIdx] : selected?.src"
-             :alt="selected?.title" class="w-full h-full object-contain max-h-[60vh] md:max-h-[95vh]" />
-        <button x-show="selected?.srcs && selected.srcs.length > 1"
-                @click.stop="imgIdx = (imgIdx - 1 + selected.srcs.length) % selected.srcs.length"
-                class="absolute left-3 top-1/2 -translate-y-1/2 bg-jet/60 hover:bg-jet text-white rounded-full w-10 h-10 flex items-center justify-center text-xl">‹</button>
-        <button x-show="selected?.srcs && selected.srcs.length > 1"
-                @click.stop="imgIdx = (imgIdx + 1) % selected.srcs.length"
-                class="absolute right-3 top-1/2 -translate-y-1/2 bg-jet/60 hover:bg-jet text-white rounded-full w-10 h-10 flex items-center justify-center text-xl">›</button>
+        <img :src="selected?.src" :alt="selected?.title" class="w-full h-full object-contain max-h-[60vh] md:max-h-[95vh]" />
       </div>
       <div class="md:w-1/3 p-8 overflow-y-auto flex flex-col justify-between">
         <div>
           <span class="text-teal text-xs font-medium tracking-widest uppercase" x-text="selected?.medium"></span>
           <h2 class="font-serif text-3xl text-jet mt-2 mb-1" x-text="selected?.title"></h2>
-          <p x-show="selected?.subtitle" class="font-serif text-base italic text-jet/50 mb-1" x-text="selected?.subtitle"></p>
-          <p class="text-jet/40 font-serif text-lg mb-6" x-text="selected?.year"></p>
+          <div class="flex gap-3 items-center mb-6">
+            <p class="text-jet/40 font-serif text-lg" x-text="selected?.year"></p>
+            <span class="text-jet/30">·</span>
+            <p class="text-jet/40 text-sm" x-text="selected?.dim"></p>
+          </div>
+          <p class="text-jet/70 leading-relaxed text-sm" x-text="selected?.desc"></p>
         </div>
-        <button @click="selected = null"
-                class="mt-8 bg-jet hover:bg-teal text-white font-medium px-6 py-3 rounded transition-colors self-start">
-          Chiudi
-        </button>
+        <div class="mt-8 flex gap-3">
+          <button @click="selected = null"
+                  class="bg-jet hover:bg-teal text-white font-medium px-6 py-3 rounded transition-colors">
+            Chiudi
+          </button>
+          <a href="index.html#contact"
+             class="border border-jet text-jet hover:bg-jet hover:text-white font-medium px-6 py-3 rounded transition-colors text-sm flex items-center">
+            Richiedi Informazioni
+          </a>
+        </div>
       </div>
     </div>
   </div>
 
+  <!-- COOKIE BANNER -->
+  <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 z-50 bg-jet border-t border-teal/40 px-6 py-5" style="display:none;">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-start sm:items-center gap-4 justify-between">
+      <p class="text-sky/80 text-sm leading-relaxed">
+        Questo sito utilizza esclusivamente cookie tecnici necessari al funzionamento.
+        Nessun cookie di profilazione o marketing. Per saperne di più consulta la
+        <a href="cookie.html" class="text-teal underline hover:text-sky">Cookie Policy</a> e la
+        <a href="privacy.html" class="text-teal underline hover:text-sky">Privacy Policy</a>.
+      </p>
+      <button id="cookie-accept" class="shrink-0 bg-teal hover:bg-teal/80 text-white text-sm font-medium px-6 py-2.5 rounded transition-colors">
+        Ho capito
+      </button>
+    </div>
+  </div>
+  <script>
+    (function() {
+      if (!localStorage.getItem('cookie-notice-accepted')) {
+        document.getElementById('cookie-banner').style.display = '';
+      }
+      document.getElementById('cookie-accept').addEventListener('click', function() {
+        localStorage.setItem('cookie-notice-accepted', '1');
+        document.getElementById('cookie-banner').style.display = 'none';
+      });
+    })();
+  </script>
+
   <!-- FOOTER -->
   <footer class="bg-jet text-sky/60 py-10">
     <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
-      <p class="font-serif text-white text-lg">Stefano Bianchi Dall'Era</p>
-      <nav class="flex gap-6 text-sm">
+      <p class="font-serif text-white text-lg">Stefano Bianchi</p>
+      <nav class="flex gap-6 text-sm flex-wrap justify-center">
         <a href="index.html" class="hover:text-white transition-colors">Home</a>
-        <a href="paintings.html" class="hover:text-white transition-colors">Pitture &amp; Disegni</a>
+        <a href="paintings.html" class="hover:text-white transition-colors">Opere Grafiche</a>
         <a href="sculptures.html" class="text-white">Sculture</a>
-        <a href="design.html" class="hover:text-white transition-colors">Design</a>
         <a href="index.html#contact" class="hover:text-white transition-colors">Contatto</a>
+        <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+        <a href="cookie.html" class="hover:text-white transition-colors">Cookie Policy</a>
       </nav>
-      <p class="text-xs">© 2025 Stefano Bianchi Dall'Era. Tutti i diritti riservati.</p>
+      <p class="text-xs">© 2025 Stefano Bianchi. Tutti i diritti riservati.</p>
     </div>
   </footer>
 
