@@ -109,7 +109,7 @@
     <!-- Background image collage -->
     <div class="absolute inset-0 bg-white">
       <div class="absolute inset-0 md:mx-32 lg:mx-48">
-        <img src="static/disegni/disegno_1_1.jpeg" alt="" class="w-full h-full object-cover object-center" />
+        <img src="static/disegni/disegno_1_1.jpeg" alt="Opera di Stefano Bianchi Dall'Era" class="w-full h-full object-cover object-center" />
         <div class="hero-overlay absolute inset-0"></div>
       </div>
     </div>
@@ -202,6 +202,7 @@
         </div>
         <input type="text" placeholder="Oggetto" class="w-full border border-lavender rounded px-4 py-3 text-jet focus:outline-none focus:border-teal transition-colors bg-lavender/30" />
         <textarea rows="5" placeholder="Messaggio..." class="w-full border border-lavender rounded px-4 py-3 text-jet focus:outline-none focus:border-teal transition-colors bg-lavender/30 resize-none"></textarea>
+        <p class="text-xs text-jet/50">I tuoi dati saranno utilizzati esclusivamente per rispondere alla tua richiesta. <a href="privacy.html" class="underline hover:text-teal transition-colors">Leggi la Privacy Policy</a>.</p>
         <button type="submit" class="w-full bg-teal hover:bg-jet text-white font-medium py-3 rounded transition-colors">
           Invia Messaggio
         </button>
@@ -220,9 +221,31 @@
         <a href="design.html" class="hover:text-white transition-colors">Design</a>
         <a href="#contact" class="hover:text-white transition-colors">Contatto</a>
       </nav>
-      <p class="text-xs">© 2025 Stefano Bianchi Dall'Era. Tutti i diritti riservati.</p>
+      <div class="flex flex-col items-center md:items-end gap-1">
+        <p class="text-xs">© 2026 Stefano Bianchi Dall'Era. Tutti i diritti riservati.</p>
+        <a href="privacy.html" class="text-xs text-teal hover:text-white transition-colors">Privacy Policy</a>
+      </div>
     </div>
   </footer>
+
+  <!-- COOKIE BANNER -->
+  <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 z-50 bg-jet border-t border-teal/30 px-6 py-4" style="display:none">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center gap-4 text-sm text-sky/80">
+      <p class="flex-1">Questo sito utilizza cookie tecnici di sessione necessari al suo funzionamento e carica risorse da CDN esterne (Google Fonts, Alpine.js) che possono trasmettere il tuo indirizzo IP a Google. Non vengono utilizzati cookie di profilazione. <a href="privacy.html" class="underline text-sky hover:text-white transition-colors">Maggiori informazioni</a>.</p>
+      <button onclick="acceptCookies()" class="shrink-0 bg-teal hover:bg-teal/80 text-white font-medium px-5 py-2 rounded transition-colors">Ho capito</button>
+    </div>
+  </div>
+  <script>
+    (function() {
+      if (!localStorage.getItem('cookie-ok')) {
+        document.getElementById('cookie-banner').style.display = 'block';
+      }
+    })();
+    function acceptCookies() {
+      localStorage.setItem('cookie-ok', '1');
+      document.getElementById('cookie-banner').style.display = 'none';
+    }
+  </script>
 
 </body>
 </html>
