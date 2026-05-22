@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Termini e Condizioni — Stefano Bianchi Dall'Era</title>
-<script src="https://cdn.tailwindcss.com"></script>
+  <title>Contatto — Stefano Bianchi Dall'Era</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script>
     tailwind.config = {
@@ -47,7 +47,7 @@
         <a href="paintings.html" class="nav-link text-sky text-sm font-medium hover:text-white transition-colors">Pitture &amp; Disegni</a>
         <a href="sculptures.html" class="nav-link text-sky text-sm font-medium hover:text-white transition-colors">Sculture</a>
         <a href="design.html" class="nav-link text-sky text-sm font-medium hover:text-white transition-colors">Design</a>
-        <a href="contatto.html" class="nav-link text-sky text-sm font-medium hover:text-white transition-colors">Contatto</a>
+        <a href="contatto.html" class="text-white text-sm font-medium border-b border-teal pb-0.5">Contatto</a>
       </div>
       <button @click="menuOpen = !menuOpen" class="md:hidden text-sky focus:outline-none">
         <svg x-show="!menuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -64,50 +64,48 @@
       <a href="paintings.html" @click="menuOpen=false" class="text-sky text-sm hover:text-white">Pitture &amp; Disegni</a>
       <a href="sculptures.html" @click="menuOpen=false" class="text-sky text-sm hover:text-white">Sculture</a>
       <a href="design.html" @click="menuOpen=false" class="text-sky text-sm hover:text-white">Design</a>
-      <a href="contatto.html" @click="menuOpen=false" class="text-sky text-sm hover:text-white">Contatto</a>
+      <a href="contatto.html" @click="menuOpen=false" class="text-white text-sm">Contatto</a>
     </div>
   </nav>
 
+  <!-- PAGE HEADER -->
+  <header class="pt-28 pb-16 bg-jet">
+    <div class="max-w-6xl mx-auto px-6">
+      <p class="text-teal text-sm font-medium tracking-[0.25em] uppercase mb-3">Scrivimi</p>
+      <h1 class="font-serif text-5xl md:text-6xl text-white leading-tight mb-4"><em class="text-sky">Contatto</em></h1>
+      <p class="text-sky/70 max-w-2xl text-base leading-relaxed">
+        Per informazioni sulle opere, richieste di esposizione o qualsiasi altra curiosità.
+      </p>
+    </div>
+  </header>
+
   <!-- CONTENT -->
-  <main class="pt-32 pb-24">
-    <div class="max-w-3xl mx-auto px-6">
-      <h1 class="font-serif text-4xl text-jet mb-2">Termini e Condizioni</h1>
-      <p class="text-teal text-sm font-medium tracking-[0.15em] uppercase mb-10">Note legali e disclaimer</p>
+  <main class="py-24">
+    <div class="max-w-2xl mx-auto px-6">
 
-      <div class="space-y-8 text-jet/80 leading-relaxed">
-
-        <section>
-          <h2 class="font-serif text-xl text-jet mb-3">1. Natura del sito</h2>
-          <p>Questo è il sito personale dell'artista <strong>Stefano Bianchi Dall'Era</strong>. Ha finalità esclusivamente biografiche e di presentazione delle opere dell'autore. Non viene svolta alcuna attività commerciale: non sono presenti vendite, acquisti, prestazioni di servizi a pagamento né forme di pubblicità.</p>
-        </section>
-
-        <section>
-          <h2 class="font-serif text-xl text-jet mb-3">2. Opere e contenuti originali</h2>
-          <p>Tutte le opere pittoriche, scultoree e i progetti originali presenti nel sito sono di proprietà esclusiva di Stefano Bianchi Dall'Era. È vietata la riproduzione, anche parziale, senza autorizzazione scritta dell'autore.</p>
-        </section>
-
-        <section>
-          <h2 class="font-serif text-xl text-jet mb-3">3. Immagini di prodotti di design</h2>
-          <p>Le opere di design sono state realizzate dall'autore in collaborazione con le aziende indicate nelle relative schede. Le immagini fotografiche dei prodotti provengono da cataloghi d'epoca e sono utilizzate a puro scopo documentativo e biografico, per testimoniare l'attività professionale dell'autore.</p>
-          <p class="mt-3">Qualora un titolare di diritti ravvisasse un utilizzo improprio è pregato di <a href="contatto.html" class="text-teal underline hover:text-jet transition-colors">contattarci</a>: provvederemo tempestivamente alla verifica e, se necessario, alla rimozione del materiale segnalato.</p>
-        </section>
-
-        <section>
-          <h2 class="font-serif text-xl text-jet mb-3">4. Limitazione di responsabilità</h2>
-          <p>Il titolare del sito non è responsabile per eventuali errori od omissioni nei contenuti, né per danni derivanti dall'utilizzo delle informazioni presenti. I contenuti possono essere aggiornati senza preavviso.</p>
-        </section>
-
-        <section>
-          <h2 class="font-serif text-xl text-jet mb-3">5. Legge applicabile</h2>
-          <p>Il presente sito è soggetto alla legge italiana. Per qualsiasi controversia è competente il Foro di Venezia.</p>
-        </section>
-
-        <section>
-          <h2 class="font-serif text-xl text-jet mb-3">6. Contatti</h2>
-          <p>Per qualsiasi comunicazione relativa ai contenuti del sito è possibile utilizzare il modulo nella sezione <a href="contatto.html" class="text-teal underline hover:text-jet transition-colors">Contatto</a>.</p>
-        </section>
-
+      <div class="bg-white rounded-lg shadow-md p-10 text-center">
+        <p class="font-serif text-2xl text-jet mb-4">Scrivimi</p>
+        <p class="text-jet/70 leading-relaxed mb-8">
+          Sono disponibile per informazioni sulle mie opere, per richieste di partecipazione a mostre o esposizioni, e per qualsiasi altra curiosità sul mio lavoro artistico. Non esitare a contattarmi direttamente via email.
+        </p>
+        <a id="email-link" href="#" class="inline-flex items-center gap-3 bg-teal hover:bg-jet text-white font-medium px-8 py-4 rounded transition-colors text-lg">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          </svg>
+          <span id="email-text"></span>
+        </a>
+        <script>
+          (function() {
+            var u = 'info', d = 'stefanobiachidallera' + '.' + 'it';
+            var a = document.getElementById('email-link');
+            var t = document.getElementById('email-text');
+            a.href = 'mai' + 'lto:' + u + '@' + d;
+            t.textContent = u + '@' + d;
+          })();
+        </script>
+        <p class="text-jet/40 text-xs mt-6">Rispondo di persona a ogni messaggio.</p>
       </div>
+
     </div>
   </main>
 
@@ -120,7 +118,7 @@
         <a href="paintings.html" class="hover:text-white transition-colors">Pitture &amp; Disegni</a>
         <a href="sculptures.html" class="hover:text-white transition-colors">Sculture</a>
         <a href="design.html" class="hover:text-white transition-colors">Design</a>
-        <a href="contatto.html" class="hover:text-white transition-colors">Contatto</a>
+        <a href="contatto.html" class="text-white transition-colors">Contatto</a>
       </nav>
       <div class="flex flex-col items-center md:items-end gap-1">
         <p class="text-xs">© 2026 Stefano Bianchi Dall'Era. Tutti i diritti riservati.</p>
