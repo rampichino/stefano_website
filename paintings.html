@@ -177,6 +177,24 @@
 
         <!-- Grafite su carta -->
         <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
+             @click="selected = { src: 'static/disegni/emma gioca con ziobi 2012.JPG', title: 'Emma gioca con Ziobi', year: '2012', medium: 'Grafite su carta', desc: '30 × 21 cm' }">
+          <div class="aspect-[3/4] overflow-hidden bg-white px-2 pb-2 pt-6">
+            <img src="static/disegni/thumbs/emma gioca con ziobi 2012.JPG" alt="Emma gioca con Ziobi"
+                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-5 mt-auto">
+            <div class="flex justify-between items-start">
+              <div>
+                <span class="text-teal text-xs font-medium tracking-widest uppercase">Grafite su carta</span>
+                <h3 class="font-serif text-xl text-jet mt-1">Emma gioca con Ziobi</h3>
+              </div>
+              <span class="text-jet/40 font-serif text-sm mt-1">2012</span>
+            </div>
+            <p class="text-jet/50 text-xs mt-2">30 × 21 cm</p>
+          </div>
+        </div>
+
+        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
              @click="selected = { src: 'static/disegni/Praga.jpeg', title: 'Praga', year: '2009', medium: 'Grafite su carta', desc: '20 × 31 cm' }">
           <div class="aspect-[3/4] overflow-hidden bg-white px-2 pb-2 pt-6">
             <img src="static/disegni/thumbs/Praga.jpeg" alt="Praga"
@@ -345,24 +363,6 @@
 
         <!-- Pennarelli e pastelli su carta -->
         <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
-             @click="selected = { src: 'static/disegni/Senza titolo.jpeg', title: 'Senza titolo', year: '2010', medium: 'Pennarelli e pastelli su carta', desc: '19 × 25 cm' }">
-          <div class="aspect-[3/4] overflow-hidden bg-white px-2 pb-2 pt-6">
-            <img src="static/disegni/thumbs/Senza titolo.jpeg" alt="Senza titolo"
-                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
-          </div>
-          <div class="p-5 mt-auto">
-            <div class="flex justify-between items-start">
-              <div>
-                <span class="text-teal text-xs font-medium tracking-widest uppercase">Pennarelli e pastelli su carta</span>
-                <h3 class="font-serif text-xl text-jet mt-1">Senza titolo</h3>
-              </div>
-              <span class="text-jet/40 font-serif text-sm mt-1">2010</span>
-            </div>
-            <p class="text-jet/50 text-xs mt-2">19 × 25 cm</p>
-          </div>
-        </div>
-
-        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
              @click="selected = { src: 'static/disegni/tra Malevic e Casorati 2009 pennarelli e pastelli su carta52X68 .jpg', title: 'Tra Malevic e Casorati', year: '2009', medium: 'Pennarelli e pastelli su carta', desc: '52 × 68 cm' }">
           <div class="aspect-[3/4] overflow-hidden bg-white px-2 pb-2 pt-6">
             <img src="static/disegni/thumbs/tra Malevic e Casorati 2009 pennarelli e pastelli su carta52X68 .jpg" alt="Tra Malevic e Casorati"
@@ -383,7 +383,7 @@
         <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
              @click="selected = { src: 'static/disegni/senza_titolo_1976.jpeg', title: 'Senza titolo', year: '1976', medium: 'Pennarelli e pastelli su carta', desc: '67 × 47 cm' }">
           <div class="aspect-[3/4] overflow-hidden bg-white px-2 pb-2 pt-6">
-            <img src="static/disegni/thumbs/senza_titolo_1976.jpeg" alt="Senza titolo, 1976"
+            <img src="static/disegni/thumbs/senza_titolo_1976.jpeg" alt="Senza titolo"
                  class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
           </div>
           <div class="p-5 mt-auto">

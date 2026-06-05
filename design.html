@@ -124,6 +124,24 @@
           <div class="border-b border-teal/30"></div>
         </div>
 
+        <!-- FRIGHETTO: GIULIANO 1994 -->
+        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
+             @click="selected = { src: 'static/design/mod. GIULIANO produzione FRIGHETTO 1994.jpeg', title: 'GIULIANO', year: '1994', medium: 'Produzione FRIGHETTO', dim: '', desc: '' }">
+          <div class="aspect-[3/4] overflow-hidden bg-white px-2 pb-2 pt-6">
+            <img src="static/design/thumbs/mod. GIULIANO produzione FRIGHETTO 1994.jpeg" alt="GIULIANO"
+                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-5 mt-auto">
+            <div class="flex justify-between items-start">
+              <div>
+                <span class="text-teal text-xs font-medium tracking-widest uppercase">Produzione FRIGHETTO</span>
+                <h3 class="font-serif text-xl text-jet mt-1">GIULIANO</h3>
+              </div>
+              <span class="text-jet/40 font-serif text-sm mt-1">1994</span>
+            </div>
+          </div>
+        </div>
+
         <!-- FRIGHETTO: MABEL 1993 -->
         <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
              @click="selected = { src: 'static/design/mod. MABEL produzione FRIGHETTO 1993.jpg', title: 'MABEL', year: '1993', medium: 'Produzione FRIGHETTO', dim: '', desc: '' }">
@@ -219,18 +237,59 @@
           </div>
         </div>
 
-        <!-- LINEA ITALIA: DOMINO 1986 -->
+        <!-- LINEA ITALIA: MODULO 1987 -->
         <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
-             @click="selected = { src: 'static/design/mod. DOMINO produzione LINEA ITALIA 1986.JPG', title: 'DOMINO', year: '1986', medium: 'Produzione LINEA ITALIA', dim: '', desc: '' }">
+             @click="selected = { src: 'static/design/mod. MODULO produzione LINEA ITALIA 1987.jpeg', title: 'MODULO', year: '1987', medium: 'Produzione LINEA ITALIA', dim: '', desc: '' }">
           <div class="aspect-[3/4] overflow-hidden bg-white px-2 pb-2 pt-6">
-            <img src="static/design/thumbs/mod. DOMINO produzione LINEA ITALIA 1986.JPG" alt="DOMINO"
+            <img src="static/design/thumbs/mod. MODULO produzione LINEA ITALIA 1987.jpeg" alt="MODULO"
                  class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
           </div>
           <div class="p-5 mt-auto">
             <div class="flex justify-between items-start">
               <div>
                 <span class="text-teal text-xs font-medium tracking-widest uppercase">Produzione LINEA ITALIA</span>
+                <h3 class="font-serif text-xl text-jet mt-1">MODULO</h3>
+              </div>
+              <span class="text-jet/40 font-serif text-sm mt-1">1987</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- LINEA ITALIA: DOMINO 1986 -->
+        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
+             @click="selected = { srcs: ['static/design/mod. DOMINO produzione LINEA ITALIA 1986.JPG', 'static/design/mod. DOMINO produzione LINEA ITALIA 1986 2.jpeg'], title: 'DOMINO', year: '1986', medium: 'Produzione LINEA ITALIA', dim: '', desc: '' }; imgIdx = 0">
+          <div class="aspect-[3/4] overflow-hidden bg-white px-2 pb-2 pt-6 relative">
+            <img src="static/design/thumbs/mod. DOMINO produzione LINEA ITALIA 1986.JPG" alt="DOMINO"
+                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="flex justify-center gap-1 py-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-teal/60 block"></span>
+            <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
+            <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
+          </div>
+          <div class="p-5 mt-auto">
+            <div class="flex justify-between items-start">
+              <div>
+                <span class="text-teal text-xs font-medium tracking-widest uppercase">Produzione LINEA ITALIA</span>
                 <h3 class="font-serif text-xl text-jet mt-1">DOMINO</h3>
+              </div>
+              <span class="text-jet/40 font-serif text-sm mt-1">1986</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- LINEA ITALIA: MAGIA 1986 -->
+        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
+             @click="selected = { src: 'static/design/mod. MAGIA produzione LINEA ITALIA 1986.jpeg', title: 'MAGIA', year: '1986', medium: 'Produzione LINEA ITALIA', dim: '', desc: '' }">
+          <div class="aspect-[3/4] overflow-hidden bg-white px-2 pb-2 pt-6">
+            <img src="static/design/thumbs/mod. MAGIA produzione LINEA ITALIA 1986.jpeg" alt="MAGIA"
+                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-5 mt-auto">
+            <div class="flex justify-between items-start">
+              <div>
+                <span class="text-teal text-xs font-medium tracking-widest uppercase">Produzione LINEA ITALIA</span>
+                <h3 class="font-serif text-xl text-jet mt-1">MAGIA</h3>
               </div>
               <span class="text-jet/40 font-serif text-sm mt-1">1986</span>
             </div>
@@ -257,10 +316,15 @@
 
         <!-- MIMO: EXCALIBUR 1995 -->
         <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
-             @click="selected = { src: 'static/design/mod. EXCALIBUR produzione MIMO 1995.JPG', title: 'EXCALIBUR', year: '1995', medium: 'Produzione MIMO', dim: '', desc: '' }">
-          <div class="aspect-[3/4] overflow-hidden bg-white px-2 pb-2 pt-6">
-            <img src="static/design/thumbs/mod. EXCALIBUR produzione MIMO 1995.JPG" alt="EXCALIBUR"
+             @click="selected = { srcs: ['static/design/mod. EXCALIBUR produzione MIMO 1995 1.jpeg', 'static/design/mod. EXCALIBUR produzione MIMO 1995.JPG'], title: 'EXCALIBUR', year: '1995', medium: 'Produzione MIMO', dim: '', desc: '' }; imgIdx = 0">
+          <div class="aspect-[3/4] overflow-hidden bg-white px-2 pb-2 pt-6 relative">
+            <img src="static/design/thumbs/mod. EXCALIBUR produzione MIMO 1995 1.jpeg" alt="EXCALIBUR"
                  class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="flex justify-center gap-1 py-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-teal/60 block"></span>
+            <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
+            <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
           </div>
           <div class="p-5 mt-auto">
             <div class="flex justify-between items-start">
@@ -293,10 +357,15 @@
 
         <!-- MIMO: ICARO 1982 -->
         <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
-             @click="selected = { src: 'static/design/mod. ICARO produzione MIMO 1982.JPG', title: 'ICARO', year: '1982', medium: 'Produzione MIMO', dim: '', desc: '' }">
-          <div class="aspect-[3/4] overflow-hidden bg-white px-2 pb-2 pt-6">
-            <img src="static/design/thumbs/mod. ICARO produzione MIMO 1982.JPG" alt="ICARO"
+             @click="selected = { srcs: ['static/design/mod. ICARO produzione MIMO 1982 1.jpeg', 'static/design/mod. ICARO produzione MIMO 1982.JPG'], title: 'ICARO', year: '1982', medium: 'Produzione MIMO', dim: '', desc: '' }; imgIdx = 0">
+          <div class="aspect-[3/4] overflow-hidden bg-white px-2 pb-2 pt-6 relative">
+            <img src="static/design/thumbs/mod. ICARO produzione MIMO 1982 1.jpeg" alt="ICARO"
                  class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="flex justify-center gap-1 py-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-teal/60 block"></span>
+            <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
+            <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
           </div>
           <div class="p-5 mt-auto">
             <div class="flex justify-between items-start">
@@ -323,6 +392,42 @@
                 <h3 class="font-serif text-xl text-jet mt-1">RALPH</h3>
               </div>
               <span class="text-jet/40 font-serif text-sm mt-1">1992</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- NUOVODESIGN MOROSO: FAUST 1991 -->
+        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
+             @click="selected = { src: 'static/design/mod. FAUST produzione NUOVODESIGN MOROSO 1991.jpeg', title: 'FAUST', year: '1991', medium: 'Produzione NUOVODESIGN MOROSO', dim: '', desc: '' }">
+          <div class="aspect-[3/4] overflow-hidden bg-white px-2 pb-2 pt-6">
+            <img src="static/design/thumbs/mod. FAUST produzione NUOVODESIGN MOROSO 1991.jpeg" alt="FAUST"
+                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-5 mt-auto">
+            <div class="flex justify-between items-start">
+              <div>
+                <span class="text-teal text-xs font-medium tracking-widest uppercase">Produzione NUOVODESIGN MOROSO</span>
+                <h3 class="font-serif text-xl text-jet mt-1">FAUST</h3>
+              </div>
+              <span class="text-jet/40 font-serif text-sm mt-1">1991</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- NUOVODESIGN MOROSO: JENNIFER 1991 -->
+        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
+             @click="selected = { src: 'static/design/mod. JENNIFER produzione NUOVODESIGN MOROSO 1991.jpeg', title: 'JENNIFER', year: '1991', medium: 'Produzione NUOVODESIGN MOROSO', dim: '', desc: '' }">
+          <div class="aspect-[3/4] overflow-hidden bg-white px-2 pb-2 pt-6">
+            <img src="static/design/thumbs/mod. JENNIFER produzione NUOVODESIGN MOROSO 1991.jpeg" alt="JENNIFER"
+                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-5 mt-auto">
+            <div class="flex justify-between items-start">
+              <div>
+                <span class="text-teal text-xs font-medium tracking-widest uppercase">Produzione NUOVODESIGN MOROSO</span>
+                <h3 class="font-serif text-xl text-jet mt-1">JENNIFER</h3>
+              </div>
+              <span class="text-jet/40 font-serif text-sm mt-1">1991</span>
             </div>
           </div>
         </div>
@@ -399,6 +504,24 @@
           </div>
         </div>
 
+        <!-- ZETATRE: ALOA 1993 -->
+        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
+             @click="selected = { src: 'static/design/mod. ALOA produzione ZETATRE 1993.jpeg', title: 'ALOA', year: '1993', medium: 'Produzione ZETATRE', dim: '', desc: '' }">
+          <div class="aspect-[3/4] overflow-hidden bg-white px-2 pb-2 pt-6">
+            <img src="static/design/thumbs/mod. ALOA produzione ZETATRE 1993.jpeg" alt="ALOA"
+                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-5 mt-auto">
+            <div class="flex justify-between items-start">
+              <div>
+                <span class="text-teal text-xs font-medium tracking-widest uppercase">Produzione ZETATRE</span>
+                <h3 class="font-serif text-xl text-jet mt-1">ALOA</h3>
+              </div>
+              <span class="text-jet/40 font-serif text-sm mt-1">1993</span>
+            </div>
+          </div>
+        </div>
+
         <!-- ZETATRE: MANHATTAN 1983 -->
         <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
              @click="selected = { src: 'static/design/Mod. MANHATTAN   1983 produzione ZETATRE.jpeg', title: 'MANHATTAN', year: '1983', medium: 'Produzione ZETATRE', dim: '', desc: '' }">
@@ -413,6 +536,23 @@
                 <h3 class="font-serif text-xl text-jet mt-1">MANHATTAN</h3>
               </div>
               <span class="text-jet/40 font-serif text-sm mt-1">1983</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- EUROSALOTTO: senza titolo 1982 -->
+        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
+             @click="selected = { src: 'static/design/mod. senza titolo produzione EUROSALOTTO 1982.jpeg', title: '', year: '1982', medium: 'Produzione EUROSALOTTO', dim: '', desc: '' }">
+          <div class="aspect-[3/4] overflow-hidden bg-white px-2 pb-2 pt-6">
+            <img src="static/design/thumbs/mod. senza titolo produzione EUROSALOTTO 1982.jpeg" alt="Produzione EUROSALOTTO"
+                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-5 mt-auto">
+            <div class="flex justify-between items-start">
+              <div>
+                <span class="text-teal text-xs font-medium tracking-widest uppercase">Produzione EUROSALOTTO</span>
+              </div>
+              <span class="text-jet/40 font-serif text-sm mt-1">1982</span>
             </div>
           </div>
         </div>
