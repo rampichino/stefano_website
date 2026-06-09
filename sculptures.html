@@ -286,6 +286,28 @@
         </div>
 
         <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
+             @click="imgIdx = 0; selected = { srcs: ['static/sculture/senza titolo 2016 legno tinto 1.jpeg', 'static/sculture/senza titolo 2016 legno tinto 2.jpeg'], title: 'Senza titolo', year: '2016', medium: 'Legno tinto', dim: '', desc: '' }">
+          <div class="aspect-[3/4] overflow-hidden relative bg-white px-2 pb-2 pt-6">
+            <img src="static/sculture/thumbs/senza titolo 2016 legno tinto 1.jpeg" alt="Senza titolo"
+                 class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="flex justify-center gap-1 py-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-teal/60 block"></span>
+            <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
+            <span class="w-1.5 h-1.5 rounded-full bg-teal/30 block"></span>
+          </div>
+          <div class="p-5 mt-auto">
+            <div class="flex justify-between items-start">
+              <div>
+                <span class="text-teal text-xs font-medium tracking-widest uppercase">Legno tinto</span>
+                <h3 class="font-serif text-xl text-jet mt-1">Senza titolo</h3>
+              </div>
+              <span class="text-jet/40 font-serif text-sm mt-1">2016</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-hover bg-white rounded-lg overflow-hidden shadow-md cursor-pointer flex flex-col"
              @click="imgIdx = 0; selected = { srcs: ['static/sculture/pudore 1 2015.jpeg', 'static/sculture/pudore 2 2015.jpeg'], title: 'Pudore', year: '2015', medium: 'Legno incerato', dim: '', desc: '' }">
           <div class="aspect-[3/4] overflow-hidden relative bg-white px-2 pb-2 pt-6">
             <img src="static/sculture/thumbs/pudore 1 2015.jpeg" alt="Pudore"
