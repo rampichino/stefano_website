@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contatto — Stefano Bianchi Dall'Era</title>
+  <link rel="canonical" href="https://stefanobianchidallera.it/contatto.html" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script>
@@ -38,12 +39,12 @@
   <!-- NAVBAR -->
   <nav class="fixed top-0 left-0 right-0 z-50 bg-jet/95 backdrop-blur-sm shadow-lg">
     <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="index.html" class="font-serif text-xl text-white tracking-wide">
+      <a href="/" class="font-serif text-xl text-white tracking-wide">
         Stefano Bianchi Dall'Era
       </a>
       <div class="hidden md:flex items-center gap-8">
-        <a href="index.html" class="nav-link text-sky text-sm font-medium hover:text-white transition-colors">Home</a>
-        <a href="index.html#about" class="nav-link text-sky text-sm font-medium hover:text-white transition-colors">Chi Sono</a>
+        <a href="/" class="nav-link text-sky text-sm font-medium hover:text-white transition-colors">Home</a>
+        <a href="/#about" class="nav-link text-sky text-sm font-medium hover:text-white transition-colors">Chi Sono</a>
         <a href="paintings.html" class="nav-link text-sky text-sm font-medium hover:text-white transition-colors">Pitture &amp; Disegni</a>
         <a href="sculptures.html" class="nav-link text-sky text-sm font-medium hover:text-white transition-colors">Sculture</a>
         <a href="design.html" class="nav-link text-sky text-sm font-medium hover:text-white transition-colors">Design</a>
@@ -59,8 +60,8 @@
       </button>
     </div>
     <div x-show="menuOpen" x-transition class="md:hidden bg-jet border-t border-teal/30 px-6 py-4 flex flex-col gap-4">
-      <a href="index.html" @click="menuOpen=false" class="text-sky text-sm hover:text-white">Home</a>
-      <a href="index.html#about" @click="menuOpen=false" class="text-sky text-sm hover:text-white">Chi Sono</a>
+      <a href="/" @click="menuOpen=false" class="text-sky text-sm hover:text-white">Home</a>
+      <a href="/#about" @click="menuOpen=false" class="text-sky text-sm hover:text-white">Chi Sono</a>
       <a href="paintings.html" @click="menuOpen=false" class="text-sky text-sm hover:text-white">Pitture &amp; Disegni</a>
       <a href="sculptures.html" @click="menuOpen=false" class="text-sky text-sm hover:text-white">Sculture</a>
       <a href="design.html" @click="menuOpen=false" class="text-sky text-sm hover:text-white">Design</a>
@@ -114,7 +115,7 @@
     <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
       <p class="font-serif text-white text-lg">Stefano Bianchi Dall'Era</p>
       <nav class="flex gap-6 text-sm">
-        <a href="index.html" class="hover:text-white transition-colors">Home</a>
+        <a href="/" class="hover:text-white transition-colors">Home</a>
         <a href="paintings.html" class="hover:text-white transition-colors">Pitture &amp; Disegni</a>
         <a href="sculptures.html" class="hover:text-white transition-colors">Sculture</a>
         <a href="design.html" class="hover:text-white transition-colors">Design</a>
